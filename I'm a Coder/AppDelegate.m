@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RootTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    /**
+     系统原生方法
+     */
+    //调用窗口
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    
+    
+    RootTabBarViewController *RootVC = [[RootTabBarViewController alloc]init];
+    //    UINavigationController *Navc = [[UINavigationController alloc]initWithRootViewController:RootVC];
+    //    Navc.navigationBar.barTintColor = [UIColor redColor];
+    
+    
+    //设置窗口的根控制器
+    
+    self.window.rootViewController = RootVC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

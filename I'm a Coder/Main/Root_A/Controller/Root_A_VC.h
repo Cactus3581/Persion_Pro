@@ -6,8 +6,8 @@
 //  Copyright © 2017年 xiaruzhen. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseTableViewVC.h"
 
-@interface Root_A_VC : BaseViewController
+@interface Root_A_VC : BaseTableViewVC
 
 @end

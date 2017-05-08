@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface Sub_A_ViewController : BaseViewController
+@property (nonatomic,strong) NSString *titleName;
+@property (nonatomic,assign) NSInteger row;
 
 @end

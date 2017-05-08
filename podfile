@@ -1,0 +1,8 @@
+
+platform :ios, "8.0"
+target “I’m a Coder” do
+    pod "AFNetworking"
+    pod "SDWebImage"
+    pod "Masonry" 
+end
+

@@ -9,7 +9,6 @@
 #import "DatabaseViewController.h"
 #import "FMDatabaseManager.h"
 #import "FMDatabaseQueueManager.h"
-
 #import "DataBaseModel.h"
 #import "BaseTableViewCell.h"
 
@@ -33,7 +32,128 @@
     
     self.tableView.frame =CGRectMake(0, CGRectGetMaxY(searchBar.frame)+40, K_width, K_height-(CGRectGetMaxY(searchBar.frame)+40));
     self.tableView.backgroundColor = [UIColor redColor];
+    
+    
+    
+    
+    NSString *value=[NSString stringWithFormat:@"%f",[@10 doubleValue]];
+    NSString *value1=[NSString stringWithFormat:@"%f",[@"10" doubleValue]];
+    
+    NSLog(@"%@",value);
+    NSLog(@"%@",value1);
+    NSLog(@"%@",[NSString stringWithFormat:@"%@",@10]);
+    NSLog(@"%@",[@10 stringValue]);
+    
+    NSString *str ;
+    
+    if (!str) {
+        NSLog(@"%@",str);
+        
+    }
+    if ([str isKindOfClass:[NSNull class]]) {
+        NSLog(@"%@",str);
+        
+    }
+    
+    if ([str isKindOfClass:[NSString class]]) {
+        NSLog(@"%@",str);
+        
+    }
+    
+    NSString *str1 = nil; ;
+    
+    if (!str1) {
+        NSLog(@"%@",str1);
+        
+    }
+    if ([str1 isKindOfClass:[NSNull class]]) {
+        NSLog(@"%@",str1);
+        
+    }
+    
+    if ([str1 isKindOfClass:[NSString class]]) {
+        NSLog(@"%@",str1);
+        
+    }
+    
+    NSString *str2 = [NSNull null]; ;
+    
+    if (!str2) {
+        NSLog(@"%@",str2);
+        
+    }
+    if ([str2 isKindOfClass:[NSNull class]]) {
+        NSLog(@"%@",str2);
+        
+    }
+    
+    if ([str2 isKindOfClass:[NSString class]]) {
+        NSLog(@"%@",str2);
+        
+    }
+    
+    NSNumber *number = [NSNumber numberWithInteger:5];
+    NSInteger shuzi = [number integerValue];
+    
+    
+    
+    
+    NSNumber *number1 = @8.3;
+    NSNumber *number2 = @8;
+    
+    NSLog(@"%.2f",[number1 floatValue] );
+    NSLog(@"%@",[NSString stringWithFormat:@"%@",number1]);
+    
+    NSLog(@"%@",number1);
+    NSLog(@"%@",[NSString stringWithFormat:@"%@",number2]);
+    
+    NSString *st = @"11";
+    NSString *st1 = @"a";
+    
+    id result;
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    result=[f numberFromString:st];
+    if(!(result))
+    {
+        NSLog(@"%.2f",[result floatValue] );
+        if ([result isKindOfClass:[NSNumber class]]) {
+            NSLog(@"%.2f",[result floatValue] );
 
+        }
+    }
+    NSLog(@"%.2f",[result floatValue] );
+    if ([result isKindOfClass:[NSNumber class]]) {
+        NSLog(@"%.2f",[result floatValue] );
+        
+    }
+    
+    NSArray *array = @[@"1"];
+    
+    NSString *str5 = XRZValidateArrayObjAtIdx(array,2);
+    NSLog(@"%@",str5);
+    if ([str5 isKindOfClass:[NSString class]]) {
+        NSLog(@"%@",str5);
+    }
+    
+    if ([str5 isKindOfClass:[NSNull class]]) {
+        NSLog(@"%@",str5);
+    }
+    if (!str5) {
+        NSLog(@"%@",str5);
+    }
+    
+    NSArray *array1 = [NSNull null];
+    if (array1) {
+//        NSLog(@"%@",array1[1]);
+    }
+    if (XRZValidateArray(array1)) {
+//        NSLog(@"%@",array1[1]);
+        NSLog(@"%@",XRZValidateArrayObjAtIdx(array1,1));
+    }
+    
+    NSNumber *nullnumber = [NSNull null];
+//    NSLog(@"%@",nullnumber.stringValue);
+    NSLog(@"%@",XRZValidateArrayObjAtIdx(array1,1));
 
 }
 
@@ -68,17 +188,17 @@
 #pragma mark - 模糊查询功能演示
 //- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 //{
-//    
-//    
+//
+//
 //    NSString *querySql = [NSString stringWithFormat:@"SELECT * FROM STUDENT WHERE name LIKE '%%%@%%' OR store LIKE '%%%@%%'", searchText, searchText];
 //    NSArray *modals = [DatabaseManager quaryAction:querySql];
-//    
+//
 //    [self.array addObjectsFromArray:modals];
-//    
+//
 //    NSLog(@"searchText = %@",searchText);
-//    
+//
 //    [DatabaseManager quaryAction:querySql];
-//    
+//
 //    [self.tableView reloadData];
 //}
 
@@ -90,10 +210,10 @@
     self.i  = self.i+1;
     NSNumber *score = [NSNumber numberWithInteger:self.i];
     DataBaseModel *model = [DataBaseModel initializeWithName:@"哈8" Sex:@"男" Age:@23 Score:score];
-
+    
     [FMDatabaseManager insertAction:model];
-//    [FMDatabaseQueueManager insertAction:model];
-
+    //    [FMDatabaseQueueManager insertAction:model];
+    
 }
 
 - (void)MaskInViewBt_2
@@ -103,9 +223,9 @@
     NSNumber *score = [NSNumber numberWithInteger:self.i];
     DataBaseModel *model = [DataBaseModel initializeWithName:@"哈4" Sex:@"男" Age:@18 Score:score];
     
-//    [FMDatabaseManager modifyAction:model];
+    //    [FMDatabaseManager modifyAction:model];
     [FMDatabaseQueueManager modifyAction:model];
-
+    
 }
 
 - (void)MaskInViewBt_3
@@ -113,26 +233,26 @@
     //删除数据后执行一次查询工作刷新表格
     DataBaseModel *model = [DataBaseModel initializeWithName:@"哈5" Sex:@"男" Age:@18 Score:@88];
     
-//    [FMDatabaseManager deleteAction:model];
+    //    [FMDatabaseManager deleteAction:model];
     [FMDatabaseQueueManager deleteAction:model];
-
-
+    
+    
 }
 - (void)MaskInViewBt_4
 {
     DataBaseModel *model = [DataBaseModel initializeWithName:@"哈3" Sex:@"男" Age:@18 Score:@2];
     
-//    [FMDatabaseManager quaryAction_one:model];
+    //    [FMDatabaseManager quaryAction_one:model];
     [FMDatabaseQueueManager quaryAction_one:model];
-
-
+    
+    
 }
 - (void)MaskInViewBt_5
 {
     
     [FMDatabaseManager transaction];
-//    [FMDatabaseQueueManager transactionByQueue];
-
+    //    [FMDatabaseQueueManager transactionByQueue];
+    
     
 }
 
@@ -174,23 +294,23 @@
         
         if (i==0) {
             [bt addTarget:self action:@selector(MaskInViewBt_1) forControlEvents:UIControlEventTouchUpInside];
-
+            
         }else if (i==1)
         {
             [bt addTarget:self action:@selector(MaskInViewBt_2) forControlEvents:UIControlEventTouchUpInside];
-
+            
         }else if (i==2)
         {
             [bt addTarget:self action:@selector(MaskInViewBt_3) forControlEvents:UIControlEventTouchUpInside];
-
+            
         }else if (i==3)
         {
             [bt addTarget:self action:@selector(MaskInViewBt_4) forControlEvents:UIControlEventTouchUpInside];
-
+            
         }else if (i==4)
         {
             [bt addTarget:self action:@selector(MaskInViewBt_5) forControlEvents:UIControlEventTouchUpInside];
-
+            
         }
         [bt setTitle:array[i] forState:UIControlStateNormal];
         [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];

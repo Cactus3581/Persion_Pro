@@ -65,11 +65,11 @@
     if (cell==nil) {
         cell = [[BaseTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        cell.textLabel.font = XFont(2);
+        //        cell.textLabel.font = XFont(2);
     }
-//    cell.textLabel.text = self.array[indexPath.row];
+    //    cell.textLabel.text = self.array[indexPath.row];
     return cell;
-
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -82,77 +82,77 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
-//    Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
-//    Sub_C_ViewController *sub_a = [[Sub_C_ViewController alloc]init];
+    //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
+    //    Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
+    //    Sub_C_ViewController *sub_a = [[Sub_C_ViewController alloc]init];
     
-//    BlockAnimatonVC *sub_a = [[BlockAnimatonVC alloc]init];
-//    CoreAnimationVC *sub_a = [[CoreAnimationVC alloc]init];
-//
-//
-//
-//    DatabaseViewController *sub_a = [[DatabaseViewController alloc]init];
-    
-    
-    
-//    AboutCopyViewController *sub_a = [[AboutCopyViewController alloc]init];
-//    sub_a.direction = 3;
-//    sub_a.dir = 1|2;
+    //    BlockAnimatonVC *sub_a = [[BlockAnimatonVC alloc]init];
+    //    CoreAnimationVC *sub_a = [[CoreAnimationVC alloc]init];
+    //
+    //
+    //
+    DatabaseViewController *sub_a = [[DatabaseViewController alloc]init];
     
     
     
-//    BlockViewController *sub_a = [[BlockViewController alloc]init];
-//    NetRequestViewController *sub_a = [[NetRequestViewController alloc]init];
+    //    AboutCopyViewController *sub_a = [[AboutCopyViewController alloc]init];
+    //    sub_a.direction = 3;
+    //    sub_a.dir = 1|2;
     
-//    RunTimeViewController *sub_a = [[RunTimeViewController alloc]init];
     
-//    MultithReadingViewController *sub_a = [[MultithReadingViewController alloc]init];
-
     
-//    DataPersistenceVC *sub_a = [[DataPersistenceVC alloc]init];
-
-//    Static_ConstViewController *sub_a = [[Static_ConstViewController alloc]init];
-
-    MasonryViewController *sub_a = [[MasonryViewController alloc]init];
-
-
-//    PopViewAnaimationVC *sub_a = [[PopViewAnaimationVC alloc]init];
-//    [sub_a initaccol:XWInteractiveTransitionTypePop];
-//    XWInteractiveTransitionType type = XWInteractiveTransitionTypePop;
-//    sub_a.type =     XWInteractiveTransitionTypeDismiss|XWInteractiveTransitionTypePush|XWInteractiveTransitionTypePop,
-//    
-////    sub_a.XWInteractiveTransitionType = XWInteractiveTransitionTypePush;
+    //    BlockViewController *sub_a = [[BlockViewController alloc]init];
+    //    NetRequestViewController *sub_a = [[NetRequestViewController alloc]init];
     
-//    TransitionViewController *sub_a = [[TransitionViewController alloc]init];
-//    TransitionListViewController *sub_a = [[TransitionListViewController alloc]init];
+    //    RunTimeViewController *sub_a = [[RunTimeViewController alloc]init];
     
-//    KVCViewController *sub_a = [[KVCViewController alloc]init];
-
-
+    //    MultithReadingViewController *sub_a = [[MultithReadingViewController alloc]init];
+    
+    
+    //    DataPersistenceVC *sub_a = [[DataPersistenceVC alloc]init];
+    
+    //    Static_ConstViewController *sub_a = [[Static_ConstViewController alloc]init];
+    
+    //    MasonryViewController *sub_a = [[MasonryViewController alloc]init];
+    
+    
+    //    PopViewAnaimationVC *sub_a = [[PopViewAnaimationVC alloc]init];
+    //    [sub_a initaccol:XRZInteractiveTransitionTypePop];
+    //    XRZInteractiveTransitionType type = XRZInteractiveTransitionTypePop;
+    //    sub_a.type =     XRZInteractiveTransitionTypeDismiss|XRZInteractiveTransitionTypePush|XRZInteractiveTransitionTypePop,
+    //
+    ////    sub_a.XRZInteractiveTransitionType = XRZInteractiveTransitionTypePush;
+    
+    //    TransitionViewController *sub_a = [[TransitionViewController alloc]init];
+    //    TransitionListViewController *sub_a = [[TransitionListViewController alloc]init];
+    
+    //    KVCViewController *sub_a = [[KVCViewController alloc]init];
+    
+    
     sub_a.hidesBottomBarWhenPushed = YES;
-
+    
     [self.navigationController pushViewController:sub_a animated:YES];
     
-//    [self transitionAnimation];
+    //    [self transitionAnimation];
 }
 
 
 - (void)transitionAnimation
 {
     CATransition  *transition = [CATransition animation];
-//    2.设置动画时长,设置代理人
+    //    2.设置动画时长,设置代理人
     transition.duration = 1.0f;
     transition.delegate = self;
-//    3.设置切换速度效果
+    //    3.设置切换速度效果
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-
+    
     transition.type = kCATransitionFade;
-
+    
     transition.subtype = kCATransitionFromTop;//顶部
     CoreAnimationVC *sub_a = [[CoreAnimationVC alloc]init];
     
     
-
+    
     sub_a.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController.view.layer addAnimation:transition forKey:nil];
@@ -190,13 +190,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

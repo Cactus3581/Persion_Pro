@@ -13,8 +13,7 @@
 #ifdef __OBJC__ //只被object－c文件所引用
 #import "Masonry.h"
 #import "XRZCatergory.h"
-
-
+#import "XRZDataTool.h"
 #endif
 
 #define K_width [UIScreen mainScreen].bounds.size.width

@@ -8,7 +8,10 @@
 
 #import "XRZCGUtilities.h"
 
-CGFloat getWidthU(){
+/**
+ 获取宽度／高度
+ */
+CGFloat getWidth(){
     return [UIScreen mainScreen].bounds.size.width;
 }
 
@@ -37,6 +40,11 @@ CGFloat getHeightUnique(){
     }
 }
 
+
+
+/**
+ 获取宽度比例
+ */
 CGFloat KScreenWidthRatio(){
     return [UIScreen mainScreen].bounds.size.width/(375.0);
 }
@@ -102,6 +110,3 @@ CGRect XRZScreenBounds(){
     });
     return bounds;
 }
-
-
-

@@ -29,131 +29,10 @@
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 64, K_width, 44)];
     searchBar.delegate = self;
     [self.view addSubview:searchBar];
-    
     self.tableView.frame =CGRectMake(0, CGRectGetMaxY(searchBar.frame)+40, K_width, K_height-(CGRectGetMaxY(searchBar.frame)+40));
     self.tableView.backgroundColor = [UIColor redColor];
     
-    
-    
-    
-    NSString *value=[NSString stringWithFormat:@"%f",[@10 doubleValue]];
-    NSString *value1=[NSString stringWithFormat:@"%f",[@"10" doubleValue]];
-    
-    NSLog(@"%@",value);
-    NSLog(@"%@",value1);
-    NSLog(@"%@",[NSString stringWithFormat:@"%@",@10]);
-    NSLog(@"%@",[@10 stringValue]);
-    
-    NSString *str ;
-    
-    if (!str) {
-        NSLog(@"%@",str);
-        
-    }
-    if ([str isKindOfClass:[NSNull class]]) {
-        NSLog(@"%@",str);
-        
-    }
-    
-    if ([str isKindOfClass:[NSString class]]) {
-        NSLog(@"%@",str);
-        
-    }
-    
-    NSString *str1 = nil; ;
-    
-    if (!str1) {
-        NSLog(@"%@",str1);
-        
-    }
-    if ([str1 isKindOfClass:[NSNull class]]) {
-        NSLog(@"%@",str1);
-        
-    }
-    
-    if ([str1 isKindOfClass:[NSString class]]) {
-        NSLog(@"%@",str1);
-        
-    }
-    
-    NSString *str2 = [NSNull null]; ;
-    
-    if (!str2) {
-        NSLog(@"%@",str2);
-        
-    }
-    if ([str2 isKindOfClass:[NSNull class]]) {
-        NSLog(@"%@",str2);
-        
-    }
-    
-    if ([str2 isKindOfClass:[NSString class]]) {
-        NSLog(@"%@",str2);
-        
-    }
-    
-    NSNumber *number = [NSNumber numberWithInteger:5];
-    NSInteger shuzi = [number integerValue];
-    
-    
-    
-    
-    NSNumber *number1 = @8.3;
-    NSNumber *number2 = @8;
-    
-    NSLog(@"%.2f",[number1 floatValue] );
-    NSLog(@"%@",[NSString stringWithFormat:@"%@",number1]);
-    
-    NSLog(@"%@",number1);
-    NSLog(@"%@",[NSString stringWithFormat:@"%@",number2]);
-    
-    NSString *st = @"11";
-    NSString *st1 = @"a";
-    
-    id result;
-    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-    result=[f numberFromString:st];
-    if(!(result))
-    {
-        NSLog(@"%.2f",[result floatValue] );
-        if ([result isKindOfClass:[NSNumber class]]) {
-            NSLog(@"%.2f",[result floatValue] );
 
-        }
-    }
-    NSLog(@"%.2f",[result floatValue] );
-    if ([result isKindOfClass:[NSNumber class]]) {
-        NSLog(@"%.2f",[result floatValue] );
-        
-    }
-    
-    NSArray *array = @[@"1"];
-    
-    NSString *str5 = XRZValidateArrayObjAtIdx(array,2);
-    NSLog(@"%@",str5);
-    if ([str5 isKindOfClass:[NSString class]]) {
-        NSLog(@"%@",str5);
-    }
-    
-    if ([str5 isKindOfClass:[NSNull class]]) {
-        NSLog(@"%@",str5);
-    }
-    if (!str5) {
-        NSLog(@"%@",str5);
-    }
-    
-    NSArray *array1 = [NSNull null];
-    if (array1) {
-//        NSLog(@"%@",array1[1]);
-    }
-    if (XRZValidateArray(array1)) {
-//        NSLog(@"%@",array1[1]);
-        NSLog(@"%@",XRZValidateArrayObjAtIdx(array1,1));
-    }
-    
-    NSNumber *nullnumber = [NSNull null];
-//    NSLog(@"%@",nullnumber.stringValue);
-    NSLog(@"%@",XRZValidateArrayObjAtIdx(array1,1));
 
 }
 
@@ -211,8 +90,8 @@
     NSNumber *score = [NSNumber numberWithInteger:self.i];
     DataBaseModel *model = [DataBaseModel initializeWithName:@"哈8" Sex:@"男" Age:@23 Score:score];
     
-    [FMDatabaseManager insertAction:model];
-    //    [FMDatabaseQueueManager insertAction:model];
+//    [FMDatabaseManager insertAction:model];
+    [FMDatabaseQueueManager insertAction:model];
     
 }
 
@@ -223,7 +102,7 @@
     NSNumber *score = [NSNumber numberWithInteger:self.i];
     DataBaseModel *model = [DataBaseModel initializeWithName:@"哈4" Sex:@"男" Age:@18 Score:score];
     
-    //    [FMDatabaseManager modifyAction:model];
+//    [FMDatabaseManager modifyAction:model];
     [FMDatabaseQueueManager modifyAction:model];
     
 }

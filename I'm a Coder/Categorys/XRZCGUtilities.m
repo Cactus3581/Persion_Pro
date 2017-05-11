@@ -9,86 +9,24 @@
 #import "XRZCGUtilities.h"
 
 /**
- 获取宽度／高度
+ 获取size
  */
-CGFloat getWidth(){
-    return [UIScreen mainScreen].bounds.size.width;
+CGSize XRZScreenSize() {
+    return [UIScreen mainScreen].bounds.size;
 }
-
-CGFloat getHeight(){
-    return [UIScreen mainScreen].bounds.size.height;
-
-}
-
-CGFloat getWidthUnique(){
-    UIInterfaceOrientation statusBarOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-    if (statusBarOrientation==UIInterfaceOrientationLandscapeRight ||statusBarOrientation==UIInterfaceOrientationLandscapeLeft) {
-        return [UIScreen mainScreen].bounds.size.height;
-    }else
-    {
-        return [UIScreen mainScreen].bounds.size.width;
-    }
-}
-
-CGFloat getHeightUnique(){
-    UIInterfaceOrientation statusBarOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-    if (statusBarOrientation==UIInterfaceOrientationLandscapeRight ||statusBarOrientation==UIInterfaceOrientationLandscapeLeft) {
-        return [UIScreen mainScreen].bounds.size.width;
-    }else
-    {
-        return [UIScreen mainScreen].bounds.size.height;
-    }
-}
-
-
 
 /**
  获取宽度比例
  */
-CGFloat KScreenWidthRatio(){
-    return [UIScreen mainScreen].bounds.size.width/(375.0);
-}
-
-CGFloat KScreenWidthRatioUnique(){
-    UIInterfaceOrientation statusBarOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-    if (statusBarOrientation==UIInterfaceOrientationLandscapeRight ||statusBarOrientation==UIInterfaceOrientationLandscapeLeft) {
-        return [UIScreen mainScreen].bounds.size.height/(375.0);
-    }else
-    {
-        return [UIScreen mainScreen].bounds.size.width/(375.0);
-    }
-    
-}
-
-CGFloat XRZScreenScale() {
-    static CGFloat scale;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        scale = [UIScreen mainScreen].scale;
-    });
-    return scale;
-}
-
-
 CGFloat XRZScreenWidthRatio(){
-    static CGFloat ratio;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        ratio = [UIScreen mainScreen].bounds.size.width / 375.0f;
-    });
-    return ratio;
+    return [UIScreen mainScreen].bounds.size.width/(375.0f);
 }
 
-CGFloat XRZScreenHeightRatio(){
-    static CGFloat ratio;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        ratio = [UIScreen mainScreen].bounds.size.height / 667.0f;
-    });
-    return ratio;
-}
 
-CGSize XRZScreenSize() {
+/**
+ 获取size
+ */
+CGSize XRZScreenSizeUnique() {
     static CGSize size;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -100,6 +38,54 @@ CGSize XRZScreenSize() {
         }
     });
     return size;
+    
+    /*
+     UIInterfaceOrientation statusBarOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+     if (statusBarOrientation==UIInterfaceOrientationLandscapeRight ||statusBarOrientation==UIInterfaceOrientationLandscapeLeft) {
+     return [UIScreen mainScreen].bounds.size.width;
+     }else
+     {
+     return [UIScreen mainScreen].bounds.size.height;
+     }
+     */
+}
+
+/**
+ 获取宽度比例
+ */
+CGFloat XRZScreenWidthRatioUnique(){
+    static CGFloat ratio;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        CGSize size = [UIScreen mainScreen].bounds.size;
+        ratio = [UIScreen mainScreen].bounds.size.width / 375.0f;
+        if (size.height < size.width) {
+            ratio = size.height / 375.0f;
+        }
+    });
+    return ratio;
+    
+    /*
+     UIInterfaceOrientation statusBarOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+     if (statusBarOrientation==UIInterfaceOrientationLandscapeRight ||statusBarOrientation==UIInterfaceOrientationLandscapeLeft) {
+     return [UIScreen mainScreen].bounds.size.height/(375.0);
+     }else
+     {
+     return [UIScreen mainScreen].bounds.size.width/(375.0);
+     }
+     */
+}
+
+/**
+ Macro
+ */
+CGFloat XRZScreenScale() {
+    static CGFloat scale;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        scale = [UIScreen mainScreen].scale;
+    });
+    return scale;
 }
 
 CGRect XRZScreenBounds(){

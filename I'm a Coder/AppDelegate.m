@@ -35,6 +35,8 @@
     
     //设置窗口的根控制器
     
+
+    
     self.window.rootViewController = RootVC;
     [self.window makeKeyAndVisible];
     return YES;

@@ -10,6 +10,9 @@
 #import "KSAlertImageView.h"
 #import "MPlayerView.h"
 
+#define SINGLE_LINE_WIDTH           (1 / [UIScreen mainScreen].scale)
+#define SINGLE_LINE_ADJUST_OFFSET   ((1 / [UIScreen mainScreen].scale) / 2)
+
 @interface MasonryViewController ()
 @property (nonatomic,strong) UIView *testview;
 @property (nonatomic,strong) UILabel *testlabel;
@@ -34,15 +37,76 @@ static  NSString * const static_Const_str2 = @"static_Const_str2";//字符串不
     [super viewDidLoad];
 //    [self differentjixing];
     
-    [self.view addSubview:self.mPlayerView];
+//    [self.view addSubview:self.mPlayerView];
     
-    CGFloat radio = widthUnique()/(CGFloat )heightUnique();
-    [self.mPlayerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(self.view);
-        make.top.equalTo(self.view).offset(0);
-        make.center.equalTo(self.view);
-        make.width.equalTo(self.view.mas_height).multipliedBy(radio);
-    }];
+    CGFloat scale = [UIScreen mainScreen].scale;
+    CGFloat px = 1.0f;
+    CGFloat pt = px / scale;
+    
+    CGFloat lineWidth = SINGLE_LINE_WIDTH;
+    CGFloat pixelAdjustOffset = SINGLE_LINE_WIDTH;
+    //仅当要绘制的线宽为奇数像素时，绘制位置需要调整
+    if (((int)(lineWidth * [UIScreen mainScreen].scale) + 1) % 2 == 0) {
+        pixelAdjustOffset = SINGLE_LINE_ADJUST_OFFSET;
+    }
+    
+    NSLog(@"%.2f",pixelAdjustOffset);
+    
+    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(10, 400, 200,pt)];
+    line.backgroundColor = [UIColor redColor];
+    [self.view addSubview:line];
+    
+    UIView *line2 = [[UIView alloc]initWithFrame:CGRectMake(10, 405, 200, 1)];
+    line2.backgroundColor = [UIColor redColor];
+    [self.view addSubview:line2];
+    
+    UIView *line1 = [[UIView alloc] initWithFrame:CGRectZero];
+    line1.frame = CGRectMake(10-pixelAdjustOffset, 410-pixelAdjustOffset, 200, lineWidth);
+    line1.backgroundColor = [UIColor redColor];
+    [self.view addSubview:line1];
+    
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(10, 100, 250, 50)];
+    view.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:view];
+    
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 470, 40, 20)];
+    label.layer.borderWidth = 0.5;
+    label.layer.borderColor = [UIColor redColor].CGColor;
+    [self.view addSubview:label];
+    
+    
+    CGFloat scalee =  [UIScreen mainScreen].scale;
+    NSLog(@"%.2f",scalee);
+
+
+    NSLog(@"%.2f",widthRatio(100));
+    NSLog(@"%.2f",widthRatioUnique(100));
+    
+    NSLog(@"%.2f",kScreenHeightUnique);
+    NSLog(@"%.2f",kScreenHeight);
+    
+    NSLog(@"%.2f",kScreenWidthUnique);
+    NSLog(@"%.2f",kScreenWidth);
+    
+    NSLog(@"%@",NSStringFromCGSize(kScreenSizeUnique));
+    NSLog(@"%@",NSStringFromCGSize(kScreenSize));
+    
+    NSLog(@"%@",NSStringFromCGRect(kScreenBounds));
+    NSLog(@"%.2f",kScreenScale);
+
+
+
+
+    
+    CGFloat radio = kScreenWidthUnique/kScreenHeightUnique;
+
+//    [self.mPlayerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.bottom.equalTo(self.view);
+//        make.top.equalTo(self.view).offset(0);
+//        make.center.equalTo(self.view);
+//        make.width.equalTo(self.view.mas_height).multipliedBy(radio);
+//    }];
 }
 
 - (MPlayerView *)mPlayerView

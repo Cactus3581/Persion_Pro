@@ -39,7 +39,7 @@ FMDatabase这个类是线程不安全的，如果在多个线程中同时使用�
     // 会通过block传递队列中创建好的数据库
     [sqlite inDatabase:^(FMDatabase *db) {
         
-        BOOL success = [db executeUpdate:@"CREATE TABLE IF NOT EXISTS STUDENT(stu_ID INTEGER PRIMARY KEY,name TEXT NOT NULL,sex TEXT NOT NULL DEFAULT 妖怪,age INTEGER DEFAULT 18,store FLOAT)"];
+        BOOL success = [db executeUpdate:@"CREATE TABLE IF NOT EXISTS STUDENT(stu_ID INTEGER PRIMARY KEY,name TEXT NOT NULL,sex TEXT DEFAULT 妖怪,age INTEGER DEFAULT 18,store FLOAT)"];
         
         if (success) {
             NSLog(@"创建表成功");

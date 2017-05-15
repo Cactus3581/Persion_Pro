@@ -55,8 +55,11 @@
 		0183A92D1E87ABCE005D40DE /* MacicViewController_one.m in Sources */ = {isa = PBXBuildFile; fileRef = 0183A92C1E87ABCE005D40DE /* MacicViewController_one.m */; };
 		0183A9301E87AF45005D40DE /* BaseFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0183A92F1E87AF45005D40DE /* BaseFromViewController.m */; };
 		0183A9331E87AF50005D40DE /* BaseToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0183A9321E87AF50005D40DE /* BaseToViewController.m */; };
+		01A580BB1EC55F3D00C426A0 /* FMDBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A580BA1EC55F3D00C426A0 /* FMDBTools.m */; };
 		01A824661EC019E200C1BDDB /* KSAlertImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A824631EC019E200C1BDDB /* KSAlertImageView.m */; };
 		01A824671EC019E200C1BDDB /* MPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A824651EC019E200C1BDDB /* MPlayerView.m */; };
+		01B6E70F1EC9834D00DFD0D9 /* SchoolModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B6E70E1EC9834D00DFD0D9 /* SchoolModel.m */; };
+		01B6E7121EC9835600DFD0D9 /* ClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B6E7111EC9835600DFD0D9 /* ClassModel.m */; };
 		01B819DF1EC1DDEF0042464C /* UIFont+XRZAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B819DA1EC1DDEF0042464C /* UIFont+XRZAdd.m */; };
 		01B819E01EC1DDEF0042464C /* XRZCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B819DE1EC1DDEF0042464C /* XRZCGUtilities.m */; };
 		01B819E61EC2B6BD0042464C /* suanfa.c in Sources */ = {isa = PBXBuildFile; fileRef = 01B819E41EC2B6BD0042464C /* suanfa.c */; };
@@ -209,10 +212,17 @@
 		0183A92F1E87AF45005D40DE /* BaseFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseFromViewController.m; sourceTree = "<group>"; };
 		0183A9311E87AF50005D40DE /* BaseToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseToViewController.h; sourceTree = "<group>"; };
 		0183A9321E87AF50005D40DE /* BaseToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseToViewController.m; sourceTree = "<group>"; };
+		01A580B91EC55F3D00C426A0 /* FMDBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBTools.h; sourceTree = "<group>"; };
+		01A580BA1EC55F3D00C426A0 /* FMDBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBTools.m; sourceTree = "<group>"; };
+		01A580BC1EC55F7F00C426A0 /* FMDBDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBDefine.h; sourceTree = "<group>"; };
 		01A824621EC019E200C1BDDB /* KSAlertImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAlertImageView.h; sourceTree = "<group>"; };
 		01A824631EC019E200C1BDDB /* KSAlertImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAlertImageView.m; sourceTree = "<group>"; };
 		01A824641EC019E200C1BDDB /* MPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPlayerView.h; sourceTree = "<group>"; };
 		01A824651EC019E200C1BDDB /* MPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPlayerView.m; sourceTree = "<group>"; };
+		01B6E70D1EC9834D00DFD0D9 /* SchoolModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolModel.h; sourceTree = "<group>"; };
+		01B6E70E1EC9834D00DFD0D9 /* SchoolModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolModel.m; sourceTree = "<group>"; };
+		01B6E7101EC9835600DFD0D9 /* ClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassModel.h; sourceTree = "<group>"; };
+		01B6E7111EC9835600DFD0D9 /* ClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassModel.m; sourceTree = "<group>"; };
 		01B819D91EC1DDEF0042464C /* UIFont+XRZAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+XRZAdd.h"; sourceTree = "<group>"; };
 		01B819DA1EC1DDEF0042464C /* UIFont+XRZAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+XRZAdd.m"; sourceTree = "<group>"; };
 		01B819DB1EC1DDEF0042464C /* XRZCategoriesMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRZCategoriesMacro.h; sourceTree = "<group>"; };
@@ -315,6 +325,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01043A831EC445CE00A43CDF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				01A580B91EC55F3D00C426A0 /* FMDBTools.h */,
+				01A580BA1EC55F3D00C426A0 /* FMDBTools.m */,
+				01A580BC1EC55F7F00C426A0 /* FMDBDefine.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		010BA9E11E276DB3009E0ACE = {
 			isa = PBXGroup;
 			children = (
@@ -356,7 +376,6 @@
 				016C19511E51B31F002F910F /* Block */,
 				016C194C1E4C1750002F910F /* AboutCopy */,
 				01413B851E489F82004521FE /* FMDB */,
-				01413B841E489EE6004521FE /* SQLite */,
 				01C64D621E36051B00CC5E88 /* Animation */,
 				010BAA571E277FF6009E0ACE /* SubVC */,
 				010BAA4E1E276DED009E0ACE /* Base */,
@@ -759,16 +778,10 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		01413B841E489EE6004521FE /* SQLite */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SQLite;
-			sourceTree = "<group>";
-		};
 		01413B851E489F82004521FE /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
+				01043A831EC445CE00A43CDF /* Tools */,
 				01413B991E48A069004521FE /* database */,
 				01413B861E48A017004521FE /* fmdb */,
 			);
@@ -819,6 +832,10 @@
 			children = (
 				015B47101E49AAC80097EA0F /* DataBaseModel.h */,
 				015B47111E49AAC80097EA0F /* DataBaseModel.m */,
+				01B6E70D1EC9834D00DFD0D9 /* SchoolModel.h */,
+				01B6E70E1EC9834D00DFD0D9 /* SchoolModel.m */,
+				01B6E7101EC9835600DFD0D9 /* ClassModel.h */,
+				01B6E7111EC9835600DFD0D9 /* ClassModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1471,7 +1488,7 @@
 				TargetAttributes = {
 					010BA9E91E276DB3009E0ACE = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = UY3VKHGENL;
+						DevelopmentTeam = 599FJK8FBV;
 						ProvisioningStyle = Automatic;
 					};
 					010BAA021E276DB3009E0ACE = {
@@ -1596,6 +1613,7 @@
 				010BAA561E276DED009E0ACE /* BaseViewController.m in Sources */,
 				0183A92D1E87ABCE005D40DE /* MacicViewController_one.m in Sources */,
 				01C7F8011E7BCB47007AE40B /* Static_ConstViewController.m in Sources */,
+				01A580BB1EC55F3D00C426A0 /* FMDBTools.m in Sources */,
 				01BE9C3F1E4A187900F47CC0 /* FMDatabaseQueueManager.m in Sources */,
 				01C64D4F1E35EAFA00CC5E88 /* Sub_C_ViewController.m in Sources */,
 				01C64D611E36015E00CC5E88 /* CustomLayer_CG.m in Sources */,
@@ -1633,6 +1651,7 @@
 				010BAA221E276DDF009E0ACE /* RootTabBarViewController.m in Sources */,
 				01B819E61EC2B6BD0042464C /* suanfa.c in Sources */,
 				01413B961E48A017004521FE /* FMDatabaseQueue.m in Sources */,
+				01B6E7121EC9835600DFD0D9 /* ClassModel.m in Sources */,
 				01EDC9AC1E7EAA21005FD15D /* MasonryViewController.m in Sources */,
 				01413B971E48A017004521FE /* FMResultSet.m in Sources */,
 				01CE35DA1E54B62200C082BB /* NSObject+Log.m in Sources */,
@@ -1650,6 +1669,7 @@
 				0183A9231E87A91C005D40DE /* TransitionListViewController.m in Sources */,
 				010BAA6C1E278209009E0ACE /* BaseTableViewVC.m in Sources */,
 				01A824671EC019E200C1BDDB /* MPlayerView.m in Sources */,
+				01B6E70F1EC9834D00DFD0D9 /* SchoolModel.m in Sources */,
 				01CE35F01E56B15300C082BB /* ArchiverSubModel.m in Sources */,
 				017CD9C21E978B5E00811B10 /* KVCViewController.m in Sources */,
 				01413B941E48A017004521FE /* FMDatabaseAdditions.m in Sources */,
@@ -1814,7 +1834,7 @@
 			baseConfigurationReference = 1F3D98718E44B94A2D89722F /* Pods-I'm a Coder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UY3VKHGENL;
+				DEVELOPMENT_TEAM = 599FJK8FBV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/I'm a Coder/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "I'm a Coder/Info.plist";
@@ -1829,7 +1849,7 @@
 			baseConfigurationReference = 88C21673B7503327DE7C04BA /* Pods-I'm a Coder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UY3VKHGENL;
+				DEVELOPMENT_TEAM = 599FJK8FBV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/I'm a Coder/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "I'm a Coder/Info.plist";

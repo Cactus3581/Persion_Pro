@@ -11,6 +11,10 @@
 #import "FMDatabaseQueueManager.h"
 #import "DataBaseModel.h"
 #import "BaseTableViewCell.h"
+#import "FMDBTools.h"
+
+#import "SchoolModel.h"
+#import "ClassModel.h"
 
 @interface DatabaseViewController () <UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 @property (nonatomic,assign) NSInteger i;
@@ -31,9 +35,113 @@
     [self.view addSubview:searchBar];
     self.tableView.frame =CGRectMake(0, CGRectGetMaxY(searchBar.frame)+40, K_width, K_height-(CGRectGetMaxY(searchBar.frame)+40));
     self.tableView.backgroundColor = [UIColor redColor];
+}
+
+- (void)MaskInViewBt_1 {
+//    self.i  = self.i+1;
+    NSNumber *score = [NSNumber numberWithInteger:self.i];
+    SchoolModel *model = [SchoolModel initializeWithName:@"一年级" TeacherName:@"张丽" StutentNumber:@34 BoyNumber:@20 GirlNumber:@14];
     
+    NSString * sql = [NSString stringWithFormat:@"INSERT INTO %@ (classId,className,teacherName,stutentNumber,boyNumber,girlNumber) VALUES (%ld,'%@','%@','%@','%@','%@')",TABLE_NAME_SCHOOL,(long)self.i,model.className,model.teacherName,model.stutentNumber,model.boyNumber,model.girlNumber];
+    
+    
+    NSString * sql1 = [NSString stringWithFormat:@"INSERT INTO %@ (classId,className,teacherName,stutentNumber,boyNumber,girlNumber) VALUES (%ld,'%@','%@','%@','%@','%@')",TABLE_NAME_SCHOOL,(long)self.i,@"2年级",model.teacherName,model.stutentNumber,model.boyNumber,model.girlNumber];
+    
+    NSString * sql2 = [NSString stringWithFormat:@"INSERT INTO %@ (classId,className,teacherName,stutentNumber,boyNumber,girlNumber) VALUES (%ld,'%@','%@','%@','%@','%@')",TABLE_NAME_SCHOOL,(long)self.i+400,@"2年级",model.teacherName,model.stutentNumber,model.boyNumber,model.girlNumber];
 
+#pragma mark - update-无事务-单条sql
+    /*
+     [[FMDBTools shareInstance] executeSQL:sql actionType:ST_DB_INSERT withBlock:^(BOOL bRet, FMResultSet *rs, NSString *msg) {
+     
+     }];
+     */
+    
+#pragma mark - update-无事务-数组sql
+    /*
+     [[FMDBTools shareInstance] executeUpdateSQLList:@[sql1,sql2] withBlock:^(BOOL bRet, NSString *msg) {
+     
+     }];
+     */
+    
+#pragma mark - update-事务-单条sql
+    /*
+     [[FMDBTools shareInstance] executeUpdateTransactionSql:sql2 withBlock:^(BOOL bRet, NSString *msg, BOOL *bRollback) {
+     
+     }];
+     */
+    
+#pragma mark - update-事务-数组sql
+    /*
+     [[FMDBTools shareInstance] executeUpdateTransactionSqlList:@[sql1,sql2] withBlock:^(BOOL bRet, NSString *msg, BOOL *bRollback) {
+     
+     }];
+     */
+    
+#pragma mark - quary-无事务-单条sql
+    /*
+     [[FMDBTools shareInstance] executeSQL:quarysql1 actionType:ST_DB_SELECT withBlock:^(BOOL bRet, FMResultSet *rs, NSString *msg) {
+     while ([rs next]) {
+     NSString *name = [rs stringForColumn:@"className"];
+     int classId = [rs intForColumn:@"classId"];
+     NSLog(@"ID: %d, name: %@",classId,name);
+     }
+     }];
+     */
 
+#pragma mark - quary-事务-单条sql
+    //    NSString * quarysql1 = [NSString stringWithFormat:@"select count (*) from %@ where classId >= 100",TABLE_NAME_SCHOOL];
+    NSString * quarysql1 = [NSString stringWithFormat:@"select * from %@ order by classId desc",TABLE_NAME_SCHOOL];
+    /*
+     quary:事务
+    [[FMDBTools shareInstance] executeQueryTransactionSql:quarysql1 withBlock:^(BOOL bRet, FMResultSet *rs, NSString *msg, BOOL *bRollback) {
+        while ([rs next]) {
+            NSString *name = [rs stringForColumn:@"name"];
+            int classId = [rs intForColumn:@"classId"];
+            NSLog(@"ID: %d, name: %@",classId,name);
+        }
+    }];
+     */
+
+    
+    /*
+     [FMDatabaseManager insertAction:model];
+     [FMDatabaseQueueManager insertAction:model];
+     */
+}
+
+- (void)MaskInViewBt_2 {
+    self.i  = self.i+1;
+    NSNumber *score = [NSNumber numberWithInteger:self.i];
+    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈4" Sex:@"男" Age:@18 Score:score];
+    /*
+     [FMDatabaseManager modifyAction:model];
+     [FMDatabaseQueueManager modifyAction:model];
+     */
+}
+
+- (void)MaskInViewBt_3 {
+    //删除数据后执行一次查询工作刷新表格
+    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈5" Sex:@"男" Age:@18 Score:@88];
+    /*
+     [FMDatabaseManager deleteAction:model];
+     [FMDatabaseQueueManager deleteAction:model];
+     */
+}
+
+- (void)MaskInViewBt_4 {
+    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈3" Sex:@"男" Age:@18 Score:@2];
+    /*
+     [FMDatabaseManager quaryAction_one:model];
+     [FMDatabaseQueueManager quaryAction_one:model];
+     */
+}
+
+- (void)MaskInViewBt_5
+{
+    /*
+     [FMDatabaseManager transaction];
+     [FMDatabaseQueueManager transactionByQueue];
+     */
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -80,60 +188,6 @@
 //
 //    [self.tableView reloadData];
 //}
-
-
-
-
-- (void)MaskInViewBt_1
-{
-    self.i  = self.i+1;
-    NSNumber *score = [NSNumber numberWithInteger:self.i];
-    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈8" Sex:@"男" Age:@23 Score:score];
-    
-//    [FMDatabaseManager insertAction:model];
-    [FMDatabaseQueueManager insertAction:model];
-    
-}
-
-- (void)MaskInViewBt_2
-{
-    
-    self.i  = self.i+1;
-    NSNumber *score = [NSNumber numberWithInteger:self.i];
-    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈4" Sex:@"男" Age:@18 Score:score];
-    
-//    [FMDatabaseManager modifyAction:model];
-    [FMDatabaseQueueManager modifyAction:model];
-    
-}
-
-- (void)MaskInViewBt_3
-{
-    //删除数据后执行一次查询工作刷新表格
-    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈5" Sex:@"男" Age:@18 Score:@88];
-    
-    //    [FMDatabaseManager deleteAction:model];
-    [FMDatabaseQueueManager deleteAction:model];
-    
-    
-}
-- (void)MaskInViewBt_4
-{
-    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈3" Sex:@"男" Age:@18 Score:@2];
-    
-    //    [FMDatabaseManager quaryAction_one:model];
-    [FMDatabaseQueueManager quaryAction_one:model];
-    
-    
-}
-- (void)MaskInViewBt_5
-{
-    
-    [FMDatabaseManager transaction];
-    //    [FMDatabaseQueueManager transactionByQueue];
-    
-    
-}
 
 // 获取这些目录路径的方法：
 - (void)creatPath

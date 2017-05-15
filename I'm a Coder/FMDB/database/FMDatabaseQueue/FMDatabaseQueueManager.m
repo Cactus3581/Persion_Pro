@@ -7,6 +7,7 @@
 //
 
 #import "FMDatabaseQueueManager.h"
+#import "FMDatabaseAdditions.h"
 static FMDatabaseQueue *sqlite = nil;
 
 @implementation FMDatabaseQueueManager
@@ -110,18 +111,32 @@ FMDatabase这个类是线程不安全的，如果在多个线程中同时使用�
         
 //        FMResultSet *result = [db executeQuery:@"SELECT store, name, age FROM STUDENT WHERE age > 25;"];
         FMResultSet *result = [db executeQuery:@"SELECT store, name, age FROM STUDENT WHERE age > ?;",@25];
-
-        
         while ([result next]) {
             float store = [result intForColumnIndex:0];
             NSString *name = [result stringForColumnIndex:1];
             int age = [result intForColumn:@"age"];
-            
             NSLog(@"ID: %.2f, name: %@, age: %zd", store, name, age);
         }
     }];
 }
 
++ (void)addColumn
+{
+//    //判断giveType字段是否存在
+//    if (![sqlite columnExists:@"giveType" inTableWithName:@"ChildDevice_Table"]) {
+//        
+//        [sqlite inDatabase:^(FMDatabase *db) {
+//            
+//            BOOL result = [db executeUpdate:@"ALTER TABLE ? ADD ? INTEGER",@"ChildDevice_Table", @"giveType"];
+//            // 判断是否SQL是否执行成功
+//            if (result) {
+//                NSLog(@"增加列成功");
+//            } else {
+//                NSLog(@"增加列失败");
+//            }
+//        }];
+//    }
+}
 
 //多线程事务
 + (void)transactionByQueue {

@@ -140,7 +140,7 @@ static FMDBTools *sharedManager=nil;
 - (void)alertTableWithName:(NSString *)tablename Column:(NSString *)column_name Parameter:(NSString *)parameter
 {
     
-    NSString *sql = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ %@",tablename,column_name,parameter];
+    NSString *sql = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ %@ default ''",tablename,column_name,parameter];
     
     [_dbQueue  inTransaction:^(FMDatabase *db, BOOL *rollback){
         //查询语句 需要返回记录集
@@ -155,6 +155,26 @@ static FMDBTools *sharedManager=nil;
     }];
 }
 
+
+- (void)addIndexWithName:(NSString *)tablename Column:(NSString *)column_name Index:(NSString *)index
+{
+    NSString *sql = [NSString stringWithFormat:@"create index %@ on %@ (%@) ",index,tablename,column_name];
+    
+    [_dbQueue  inTransaction:^(FMDatabase *db, BOOL *rollback){
+        //查询语句 需要返回记录集
+        
+        BOOL ret = [db executeUpdate:sql];
+        
+        if ([db hadError]) {
+            NSLog(@"executeQueryTransactionSql error %d:  %@",[db lastErrorCode],[db lastErrorMessage]);
+        }else{
+            
+        };
+    }];
+    
+    ;
+
+}
 
 // 根据查询到的model，删除／修改或者插入；不用事务，update，数组
 //根据查询结果 确定是更新还是新增操作，无事务处理，sqlList[0]查询select语句 sqList[1]update更新语句 sqlList[2] insert into 插入语句

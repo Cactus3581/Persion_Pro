@@ -76,6 +76,9 @@
      
      }];
      */
+    [[FMDBTools shareInstance] executeUpdateTransactionSqlList:@[sql1,sql2] withBlock:^(BOOL bRet, NSString *msg, BOOL *bRollback) {
+        
+    }];
     
 #pragma mark - quary-无事务-单条sql
     /*
@@ -104,7 +107,7 @@
 ////        }
 //    }];
     
-    [[FMDBTools shareInstance] alertTableWithName:TABLE_NAME_SCHOOL Column:@"rank" Parameter:@"text"];
+//    [[FMDBTools shareInstance] alertTableWithName:TABLE_NAME_SCHOOL Column:@"rank" Parameter:@"text"];
 
     
     /*
@@ -117,6 +120,9 @@
     self.i  = self.i+1;
     NSNumber *score = [NSNumber numberWithInteger:self.i];
     DataBaseModel *model = [DataBaseModel initializeWithName:@"哈4" Sex:@"男" Age:@18 Score:score];
+    [[FMDBTools shareInstance] addIndexWithName:TABLE_NAME_SCHOOL Column:@"className" Index:@"Pindex"];
+
+    
     /*
      [FMDatabaseManager modifyAction:model];
      [FMDatabaseQueueManager modifyAction:model];

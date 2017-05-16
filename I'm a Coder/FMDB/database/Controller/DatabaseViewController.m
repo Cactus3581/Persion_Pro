@@ -93,14 +93,18 @@
     NSString * quarysql1 = [NSString stringWithFormat:@"select * from %@ order by classId desc",TABLE_NAME_SCHOOL];
     /*
      quary:事务
-    [[FMDBTools shareInstance] executeQueryTransactionSql:quarysql1 withBlock:^(BOOL bRet, FMResultSet *rs, NSString *msg, BOOL *bRollback) {
-        while ([rs next]) {
-            NSString *name = [rs stringForColumn:@"name"];
-            int classId = [rs intForColumn:@"classId"];
-            NSLog(@"ID: %d, name: %@",classId,name);
-        }
-    }];
+
      */
+    
+//    [[FMDBTools shareInstance] executeQueryTransactionSql:quarysql1 withBlock:^(BOOL bRet, FMResultSet *rs, NSString *msg, BOOL *bRollback) {
+////        while ([rs next]) {
+////            NSString *name = [rs stringForColumn:@"name"];
+////            int classId = [rs intForColumn:@"classId"];
+////            NSLog(@"ID: %d, name: %@",classId,name);
+////        }
+//    }];
+    
+    [[FMDBTools shareInstance] alertTableWithName:TABLE_NAME_SCHOOL Column:@"rank" Parameter:@"text"];
 
     
     /*

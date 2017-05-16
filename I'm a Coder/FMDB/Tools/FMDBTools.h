@@ -50,4 +50,9 @@ typedef enum ST_DB_ActionType
  */
 -(void)executeQueryTransactionSql:(NSString *)sql withBlock:(void(^)(BOOL bRet,FMResultSet *rs, NSString *msg, BOOL *bRollback))block ;
 
+/*
+ 操作列
+ */
+- (void)alertTableWithName:(NSString *)tablename Column:(NSString *)column_name Parameter:(NSString *)parameter;
+
 @end

@@ -132,8 +132,28 @@ static FMDBTools *sharedManager=nil;
             block(YES,rs,nil,rollback);
         };
     }];
+
+    
+
 }
 
+- (void)alertTableWithName:(NSString *)tablename Column:(NSString *)column_name Parameter:(NSString *)parameter
+{
+    
+    NSString *sql = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ %@",tablename,column_name,parameter];
+    
+    [_dbQueue  inTransaction:^(FMDatabase *db, BOOL *rollback){
+        //查询语句 需要返回记录集
+        
+        BOOL ret = [db executeUpdate:sql];
+
+        if ([db hadError]) {
+            NSLog(@"executeQueryTransactionSql error %d:  %@",[db lastErrorCode],[db lastErrorMessage]);
+        }else{
+            
+        };
+    }];
+}
 
 
 // 根据查询到的model，删除／修改或者插入；不用事务，update，数组

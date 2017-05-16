@@ -2,4 +2,159 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&apos;m a Coder/FMDB/Tools/FMDBTools.m"
+            timestampString = "516595639.861715"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "-alertTableWithName:Column:Parameter:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__49-[FMDBTools alertTableWithName:Column:Parameter:]_block_invoke"
+                  moduleName = "I&apos;m a Coder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaruzhen/Documents/I&apos;m%20a%20Coder/I&apos;m%20a%20Coder/FMDB/Tools/FMDBTools.m"
+                  timestampString = "516595639.937362"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "251">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.75"
+                  moduleName = "I&apos;m a Coder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaruzhen/Documents/I&apos;m%20a%20Coder/I&apos;m%20a%20Coder/FMDB/Tools/FMDBTools.m"
+                  timestampString = "516595639.940078"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.76"
+                  moduleName = "I&apos;m a Coder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaruzhen/Documents/I&apos;m%20a%20Coder/I&apos;m%20a%20Coder/FMDB/Tools/FMDBTools.m"
+                  timestampString = "516595639.943687"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&apos;m a Coder/FMDB/Tools/FMDBTools.m"
+            timestampString = "516595639.861715"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "-alertTableWithName:Column:Parameter:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&apos;m a Coder/FMDB/Tools/FMDBTools.m"
+            timestampString = "516595355.061391"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-alertTableWithName:Column:Parameter:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[FMDBTools alertTableWithName:Column:Parameter:]"
+                  moduleName = "I&apos;m a Coder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaruzhen/Documents/I&apos;m%20a%20Coder/I&apos;m%20a%20Coder/FMDB/Tools/FMDBTools.m"
+                  timestampString = "516595639.972816"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "195">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__49-[FMDBTools alertTableWithName:Column:Parameter:]_block_invoke"
+                  moduleName = "I&apos;m a Coder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xiaruzhen/Documents/I&apos;m%20a%20Coder/I&apos;m%20a%20Coder/FMDB/Tools/FMDBTools.m"
+                  timestampString = "516595639.978266"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&apos;m a Coder/FMDB/Tools/FMDBTools.m"
+            timestampString = "516595485.807466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "-init"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -13,7 +13,7 @@ static FMDBTools *sharedManager=nil;
 
 @implementation FMDBTools
 
-+ (FMDBTools *)shareInstance{
++ (FMDBTools *)shareInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedManager = [[FMDBTools alloc]init];
@@ -21,23 +21,97 @@ static FMDBTools *sharedManager=nil;
     return sharedManager;
 }
 
-- (instancetype)init{
+- (instancetype)init {
     if (self = [super init]) {
-        NSFileManager * fmManger = [NSFileManager defaultManager];
         NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-        NSString *dbPath = [path stringByAppendingPathComponent:DB_NAME];        
-        if (![fmManger fileExistsAtPath:dbPath]) {
-            [fmManger createFileAtPath:dbPath contents:nil attributes:nil];
-        }
+        NSString *dbPath = [path stringByAppendingPathComponent:DB_NAME];
         _dbQueue  = [FMDatabaseQueue databaseQueueWithPath:dbPath];
-        // 1-更新问题
-//        [self updateDbVersion:DB_NEWVERSION];
-        [self executeSQL:DB_CREATE_SCHOOL actionType:ST_DB_UPDATE withBlock:^(BOOL bRet, FMResultSet *rs, NSString *msg) {
-            NSLog(@"%d",bRet);
-            
-        }];
+        [self configueDBVersion];
     }
     return self;
+}
+
+/*
+ *  初始化表结构
+ */
+- (void)configueDBVersion {
+    if (![self getDBVerison]) {
+        //系统之前没有数据库 新建立表。
+        [self createTablesWithName:DB_CREATE_SCHOOLV3];
+    }else{
+        //表结构升级迭代
+        [self updateDBVersion];
+    }
+}
+
+/*
+ *  创建新表
+ */
+- (void)createTablesWithName:(NSString *)tableName{
+    [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        @try {
+            [db executeUpdate:tableName];
+            //            [db executeUpdate:DB_CREATE_SCHOOLV3];
+            
+        }
+        @catch (NSException *exception) {
+            *rollback = YES;
+        }
+    }];
+    [self saveVersion:SchoolDBVersionV3];
+}
+
+/*
+ *  表结构升级迭代
+ */
+- (void)updateDBVersion {
+    SchoolDBVersion ver = [self getDBVerison];
+    switch (ver) {
+        case SchoolDBVersionV1: {
+            //            NSString *sql =[NSString stringWithFormat:@"insert into %@(classId,className,teacherName,stutentNumber,boyNumber,girlNumber)  select classId,className,teacherName,stutentNumber,boyNumber,girlNumber from temp%@",TABLE_NAME_SCHOOL,TABLE_NAME_SCHOOL];
+            //            [self migrationWithVersion:SchoolDBVersionV2 CreateSql:DB_CREATE_SCHOOLV2 MigrationSql:sql];
+        }
+        case SchoolDBVersionV2: {
+            NSString *sql =[NSString stringWithFormat:@"insert into %@(classId,className,teacherName,stutentNumber,girlNumber)  select classId,className,teacherName,stutentNumber,girlNumber from temp%@",TABLE_NAME_SCHOOL,TABLE_NAME_SCHOOL];
+            [self migrationWithVersion:SchoolDBVersionV3 CreateSql:DB_CREATE_SCHOOLV3 MigrationSql:sql];
+        }
+        case SchoolDBVersionV3: {
+            //已经是最新的表了，不需要升级
+        }
+            break;
+        default:
+            break;
+    }
+    
+}
+
+/*
+ * 数据迁移
+ */
+- (void)migrationWithVersion:(NSInteger)version CreateSql:(NSString *)createSql MigrationSql:(NSString *)migrationSql {
+    
+    [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        @try {
+            //将原始表名T1 修改为 tempT1
+            NSString *renameString = [NSString stringWithFormat:@"alter table %@ rename to temp%@",TABLE_NAME_SCHOOL,TABLE_NAME_SCHOOL];
+            [db executeUpdate:renameString];
+            
+            //创建新表T1（V2版本的新表创建）
+            [db executeUpdate:createSql];
+            
+            //迁移数据
+            [db executeUpdate:migrationSql];
+            
+            //删除tempT1临时表
+            NSString *dropTableStr = [NSString stringWithFormat:@"drop table temp%@",TABLE_NAME_SCHOOL];
+            [db executeUpdate:dropTableStr];
+        }
+        @catch (NSException *exception) {
+            *rollback = YES;
+        }
+    }];
+    
+    [self saveVersion:version];
 }
 
 /*
@@ -57,7 +131,7 @@ static FMDBTools *sharedManager=nil;
         }else{
             //更新操作 只关心操作是否执行成功，不关心记录集  返回布尔值  无执行结果
             BOOL ret = [db executeUpdate:sqlStr];
-            if ([db hadError]) {
+            if (!ret) {
                 block(NO,nil,[db lastErrorMessage]);
                 NSLog(@"executeSQL_update error %d:  %@",[db lastErrorCode],[db lastErrorMessage]);
             }else{
@@ -75,7 +149,7 @@ static FMDBTools *sharedManager=nil;
     [_dbQueue inDatabase:^(FMDatabase *db) {
         for (NSString * sql in sqlStrList) {
             bRet = [db executeUpdate:sql];
-            if ([db hadError]) {
+            if (!bRet) {
                 block(bRet,[db lastErrorMessage]);
                 NSLog(@"executeUpdateSQLList Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
                 break;
@@ -86,15 +160,16 @@ static FMDBTools *sharedManager=nil;
 }
 
 /*
- 事务；单条sql；update
+ 事务；单条sql；update(有没有必要？)
  */
 -(void)executeUpdateTransactionSql:(NSString *)sql withBlock:(void(^)(BOOL bRet, NSString *msg, BOOL *bRollback))block {
     __block BOOL bRet = NO;
     [_dbQueue  inTransaction:^(FMDatabase *db, BOOL *rollback){
         bRet = [db executeUpdate:sql];
-        if ([db hadError]) {
+        if (!bRet) {
             block(bRet, [db lastErrorMessage], rollback);
             NSLog(@"executeUpdateTransactionSql Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
+            *rollback = YES;
         }
         block(bRet, nil, rollback);
     }];
@@ -108,9 +183,10 @@ static FMDBTools *sharedManager=nil;
     [_dbQueue  inTransaction:^(FMDatabase *db, BOOL *rollback){
         for (NSString *sqlStr in sqlStrArr) {
             bRet = [db executeUpdate:sqlStr];
-            if ([db hadError]) {
+            if (!bRet) {
                 block(bRet, [db lastErrorMessage], rollback);
                 NSLog(@"executeUpdateTransactionSqlList Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
+                *rollback = YES;
                 break;
             }
         }
@@ -119,217 +195,57 @@ static FMDBTools *sharedManager=nil;
 }
 
 /*
- 事务；单条sql；query
+ 增加字段
  */
--(void)executeQueryTransactionSql:(NSString *)sql withBlock:(void(^)(BOOL bRet,FMResultSet *rs, NSString *msg, BOOL *bRollback))block {
-    [_dbQueue  inTransaction:^(FMDatabase *db, BOOL *rollback){
-        //查询语句 需要返回记录集
-        FMResultSet * rs = [db executeQuery:sql];
-        if ([db hadError]) {
-            block(NO,rs,[db lastErrorMessage],rollback);
-            NSLog(@"executeQueryTransactionSql error %d:  %@",[db lastErrorCode],[db lastErrorMessage]);
-        }else{
-            block(YES,rs,nil,rollback);
-        };
-    }];
-
-    
-
-}
-
-- (void)alertTableWithName:(NSString *)tablename Column:(NSString *)column_name Parameter:(NSString *)parameter
-{
-    
-    NSString *sql = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ %@ default ''",tablename,column_name,parameter];
+- (void)alertTableWithName:(NSString *)tablename Column:(NSString *)column_name Parameter:(NSString *)parameter {
+    NSString *sql = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ %@",tablename,column_name,parameter];
     [_dbQueue  inTransaction:^(FMDatabase *db, BOOL *rollback){
         //查询语句 需要返回记录集
         BOOL ret = [db executeUpdate:sql];
-
-        if ([db hadError]) {
+        
+        if (!ret) {
             NSLog(@"executeQueryTransactionSql error %d:  %@",[db lastErrorCode],[db lastErrorMessage]);
+            *rollback = YES;
+            return ;// 退出了这个block
         }else{
             
         };
     }];
 }
 
-
-- (void)addIndexWithName:(NSString *)tablename Column:(NSString *)column_name Index:(NSString *)index
-{
+/*
+ 字段创建索引
+ */
+- (void)addIndexWithName:(NSString *)tablename Column:(NSString *)column_name Index:(NSString *)index {
     NSString *sql = [NSString stringWithFormat:@"create index %@ on %@ (%@) ",index,tablename,column_name];
-    
     [_dbQueue  inTransaction:^(FMDatabase *db, BOOL *rollback){
         //查询语句 需要返回记录集
-        
         BOOL ret = [db executeUpdate:sql];
-        
-        if ([db hadError]) {
+        if (!ret) {
             NSLog(@"executeQueryTransactionSql error %d:  %@",[db lastErrorCode],[db lastErrorMessage]);
+            *rollback = YES;
+            return ;// 退出了这个block
         }else{
             
         };
     }];
-    
-    ;
-
 }
 
-// 根据查询到的model，删除／修改或者插入；不用事务，update，数组
-//根据查询结果 确定是更新还是新增操作，无事务处理，sqlList[0]查询select语句 sqList[1]update更新语句 sqlList[2] insert into 插入语句
-- (void)executeRelevanceSql:(NSArray *)sqlList withBlock:(void(^)(BOOL ret,NSString * errMsg))block{
-    __block BOOL ret;
-    [_dbQueue inDatabase:^(FMDatabase *db) {
-        FMResultSet * rs = [db executeQuery:sqlList[0]];
-        if ([db hadError]) {
-            block(NO,[db lastErrorMessage]);
-            NSLog(@"da_error_%@",[db lastErrorMessage]);
-        }
-        int nCount = 0;
-        if ([rs next]) {
-            //获取查询数据的个数
-            nCount = [rs intForColumnIndex:0];
-        }
-        [rs close];
-        
-        NSString * nextSqlString = nil;
-        if (nCount > 0) {
-            //查询到了结果  执行update操作
-            nextSqlString = sqlList[1];
-        }else{
-            //查询无结果  执行 insert into 操作
-            nextSqlString = sqlList[2];
-        }
-        
-        ret = [db executeUpdate:nextSqlString];
-        if ([db hadError]) {
-            block(NO,[db lastErrorMessage]);
-            NSLog(@"da_error_%@",[db lastErrorMessage]);
-        }else{
-            block(ret, nil);
-        }
-    }];
-    
-}
-
-// 根据查询到的model，删除／修改或者插入
-//用事务，update，数组。根据查询结果 确定是更新还是新增操作，sqlList 是一个二维数组，每一个成员包含三个sql语句，分别是查询，更新，插入，并且根据查询结果返回是执行更新 还是 插入操作
-//sql语句数组，sqlArr[i][0]：查询语句；sqlArr[i][1]：update语句；sqlArr[i][2]：insert into语句
-- (void)executeDbQueue2RelevanceTransactionSqlList:(NSArray *)sqlList withBlock:(void(^)(BOOL bRet, NSString *msg, BOOL *bRollback))block{
-    __block BOOL ret = NO;
-    [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
-        for (NSArray * singleSqlList in sqlList ) {
-            FMResultSet * rs = [db executeQuery:singleSqlList[0]];
-            if ([db hadError]) {
-                block(NO,[db lastErrorMessage],rollback);
-                NSLog(@"da_error_%@",[db lastErrorMessage]);
-            }else{
-                int nCount = 0;
-                while ([rs next]){
-                    nCount  = [rs intForColumnIndex:0];
-                }
-                [rs close];
-                
-                NSString * nextSqlString = nil;
-                if (nCount > 0){
-                    //执行更新
-                    nextSqlString = singleSqlList[1];
-                }
-                else{
-                    //执行插入
-                    nextSqlString = singleSqlList[2];
-                }
-                
-                ret = [db executeUpdate:nextSqlString];
-                if ([db hadError])
-                {
-                    block(NO, [db lastErrorMessage], rollback);
-                    NSLog(@"executeSql Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
-                }
-            }
-        }
-        block(ret, nil, rollback);
-    }];
-}
-
-//更新数据库
-//注意：因为队列是串行执行的，因此inDatabase的block并不能嵌套使用，这样会导致错误。
-
-- (void)updateDbVersion:(NSInteger)newVersion{
-    //执行数据库更新
-    [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
-        [self getCurrentDbVersion:db withBlock:^(BOOL bRet, int version) {
-            if (bRet && (newVersion > version || newVersion == 0) ) {
-                //如果本地数据库版本需要升级
-                [self executeUpdateSQLList:[self setSqliArray] withBlock:^(BOOL bRet, NSString *msg) {
-                    if (bRet) {
-                        //设置数据库版本号
-                        [self setNewDbVersion:newVersion db:db withBlock:^(BOOL bRet) {
-                            if (bRet)
-                            {
-                                NSLog(@"set new db version successfully!");
-                            }
-                        }];
-                    }
-                }];
-            }
-        }];
-    }];
-}
-
-- (void)getCurrentDbVersion:(FMDatabase *)db withBlock:(void(^)(BOOL bRet,int version))block{
-    NSString * sql = [NSString stringWithFormat:@"PRAGMA user_version"];
-    FMResultSet * rs = [db executeQuery:sql];
-    int nVersion = 0;
-    while ([rs next]) {
-        nVersion = [rs intForColumn:@"user_version"];
-    }
-    [rs close];
-    if ([db hadError]) {
-        NSLog(@"get db version Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
-        block(NO,-1);
-        return;
-    }
-    block(YES,nVersion);
-}
-
--(void)setNewDbVersion:(NSInteger)newVersion withBlock:(void(^)(BOOL bRet))block
+/*
+ 存取版本号
+ */
+- (void)saveVersion:(NSInteger) version
 {
-    [_dbQueue inDatabase:^(FMDatabase *db) {
-        
-        NSString *sql = [NSString stringWithFormat:@"PRAGMA user_version = %ld",(long)newVersion];
-        
-        BOOL ret = [db executeUpdate:sql];
-        
-        if ([db hadError])
-        {
-            NSLog(@"get db version Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
-        }
-        
-        block(ret);
-    }];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:version] forKey:SchoolDBVersionNum];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
--(void)setNewDbVersion:(NSInteger)newVersion db:(FMDatabase *)db withBlock:(void(^)(BOOL bRet))block
-{
-    NSString *sql = [NSString stringWithFormat:@"PRAGMA user_version = %ld",(long)newVersion];
-    
-    BOOL ret = [db executeUpdate:sql];
-    
-    if ([db hadError])
-    {
-        NSLog(@"get db version Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
-    }
-    
-    block(ret);
+/*
+ 获取版本号
+ */
+- (NSInteger )getDBVerison {
+    SchoolDBVersion ver = [[[NSUserDefaults standardUserDefaults] objectForKey:SchoolDBVersionNum] integerValue];
+    return ver;
 }
-
-//插入创建表数组
-- (NSArray *)setSqliArray{
-    NSMutableArray * sqlList = @[].mutableCopy;
-    [sqlList addObject:DB_CREATE_SCHOOL];
-    return sqlList;
-}
-
 
 @end
-

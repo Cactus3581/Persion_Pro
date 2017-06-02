@@ -30,24 +30,27 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.i = 1;
-//    [self creatBT];
+    [self creatBT];
     // 模糊查询
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 64, K_width, 44)];
     searchBar.delegate = self;
-//    [self.view addSubview:searchBar];
-//    self.tableView.frame =CGRectMake(0, CGRectGetMaxY(searchBar.frame)+40, K_width, K_height-(CGRectGetMaxY(searchBar.frame)+40));
-//    self.tableView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:searchBar];
+    self.tableView.frame =CGRectMake(0, CGRectGetMaxY(searchBar.frame)+40, K_width, K_height-(CGRectGetMaxY(searchBar.frame)+40));
+    self.tableView.backgroundColor = [UIColor redColor];
+    
+    [FMDBTools shareInstance];
     
     
-//    [self.view addSubview:self.slideView];
-//    [self.slideView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.width.equalTo(self.view.mas_width);
-//        make.top.equalTo(self.view).offset(100);
-//        make.centerX.equalTo(self.view.mas_centerX);
-//        make.height.mas_equalTo(92/2.0);
-//    }];
-//    
-//    self.slideView.goodsArray =@[@"熊出没",@"死神来了19",@"钢铁侠0",@"海上钢琴师",@"最后一只恐龙",@"苍井空",@"假如爱有天意",@"好好先生",@"特种部队",@"生化危机",@"生化危机"];
+    
+    //    [self.view addSubview:self.slideView];
+    //    [self.slideView mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.width.equalTo(self.view.mas_width);
+    //        make.top.equalTo(self.view).offset(100);
+    //        make.centerX.equalTo(self.view.mas_centerX);
+    //        make.height.mas_equalTo(92/2.0);
+    //    }];
+    //
+    //    self.slideView.goodsArray =@[@"熊出没",@"死神来了19",@"钢铁侠0",@"海上钢琴师",@"最后一只恐龙",@"苍井空",@"假如爱有天意",@"好好先生",@"特种部队",@"生化危机",@"生化危机"];
     
     NSMutableArray *array = [NSMutableArray arrayWithObjects:
                              [NSDictionary dictionaryWithObjectsAndKeys:@"Obj0", [NSNumber numberWithInt:0], nil],
@@ -71,7 +74,6 @@
     }];
     
     NSLog(@"%@",resultArray);
-
 }
 
 - (KSSlideView *)slideView
@@ -117,14 +119,19 @@
      */
     
 #pragma mark - update-事务-数组sql
-    /*
-     [[FMDBTools shareInstance] executeUpdateTransactionSqlList:@[sql1,sql2] withBlock:^(BOOL bRet, NSString *msg, BOOL *bRollback) {
+    
+    for (int i = 0; i<5000; i++) {
+        NSString * sqlopr = [NSString stringWithFormat:@"INSERT INTO %@ (classId,className,teacherName,stutentNumber,boyNumber,girlNumber) VALUES (%d,'%@','%@','%d','%d','%d')",TABLE_NAME_SCHOOL,i,[NSString stringWithFormat:@"%d年级",i+1],model.teacherName,i+100,i,5000-i];
+        [[FMDBTools shareInstance] executeUpdateTransactionSql:sqlopr withBlock:^(BOOL bRet, NSString *msg, BOOL *bRollback) {
+            
+        }];
+    }
+    
+
      
-     }];
-     */
-    [[FMDBTools shareInstance] executeUpdateTransactionSqlList:@[sql1,sql2] withBlock:^(BOOL bRet, NSString *msg, BOOL *bRollback) {
-        
-    }];
+//    [[FMDBTools shareInstance] executeUpdateTransactionSqlList:@[sql1,sql2] withBlock:^(BOOL bRet, NSString *msg, BOOL *bRollback) {
+//        
+//    }];
     
 #pragma mark - quary-无事务-单条sql
     /*
@@ -139,18 +146,20 @@
 
 #pragma mark - quary-事务-单条sql
     //    NSString * quarysql1 = [NSString stringWithFormat:@"select count (*) from %@ where classId >= 100",TABLE_NAME_SCHOOL];
-    NSString * quarysql1 = [NSString stringWithFormat:@"select * from %@ order by classId desc",TABLE_NAME_SCHOOL];
+    NSString * quarysql1 = [NSString stringWithFormat:@"select * from %@ order by className desc",TABLE_NAME_SCHOOL];
     /*
      quary:事务
 
      */
     
 //    [[FMDBTools shareInstance] executeQueryTransactionSql:quarysql1 withBlock:^(BOOL bRet, FMResultSet *rs, NSString *msg, BOOL *bRollback) {
-////        while ([rs next]) {
-////            NSString *name = [rs stringForColumn:@"name"];
-////            int classId = [rs intForColumn:@"classId"];
-////            NSLog(@"ID: %d, name: %@",classId,name);
-////        }
+//        while ([rs next]) {
+//            NSString *className = [rs stringForColumn:@"className"];
+//            NSString *teacherName = [rs stringForColumn:@"teacherName"];
+//
+//            int classId = [rs intForColumn:@"classId"];
+//            NSLog(@"ID: %d, name: %@",classId,className,teacherName);
+//        }
 //    }];
     
 //    [[FMDBTools shareInstance] alertTableWithName:TABLE_NAME_SCHOOL Column:@"rank" Parameter:@"text"];
@@ -163,11 +172,21 @@
 }
 
 - (void)MaskInViewBt_2 {
-    self.i  = self.i+1;
-    NSNumber *score = [NSNumber numberWithInteger:self.i];
-    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈4" Sex:@"男" Age:@18 Score:score];
-    [[FMDBTools shareInstance] addIndexWithName:TABLE_NAME_SCHOOL Column:@"className" Index:@"Pindex"];
+//    [[FMDBTools shareInstance] addIndexWithName:TABLE_NAME_SCHOOL Column:@"className" Index:@"Pindex"];
+    
+    NSString * quarysql1 = [NSString stringWithFormat:@"select * from %@ order by className desc",TABLE_NAME_SCHOOL];
 
+    
+     [[FMDBTools shareInstance] executeSQL:quarysql1 actionType:ST_DB_SELECT withBlock:^(BOOL bRet, FMResultSet *rs, NSString *msg) {
+         while ([rs next]) {
+             NSString *className = [rs stringForColumn:@"className"];
+             NSString *teacherName = [rs stringForColumn:@"teacherName"];
+             
+             int classId = [rs intForColumn:@"classId"];
+             NSLog(@"ID: %d, name: %@, teacherName: %@",classId,className,teacherName);
+         }
+     
+     }];
     
     /*
      [FMDatabaseManager modifyAction:model];
@@ -176,8 +195,10 @@
 }
 
 - (void)MaskInViewBt_3 {
-    //删除数据后执行一次查询工作刷新表格
-    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈5" Sex:@"男" Age:@18 Score:@88];
+    
+    [[FMDBTools shareInstance] alertTableWithName:TABLE_NAME_SCHOOL Column:@"rank" Parameter:@"text"];
+
+
     /*
      [FMDatabaseManager deleteAction:model];
      [FMDatabaseQueueManager deleteAction:model];
@@ -186,6 +207,9 @@
 
 - (void)MaskInViewBt_4 {
     DataBaseModel *model = [DataBaseModel initializeWithName:@"哈3" Sex:@"男" Age:@18 Score:@2];
+    NSLog(@"%ld",[[FMDBTools shareInstance] getDBVerison]);
+
+    
     /*
      [FMDatabaseManager quaryAction_one:model];
      [FMDatabaseQueueManager quaryAction_one:model];

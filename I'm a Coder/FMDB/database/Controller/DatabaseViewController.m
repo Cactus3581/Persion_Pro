@@ -15,10 +15,12 @@
 
 #import "SchoolModel.h"
 #import "ClassModel.h"
+#import "KSSlideView.h"
 
 @interface DatabaseViewController () <UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 @property (nonatomic,assign) NSInteger i;
 @property (nonatomic,strong) NSMutableArray *array;
+@property (nonatomic,strong) KSSlideView *slideView;
 
 @end
 
@@ -28,14 +30,58 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.i = 1;
-    [self creatBT];
+//    [self creatBT];
     // 模糊查询
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 64, K_width, 44)];
     searchBar.delegate = self;
-    [self.view addSubview:searchBar];
-    self.tableView.frame =CGRectMake(0, CGRectGetMaxY(searchBar.frame)+40, K_width, K_height-(CGRectGetMaxY(searchBar.frame)+40));
-    self.tableView.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:searchBar];
+//    self.tableView.frame =CGRectMake(0, CGRectGetMaxY(searchBar.frame)+40, K_width, K_height-(CGRectGetMaxY(searchBar.frame)+40));
+//    self.tableView.backgroundColor = [UIColor redColor];
+    
+    
+//    [self.view addSubview:self.slideView];
+//    [self.slideView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.width.equalTo(self.view.mas_width);
+//        make.top.equalTo(self.view).offset(100);
+//        make.centerX.equalTo(self.view.mas_centerX);
+//        make.height.mas_equalTo(92/2.0);
+//    }];
+//    
+//    self.slideView.goodsArray =@[@"熊出没",@"死神来了19",@"钢铁侠0",@"海上钢琴师",@"最后一只恐龙",@"苍井空",@"假如爱有天意",@"好好先生",@"特种部队",@"生化危机",@"生化危机"];
+    
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj0", [NSNumber numberWithInt:0], nil],
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj5", [NSNumber numberWithInt:5], nil],
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj2", [NSNumber numberWithInt:2], nil],
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj3", [NSNumber numberWithInt:3], nil],
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj1", [NSNumber numberWithInt:1], nil],
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj4", [NSNumber numberWithInt:4], nil], nil];
+    
+    //    NSArray *resultArray = [array sortedArrayUsingSelector:@selector(compare:)];
+    
+    NSArray *resultArray = [array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        
+        NSNumber *number1 = [[obj1 allKeys] objectAtIndex:0];
+        NSNumber *number2 = [[obj2 allKeys] objectAtIndex:0];
+        
+        NSComparisonResult result = [number1 compare:number2];
+        
+        return result == NSOrderedDescending; // 升序
+        //        return result == NSOrderedAscending;  // 降序
+    }];
+    
+    NSLog(@"%@",resultArray);
+
 }
+
+- (KSSlideView *)slideView
+{
+    if (!_slideView) {
+        _slideView  = [[KSSlideView alloc]initWithSelectedColor:1 UnselectedColor:66 Cornus:46/2 LabelFont:11 TagEdge:15];
+    }
+    return _slideView;
+}
+
 
 - (void)MaskInViewBt_1 {
 //    self.i  = self.i+1;

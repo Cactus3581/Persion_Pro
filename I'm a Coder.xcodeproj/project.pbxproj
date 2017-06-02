@@ -30,6 +30,8 @@
 		010BAA8C1E2789B6009E0ACE /* CustomDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 010BAA8B1E2789B6009E0ACE /* CustomDrawView.m */; };
 		010BAA8F1E278AD6009E0ACE /* PathViewByBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 010BAA8E1E278AD6009E0ACE /* PathViewByBezier.m */; };
 		010BAA941E27A315009E0ACE /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010BAA931E27A315009E0ACE /* BaseModel.m */; };
+		011B0FC51ED2851C00643227 /* KSSlideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B0FC21ED2851C00643227 /* KSSlideCell.m */; };
+		011B0FC61ED2851C00643227 /* KSSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B0FC41ED2851C00643227 /* KSSlideView.m */; };
 		01413B931E48A017004521FE /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 01413B881E48A017004521FE /* FMDatabase.m */; };
 		01413B941E48A017004521FE /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 01413B8A1E48A017004521FE /* FMDatabaseAdditions.m */; };
 		01413B951E48A017004521FE /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01413B8C1E48A017004521FE /* FMDatabasePool.m */; };
@@ -55,6 +57,10 @@
 		0183A92D1E87ABCE005D40DE /* MacicViewController_one.m in Sources */ = {isa = PBXBuildFile; fileRef = 0183A92C1E87ABCE005D40DE /* MacicViewController_one.m */; };
 		0183A9301E87AF45005D40DE /* BaseFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0183A92F1E87AF45005D40DE /* BaseFromViewController.m */; };
 		0183A9331E87AF50005D40DE /* BaseToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0183A9321E87AF50005D40DE /* BaseToViewController.m */; };
+		01877C441EDF123C00C86202 /* ZYProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C411EDF123C00C86202 /* ZYProgressBar.m */; };
+		01877C451EDF123C00C86202 /* ZYProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C431EDF123C00C86202 /* ZYProgressIndicator.m */; };
+		01877C501EDF225200C86202 /* KSProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C4D1EDF225200C86202 /* KSProgressIndicatorView.m */; };
+		01877C511EDF225200C86202 /* KSProgressNumberBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C4F1EDF225200C86202 /* KSProgressNumberBar.m */; };
 		01A580BB1EC55F3D00C426A0 /* FMDBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A580BA1EC55F3D00C426A0 /* FMDBTools.m */; };
 		01A824661EC019E200C1BDDB /* KSAlertImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A824631EC019E200C1BDDB /* KSAlertImageView.m */; };
 		01A824671EC019E200C1BDDB /* MPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A824651EC019E200C1BDDB /* MPlayerView.m */; };
@@ -161,6 +167,10 @@
 		010BAA911E279F75009E0ACE /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		010BAA921E27A315009E0ACE /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
 		010BAA931E27A315009E0ACE /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		011B0FC11ED2851C00643227 /* KSSlideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSSlideCell.h; sourceTree = "<group>"; };
+		011B0FC21ED2851C00643227 /* KSSlideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSlideCell.m; sourceTree = "<group>"; };
+		011B0FC31ED2851C00643227 /* KSSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSSlideView.h; sourceTree = "<group>"; };
+		011B0FC41ED2851C00643227 /* KSSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSlideView.m; sourceTree = "<group>"; };
 		01413B871E48A017004521FE /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		01413B881E48A017004521FE /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		01413B891E48A017004521FE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -212,6 +222,14 @@
 		0183A92F1E87AF45005D40DE /* BaseFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseFromViewController.m; sourceTree = "<group>"; };
 		0183A9311E87AF50005D40DE /* BaseToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseToViewController.h; sourceTree = "<group>"; };
 		0183A9321E87AF50005D40DE /* BaseToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseToViewController.m; sourceTree = "<group>"; };
+		01877C401EDF123C00C86202 /* ZYProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYProgressBar.h; sourceTree = "<group>"; };
+		01877C411EDF123C00C86202 /* ZYProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYProgressBar.m; sourceTree = "<group>"; };
+		01877C421EDF123C00C86202 /* ZYProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYProgressIndicator.h; sourceTree = "<group>"; };
+		01877C431EDF123C00C86202 /* ZYProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYProgressIndicator.m; sourceTree = "<group>"; };
+		01877C4C1EDF225200C86202 /* KSProgressIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSProgressIndicatorView.h; sourceTree = "<group>"; };
+		01877C4D1EDF225200C86202 /* KSProgressIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSProgressIndicatorView.m; sourceTree = "<group>"; };
+		01877C4E1EDF225200C86202 /* KSProgressNumberBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSProgressNumberBar.h; sourceTree = "<group>"; };
+		01877C4F1EDF225200C86202 /* KSProgressNumberBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSProgressNumberBar.m; sourceTree = "<group>"; };
 		01A580B91EC55F3D00C426A0 /* FMDBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBTools.h; sourceTree = "<group>"; };
 		01A580BA1EC55F3D00C426A0 /* FMDBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBTools.m; sourceTree = "<group>"; };
 		01A580BC1EC55F7F00C426A0 /* FMDBDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBDefine.h; sourceTree = "<group>"; };
@@ -650,9 +668,8 @@
 		010BAA591E278018009E0ACE /* Sub_B */ = {
 			isa = PBXGroup;
 			children = (
+				01877C3F1EDF120500C86202 /* View */,
 				010BAA5E1E27803F009E0ACE /* Controller */,
-				010BAA5F1E27803F009E0ACE /* Model */,
-				010BAA601E27803F009E0ACE /* View */,
 			);
 			path = Sub_B;
 			sourceTree = "<group>";
@@ -703,20 +720,6 @@
 				010BAA781E2787E0009E0ACE /* Sub_B_ViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		010BAA5F1E27803F009E0ACE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		010BAA601E27803F009E0ACE /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		010BAA611E278045009E0ACE /* Controller */ = {
@@ -1030,11 +1033,30 @@
 			path = "九宫格效果";
 			sourceTree = "<group>";
 		};
+		01877C3F1EDF120500C86202 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01877C4C1EDF225200C86202 /* KSProgressIndicatorView.h */,
+				01877C4D1EDF225200C86202 /* KSProgressIndicatorView.m */,
+				01877C4E1EDF225200C86202 /* KSProgressNumberBar.h */,
+				01877C4F1EDF225200C86202 /* KSProgressNumberBar.m */,
+				01877C401EDF123C00C86202 /* ZYProgressBar.h */,
+				01877C411EDF123C00C86202 /* ZYProgressBar.m */,
+				01877C421EDF123C00C86202 /* ZYProgressIndicator.h */,
+				01877C431EDF123C00C86202 /* ZYProgressIndicator.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		01B819E31EC2B6AE0042464C /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
 				01B819E41EC2B6BD0042464C /* suanfa.c */,
 				01B819E51EC2B6BD0042464C /* suanfa.h */,
+				011B0FC11ED2851C00643227 /* KSSlideCell.h */,
+				011B0FC21ED2851C00643227 /* KSSlideCell.m */,
+				011B0FC31ED2851C00643227 /* KSSlideView.h */,
+				011B0FC41ED2851C00643227 /* KSSlideView.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -1614,6 +1636,7 @@
 				0183A92D1E87ABCE005D40DE /* MacicViewController_one.m in Sources */,
 				01C7F8011E7BCB47007AE40B /* Static_ConstViewController.m in Sources */,
 				01A580BB1EC55F3D00C426A0 /* FMDBTools.m in Sources */,
+				01877C441EDF123C00C86202 /* ZYProgressBar.m in Sources */,
 				01BE9C3F1E4A187900F47CC0 /* FMDatabaseQueueManager.m in Sources */,
 				01C64D4F1E35EAFA00CC5E88 /* Sub_C_ViewController.m in Sources */,
 				01C64D611E36015E00CC5E88 /* CustomLayer_CG.m in Sources */,
@@ -1632,6 +1655,7 @@
 				010BAA4B1E276DE6009E0ACE /* Root_D_VC.m in Sources */,
 				0183A9201E87A64F005D40DE /* BaseListViewController.m in Sources */,
 				01A824661EC019E200C1BDDB /* KSAlertImageView.m in Sources */,
+				011B0FC51ED2851C00643227 /* KSSlideCell.m in Sources */,
 				01CE35DD1E557C4100C082BB /* Const.m in Sources */,
 				010BAA891E2789A6009E0ACE /* CustomDrawLayer.m in Sources */,
 				010BAA481E276DE6009E0ACE /* Root_A_VC.m in Sources */,
@@ -1641,8 +1665,10 @@
 				01413B951E48A017004521FE /* FMDatabasePool.m in Sources */,
 				01BE9C3C1E4A186F00F47CC0 /* FMDatabaseManager.m in Sources */,
 				01CE35AB1E546F3A00C082BB /* CollectionViewController.m in Sources */,
+				01877C501EDF225200C86202 /* KSProgressIndicatorView.m in Sources */,
 				01413B931E48A017004521FE /* FMDatabase.m in Sources */,
 				016C195A1E51B35E002F910F /* BlockViewController.m in Sources */,
+				01877C511EDF225200C86202 /* KSProgressNumberBar.m in Sources */,
 				010BAA8C1E2789B6009E0ACE /* CustomDrawView.m in Sources */,
 				015B47121E49AAC80097EA0F /* DataBaseModel.m in Sources */,
 				01CE35BF1E546FB100C082BB /* Cell_two.m in Sources */,
@@ -1668,10 +1694,12 @@
 				01CE35C11E546FB100C082BB /* Section_one_ReusableView.m in Sources */,
 				0183A9231E87A91C005D40DE /* TransitionListViewController.m in Sources */,
 				010BAA6C1E278209009E0ACE /* BaseTableViewVC.m in Sources */,
+				01877C451EDF123C00C86202 /* ZYProgressIndicator.m in Sources */,
 				01A824671EC019E200C1BDDB /* MPlayerView.m in Sources */,
 				01B6E70F1EC9834D00DFD0D9 /* SchoolModel.m in Sources */,
 				01CE35F01E56B15300C082BB /* ArchiverSubModel.m in Sources */,
 				017CD9C21E978B5E00811B10 /* KVCViewController.m in Sources */,
+				011B0FC61ED2851C00643227 /* KSSlideView.m in Sources */,
 				01413B941E48A017004521FE /* FMDatabaseAdditions.m in Sources */,
 				01CE35D41E54B0FC00C082BB /* RunModel.m in Sources */,
 				01CE35AF1E546FA800C082BB /* CustomFlowLayout.m in Sources */,

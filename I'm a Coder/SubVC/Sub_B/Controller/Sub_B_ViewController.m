@@ -10,6 +10,8 @@
 #import "CustomDrawView.h"
 #import "CustomDrawLayer.h"
 #import "PathViewByBezier.h"
+#import "ZYProgressBar.h"
+#import "KSProgressNumberBar.h"
 
 #define widthBt [UIScreen mainScreen].bounds.size.width/5.0
 #define heightBt 30.0
@@ -22,6 +24,8 @@
 @property (nonatomic,strong)CAReplicatorLayer *replicatorLayer;
 @property (nonatomic,strong)CAGradientLayer *gradientLayer;
 @property (nonatomic,strong)NSTimer *timer;
+@property (nonatomic,strong)ZYProgressBar *progressBar;
+@property (nonatomic,assign)CGFloat progress;
 
 @end
 
@@ -30,14 +34,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title =self.titleName;
-    self.view.backgroundColor = [UIColor whiteColor];
-    [self dealWithData];
-    [self set3DRotate];
-    [self set3DMakeRotationn];
-    [self setMaskInLayer];
-    [self setReset];
-    
+    self.view.backgroundColor = [UIColor greenColor];
+//    [self dealWithData];
+//    [self set3DRotate];
+//    [self set3DMakeRotationn];
+//    [self setMaskInLayer];
+//    [self setReset];
+
+    [KSProgressNumberBar show];
+    [self progressBarDownload];
 }
+
+- (void)progressBarDownload
+{
+    self.timer = [self timerWithSelector:@selector(setBarProgress)];
+}
+
+- (void)setBarProgress
+{
+    _progress += 0.01;
+    if (_progress>1.0) {
+        [self.timer invalidate];
+    }
+    [KSProgressNumberBar setProgress:_progress];
+}
+
+- (NSTimer *)timerWithSelector:(SEL)selector {
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:selector userInfo:nil repeats:YES];
+    return timer;
+}
+
 - (void)dealWithData
 {
     // layer基本属性
@@ -45,7 +71,7 @@
     
 //    [self testshapeLayer];// 测试在mask情况下，贝塞尔曲线的frame，shapelayer的frame，如何受影响.
 //    [self creatshapeLayer]; //一般绘制shapelayer的方法
-//    [self creatshapeLayer_one];  //与CAGradientLayer联合使用，绘制渐变加载条动画
+    [self creatshapeLayer_one];  //与CAGradientLayer联合使用，绘制渐变加载条动画
 //    [self creatshapeLayer_two]; //扇形动画
 //    [self creatshapeLayer_three]; //绘制起泡-不规则图形
     
@@ -63,7 +89,7 @@
     //    [self creatgradientLayer_two];//png渐变
     //    [self creatgradientLayer_three];//png覆盖图层
     
-    [self audioplaying];
+//    [self audioplaying];
 }
 
 

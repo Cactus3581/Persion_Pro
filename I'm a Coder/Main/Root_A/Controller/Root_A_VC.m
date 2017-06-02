@@ -44,6 +44,47 @@
     self.array = @[@"视图与图层",@"CALayer",@"drawRect_cg",@"drawLayer_oc",@"drawLayer_cg"];
     self.navigationItem.leftBarButtonItem = nil;
     self.navigationItem.rightBarButtonItem = nil;
+    
+    
+    
+//    self.navigationItem.leftBarButtonItem = backNavigationItem;
+    
+    UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
+    bt.frame = CGRectMake(100,100, 100, 30);
+    [bt setTitle:@"转场动画" forState:UIControlStateNormal];
+    [bt setImage:[UIImage imageNamed:@"sanjiao"] forState:UIControlStateNormal];
+    [bt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    bt.titleLabel.font = [UIFont systemFontOfSize:12];
+    
+    CGSize strSize = [@"转场动画" sizeWithAttributes:@{NSFontAttributeName:bt.titleLabel.font}];
+    UIImage *image = bt.imageView.image;
+    CGFloat imageWidth = 0;
+    if (!image) {
+        imageWidth = 0;
+    }
+    imageWidth = ceilf(image.size.width);
+    CGFloat titleWidth = ceilf(strSize.width);
+    CGFloat width = imageWidth+titleWidth;
+    NSLog(@"%.2f",imageWidth);
+    NSLog(@"%.2f",titleWidth);
+
+    NSLog(@"%.2f",width);
+    NSLog(@"%.2f",bt.frame.size.width);
+
+
+    [bt setImageEdgeInsets:UIEdgeInsetsMake(0,-12, 0, 0)];
+    [bt setTitleEdgeInsets:UIEdgeInsetsMake(0,-12, 0, 0)];
+
+//
+//    CGRect frame = bt.frame;
+//    frame.size.width = width;
+//    bt.frame = frame;
+    bt.backgroundColor = [UIColor redColor];
+    bt.titleLabel.backgroundColor = [UIColor yellowColor];
+    bt.imageView.backgroundColor = [UIColor greenColor];
+//    [self.view addSubview:bt];
+    UIBarButtonItem *backNavigationItem = [[UIBarButtonItem alloc] initWithCustomView:bt];
+
 }
 
 
@@ -56,6 +97,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.array.count;
+//    return 0;
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,7 +126,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
-    //    Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
+        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
     //    Sub_C_ViewController *sub_a = [[Sub_C_ViewController alloc]init];
     
     //    BlockAnimatonVC *sub_a = [[BlockAnimatonVC alloc]init];
@@ -91,7 +134,7 @@
     //
     //
     //
-    DatabaseViewController *sub_a = [[DatabaseViewController alloc]init];
+//    DatabaseViewController *sub_a = [[DatabaseViewController alloc]init];
     
     
     

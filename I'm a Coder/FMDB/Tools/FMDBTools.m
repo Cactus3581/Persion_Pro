@@ -141,10 +141,8 @@ static FMDBTools *sharedManager=nil;
 {
     
     NSString *sql = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ %@ default ''",tablename,column_name,parameter];
-    
     [_dbQueue  inTransaction:^(FMDatabase *db, BOOL *rollback){
         //查询语句 需要返回记录集
-        
         BOOL ret = [db executeUpdate:sql];
 
         if ([db hadError]) {

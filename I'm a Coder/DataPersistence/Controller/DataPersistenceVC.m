@@ -22,7 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
 //    [self setNSString];
 //    [self setNSArray];
 //    [self setDic_plist];

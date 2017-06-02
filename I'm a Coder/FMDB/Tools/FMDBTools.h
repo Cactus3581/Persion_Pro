@@ -45,14 +45,29 @@ typedef enum ST_DB_ActionType
  */
 -(void)executeUpdateTransactionSqlList:(NSArray *)sqlStrArr withBlock:(void(^)(BOOL bRet, NSString *msg, BOOL *bRollback))block;
 
-/*
- 事务；单条sql；query
- */
--(void)executeQueryTransactionSql:(NSString *)sql withBlock:(void(^)(BOOL bRet,FMResultSet *rs, NSString *msg, BOOL *bRollback))block ;
 
 /*
- 操作列
+ 操作列(增加列)
  */
 - (void)alertTableWithName:(NSString *)tablename Column:(NSString *)column_name Parameter:(NSString *)parameter;
 
+/*
+ 操作索引
+ */
+- (void)addIndexWithName:(NSString *)tablename Column:(NSString *)column_name Index:(NSString *)index;
+/*
+ 获取数据库版本
+ */
+- (NSInteger )getDBVerison;
+
+/*
+ 存储表版本号
+ */
+
+- (void)saveVersionWithTableName:(NSString *)tableName tableVersion:(NSInteger) version;
+
+/*
+ 获取版本号
+ */
+- (NSInteger )getDBVerisonWithTableName:(NSString *)tableName;
 @end

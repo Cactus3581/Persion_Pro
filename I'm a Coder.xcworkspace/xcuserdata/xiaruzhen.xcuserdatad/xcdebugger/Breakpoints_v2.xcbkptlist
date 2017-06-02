@@ -57,7 +57,11 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
+<<<<<<< HEAD
             landmarkName = "-dealWithData"
+=======
+            landmarkName = "-setBarProgress"
+>>>>>>> develop
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

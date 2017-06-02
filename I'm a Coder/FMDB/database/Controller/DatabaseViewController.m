@@ -15,10 +15,12 @@
 
 #import "SchoolModel.h"
 #import "ClassModel.h"
+#import "KSSlideView.h"
 
 @interface DatabaseViewController () <UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
 @property (nonatomic,assign) NSInteger i;
 @property (nonatomic,strong) NSMutableArray *array;
+@property (nonatomic,strong) KSSlideView *slideView;
 
 @end
 
@@ -35,7 +37,53 @@
     [self.view addSubview:searchBar];
     self.tableView.frame =CGRectMake(0, CGRectGetMaxY(searchBar.frame)+40, K_width, K_height-(CGRectGetMaxY(searchBar.frame)+40));
     self.tableView.backgroundColor = [UIColor redColor];
+    
+    [FMDBTools shareInstance];
+    
+    
+    
+    //    [self.view addSubview:self.slideView];
+    //    [self.slideView mas_makeConstraints:^(MASConstraintMaker *make) {
+    //        make.width.equalTo(self.view.mas_width);
+    //        make.top.equalTo(self.view).offset(100);
+    //        make.centerX.equalTo(self.view.mas_centerX);
+    //        make.height.mas_equalTo(92/2.0);
+    //    }];
+    //
+    //    self.slideView.goodsArray =@[@"熊出没",@"死神来了19",@"钢铁侠0",@"海上钢琴师",@"最后一只恐龙",@"苍井空",@"假如爱有天意",@"好好先生",@"特种部队",@"生化危机",@"生化危机"];
+    
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj0", [NSNumber numberWithInt:0], nil],
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj5", [NSNumber numberWithInt:5], nil],
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj2", [NSNumber numberWithInt:2], nil],
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj3", [NSNumber numberWithInt:3], nil],
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj1", [NSNumber numberWithInt:1], nil],
+                             [NSDictionary dictionaryWithObjectsAndKeys:@"Obj4", [NSNumber numberWithInt:4], nil], nil];
+    
+    //    NSArray *resultArray = [array sortedArrayUsingSelector:@selector(compare:)];
+    
+    NSArray *resultArray = [array sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        
+        NSNumber *number1 = [[obj1 allKeys] objectAtIndex:0];
+        NSNumber *number2 = [[obj2 allKeys] objectAtIndex:0];
+        
+        NSComparisonResult result = [number1 compare:number2];
+        
+        return result == NSOrderedDescending; // 升序
+        //        return result == NSOrderedAscending;  // 降序
+    }];
+    
+    NSLog(@"%@",resultArray);
 }
+
+- (KSSlideView *)slideView
+{
+    if (!_slideView) {
+        _slideView  = [[KSSlideView alloc]initWithSelectedColor:1 UnselectedColor:66 Cornus:46/2 LabelFont:11 TagEdge:15];
+    }
+    return _slideView;
+}
+
 
 - (void)MaskInViewBt_1 {
 //    self.i  = self.i+1;
@@ -71,11 +119,19 @@
      */
     
 #pragma mark - update-事务-数组sql
-    /*
-     [[FMDBTools shareInstance] executeUpdateTransactionSqlList:@[sql1,sql2] withBlock:^(BOOL bRet, NSString *msg, BOOL *bRollback) {
+    
+    for (int i = 0; i<5000; i++) {
+        NSString * sqlopr = [NSString stringWithFormat:@"INSERT INTO %@ (classId,className,teacherName,stutentNumber,boyNumber,girlNumber) VALUES (%d,'%@','%@','%d','%d','%d')",TABLE_NAME_SCHOOL,i,[NSString stringWithFormat:@"%d年级",i+1],model.teacherName,i+100,i,5000-i];
+        [[FMDBTools shareInstance] executeUpdateTransactionSql:sqlopr withBlock:^(BOOL bRet, NSString *msg, BOOL *bRollback) {
+            
+        }];
+    }
+    
+
      
-     }];
-     */
+//    [[FMDBTools shareInstance] executeUpdateTransactionSqlList:@[sql1,sql2] withBlock:^(BOOL bRet, NSString *msg, BOOL *bRollback) {
+//        
+//    }];
     
 #pragma mark - quary-无事务-单条sql
     /*
@@ -90,21 +146,23 @@
 
 #pragma mark - quary-事务-单条sql
     //    NSString * quarysql1 = [NSString stringWithFormat:@"select count (*) from %@ where classId >= 100",TABLE_NAME_SCHOOL];
-    NSString * quarysql1 = [NSString stringWithFormat:@"select * from %@ order by classId desc",TABLE_NAME_SCHOOL];
+    NSString * quarysql1 = [NSString stringWithFormat:@"select * from %@ order by className desc",TABLE_NAME_SCHOOL];
     /*
      quary:事务
 
      */
     
 //    [[FMDBTools shareInstance] executeQueryTransactionSql:quarysql1 withBlock:^(BOOL bRet, FMResultSet *rs, NSString *msg, BOOL *bRollback) {
-////        while ([rs next]) {
-////            NSString *name = [rs stringForColumn:@"name"];
-////            int classId = [rs intForColumn:@"classId"];
-////            NSLog(@"ID: %d, name: %@",classId,name);
-////        }
+//        while ([rs next]) {
+//            NSString *className = [rs stringForColumn:@"className"];
+//            NSString *teacherName = [rs stringForColumn:@"teacherName"];
+//
+//            int classId = [rs intForColumn:@"classId"];
+//            NSLog(@"ID: %d, name: %@",classId,className,teacherName);
+//        }
 //    }];
     
-    [[FMDBTools shareInstance] alertTableWithName:TABLE_NAME_SCHOOL Column:@"rank" Parameter:@"text"];
+//    [[FMDBTools shareInstance] alertTableWithName:TABLE_NAME_SCHOOL Column:@"rank" Parameter:@"text"];
 
     
     /*
@@ -114,9 +172,22 @@
 }
 
 - (void)MaskInViewBt_2 {
-    self.i  = self.i+1;
-    NSNumber *score = [NSNumber numberWithInteger:self.i];
-    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈4" Sex:@"男" Age:@18 Score:score];
+//    [[FMDBTools shareInstance] addIndexWithName:TABLE_NAME_SCHOOL Column:@"className" Index:@"Pindex"];
+    
+    NSString * quarysql1 = [NSString stringWithFormat:@"select * from %@ order by className desc",TABLE_NAME_SCHOOL];
+
+    
+     [[FMDBTools shareInstance] executeSQL:quarysql1 actionType:ST_DB_SELECT withBlock:^(BOOL bRet, FMResultSet *rs, NSString *msg) {
+         while ([rs next]) {
+             NSString *className = [rs stringForColumn:@"className"];
+             NSString *teacherName = [rs stringForColumn:@"teacherName"];
+             
+             int classId = [rs intForColumn:@"classId"];
+             NSLog(@"ID: %d, name: %@, teacherName: %@",classId,className,teacherName);
+         }
+     
+     }];
+    
     /*
      [FMDatabaseManager modifyAction:model];
      [FMDatabaseQueueManager modifyAction:model];
@@ -124,8 +195,10 @@
 }
 
 - (void)MaskInViewBt_3 {
-    //删除数据后执行一次查询工作刷新表格
-    DataBaseModel *model = [DataBaseModel initializeWithName:@"哈5" Sex:@"男" Age:@18 Score:@88];
+    
+    [[FMDBTools shareInstance] alertTableWithName:TABLE_NAME_SCHOOL Column:@"rank" Parameter:@"text"];
+
+
     /*
      [FMDatabaseManager deleteAction:model];
      [FMDatabaseQueueManager deleteAction:model];
@@ -134,6 +207,9 @@
 
 - (void)MaskInViewBt_4 {
     DataBaseModel *model = [DataBaseModel initializeWithName:@"哈3" Sex:@"男" Age:@18 Score:@2];
+    NSLog(@"%ld",[[FMDBTools shareInstance] getDBVerison]);
+
+    
     /*
      [FMDatabaseManager quaryAction_one:model];
      [FMDatabaseQueueManager quaryAction_one:model];

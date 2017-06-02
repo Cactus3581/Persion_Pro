@@ -19,76 +19,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "I&apos;m a Coder/FMDB/Tools/FMDBTools.m"
-            timestampString = "516595639.861715"
+            filePath = "I&apos;m a Coder/SubVC/Sub_B/ZYProgressIndicator.m"
+            timestampString = "517855544.949065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "-alertTableWithName:Column:Parameter:"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "-configure"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__49-[FMDBTools alertTableWithName:Column:Parameter:]_block_invoke"
-                  moduleName = "I&apos;m a Coder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xiaruzhen/Documents/I&apos;m%20a%20Coder/I&apos;m%20a%20Coder/FMDB/Tools/FMDBTools.m"
-                  timestampString = "516595639.937362"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "251">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.75"
-                  moduleName = "I&apos;m a Coder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xiaruzhen/Documents/I&apos;m%20a%20Coder/I&apos;m%20a%20Coder/FMDB/Tools/FMDBTools.m"
-                  timestampString = "516595639.940078"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.76"
-                  moduleName = "I&apos;m a Coder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xiaruzhen/Documents/I&apos;m%20a%20Coder/I&apos;m%20a%20Coder/FMDB/Tools/FMDBTools.m"
-                  timestampString = "516595639.943687"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "29">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "I&apos;m a Coder/FMDB/Tools/FMDBTools.m"
-            timestampString = "516595639.861715"
+            filePath = "I&apos;m a Coder/SubVC/Sub_B/View/KSProgressNumberBar.m"
+            timestampString = "518063800.557792"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "-alertTableWithName:Column:Parameter:"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "+setProgress:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&apos;m a Coder/SubVC/Sub_B/Controller/Sub_B_ViewController.m"
+            timestampString = "518066584.943798"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-dealWithData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -98,46 +67,30 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "I&apos;m a Coder/FMDB/Tools/FMDBTools.m"
-            timestampString = "516595355.061391"
+            filePath = "I&apos;m a Coder/SubVC/Sub_B/View/ZYProgressBar.m"
+            timestampString = "518066627.17231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "-alertTableWithName:Column:Parameter:"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "-refreshUI"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FMDBTools alertTableWithName:Column:Parameter:]"
-                  moduleName = "I&apos;m a Coder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xiaruzhen/Documents/I&apos;m%20a%20Coder/I&apos;m%20a%20Coder/FMDB/Tools/FMDBTools.m"
-                  timestampString = "516595639.972816"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "195">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__49-[FMDBTools alertTableWithName:Column:Parameter:]_block_invoke"
-                  moduleName = "I&apos;m a Coder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xiaruzhen/Documents/I&apos;m%20a%20Coder/I&apos;m%20a%20Coder/FMDB/Tools/FMDBTools.m"
-                  timestampString = "516595639.978266"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&apos;m a Coder/SubVC/Sub_B/View/KSProgressNumberBar.m"
+            timestampString = "518067875.907661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "-refreshUI"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -146,13 +99,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "I&apos;m a Coder/FMDB/Tools/FMDBTools.m"
-            timestampString = "516595485.807466"
+            filePath = "I&apos;m a Coder/SubVC/Sub_B/View/KSProgressNumberBar.m"
+            timestampString = "518067875.907661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-init"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "-configure"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&apos;m a Coder/SubVC/Sub_B/View/KSProgressNumberBar.m"
+            timestampString = "518067875.907661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-configure"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&apos;m a Coder/SubVC/Sub_B/View/KSProgressNumberBar.m"
+            timestampString = "518067875.907661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-setProgresss:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "I&apos;m a Coder/SubVC/Sub_B/View/KSProgressNumberBar.m"
+            timestampString = "518067875.907661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-setProgresss:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -66,6 +66,7 @@
 		01877C7C1EE1492B00C86202 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C6B1EE1492B00C86202 /* FMDatabaseQueue.m */; };
 		01877C7D1EE1492B00C86202 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C6E1EE1492B00C86202 /* FMResultSet.m */; };
 		01877C801EE1531600C86202 /* FMDBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C7F1EE1531600C86202 /* FMDBTools.m */; };
+		01877C851EE1614B00C86202 /* CountryDBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C841EE1614B00C86202 /* CountryDBTools.m */; };
 		01A824661EC019E200C1BDDB /* KSAlertImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A824631EC019E200C1BDDB /* KSAlertImageView.m */; };
 		01A824671EC019E200C1BDDB /* MPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A824651EC019E200C1BDDB /* MPlayerView.m */; };
 		01B819DF1EC1DDEF0042464C /* UIFont+XRZAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B819DA1EC1DDEF0042464C /* UIFont+XRZAdd.m */; };
@@ -241,6 +242,8 @@
 		01877C701EE1492B00C86202 /* FMDBDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBDefine.h; sourceTree = "<group>"; };
 		01877C711EE1492B00C86202 /* FMDBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBTools.h; sourceTree = "<group>"; };
 		01877C7F1EE1531600C86202 /* FMDBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBTools.m; sourceTree = "<group>"; };
+		01877C831EE1614B00C86202 /* CountryDBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryDBTools.h; sourceTree = "<group>"; };
+		01877C841EE1614B00C86202 /* CountryDBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryDBTools.m; sourceTree = "<group>"; };
 		01A824621EC019E200C1BDDB /* KSAlertImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAlertImageView.h; sourceTree = "<group>"; };
 		01A824631EC019E200C1BDDB /* KSAlertImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAlertImageView.m; sourceTree = "<group>"; };
 		01A824641EC019E200C1BDDB /* MPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPlayerView.h; sourceTree = "<group>"; };
@@ -774,6 +777,7 @@
 		01413B851E489F82004521FE /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
+				01877C821EE1612C00C86202 /* SubTools */,
 				01877C521EE1492B00C86202 /* database */,
 				01877C631EE1492B00C86202 /* fmdb */,
 				01877C6F1EE1492B00C86202 /* Tools */,
@@ -1056,6 +1060,15 @@
 				01877C7F1EE1531600C86202 /* FMDBTools.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		01877C821EE1612C00C86202 /* SubTools */ = {
+			isa = PBXGroup;
+			children = (
+				01877C831EE1614B00C86202 /* CountryDBTools.h */,
+				01877C841EE1614B00C86202 /* CountryDBTools.m */,
+			);
+			path = SubTools;
 			sourceTree = "<group>";
 		};
 		01B819E31EC2B6AE0042464C /* Algorithm */ = {
@@ -1650,6 +1663,7 @@
 				0183A9201E87A64F005D40DE /* BaseListViewController.m in Sources */,
 				01A824661EC019E200C1BDDB /* KSAlertImageView.m in Sources */,
 				011B0FC51ED2851C00643227 /* KSSlideCell.m in Sources */,
+				01877C851EE1614B00C86202 /* CountryDBTools.m in Sources */,
 				01CE35DD1E557C4100C082BB /* Const.m in Sources */,
 				010BAA891E2789A6009E0ACE /* CustomDrawLayer.m in Sources */,
 				010BAA481E276DE6009E0ACE /* Root_A_VC.m in Sources */,

@@ -14,6 +14,9 @@
 #import "Masonry.h"
 #import "XRZCatergory.h"
 #import "XRZDataTool.h"
+#import "MJExtension.h"
+#import "NSString+MJExtension.h"
+
 #endif
 
 #define K_width [UIScreen mainScreen].bounds.size.width

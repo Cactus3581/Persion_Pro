@@ -25,16 +25,13 @@
 #import "MasonryViewController.h"
 #import "PopViewAnaimationVC.h"
 #import "TransitionViewController.h"
-
 #import "TransitionListViewController.h"
 #import "KVCViewController.h"
+#import "KSGrammarBookCatalogueController.h"
 
 @interface Root_A_VC ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) NSArray *array;
 @property (nonatomic,strong) Sub_A_ViewController *sub_A_ViewController;
-
-
-
 @end
 
 @implementation Root_A_VC
@@ -125,8 +122,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+        KSGrammarBookCatalogueController *sub_a = [[KSGrammarBookCatalogueController alloc]init];
+
+
     //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
-        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
+//        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
     //    Sub_C_ViewController *sub_a = [[Sub_C_ViewController alloc]init];
     
     //    BlockAnimatonVC *sub_a = [[BlockAnimatonVC alloc]init];
@@ -174,7 +174,7 @@
     
     sub_a.hidesBottomBarWhenPushed = YES;
     
-    [self.navigationController pushViewController:sub_a animated:YES];
+    [self.navigationController pushViewController:sub_a animated:NO];
     
     //    [self transitionAnimation];
 }

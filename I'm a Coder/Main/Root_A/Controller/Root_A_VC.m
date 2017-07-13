@@ -28,7 +28,8 @@
 #import "TransitionListViewController.h"
 #import "KVCViewController.h"
 #import "KSGrammarBookCatalogueController.h"
-#import "KSCertificateViewController.h"
+#import "KSGrammarCertificateController.h"
+#import "KSGrammarUnfinishedController.h"
 
 @interface Root_A_VC ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) NSArray *array;
@@ -124,7 +125,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
         //KSGrammarBookCatalogueController *sub_a = [[KSGrammarBookCatalogueController alloc]init];
-    KSCertificateViewController *sub_a = [[KSCertificateViewController alloc]init];
+//    KSCertificateViewController *sub_a = [[KSCertificateViewController alloc]init];
+    
+//    KSGrammarCertificateController *sub_a = [[KSGrammarCertificateController alloc]init];
+    
+    KSGrammarUnfinishedController *sub_a = [[KSGrammarUnfinishedController alloc]init];
+
+
     
     [self presentViewController:sub_a animated:YES completion:nil];
 

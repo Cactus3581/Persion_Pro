@@ -14,7 +14,6 @@
 #import "KSGrammarBookCatalogueFooterView.h"
 #import "Sub_B_ViewController.h"
 #import "KSCertificateView.h"
-#import "KSAlertWindow.h"
 #import "AppDelegate.h"
 
 #define kScreen_Width self.view.bounds.size.width

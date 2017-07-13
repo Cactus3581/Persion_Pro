@@ -55,14 +55,13 @@
 		0170DB3B1F14CC060041D4EE /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DB301F14CC060041D4EE /* NSObject+MJProperty.m */; };
 		0170DB3C1F14CC060041D4EE /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DB321F14CC060041D4EE /* NSString+MJExtension.m */; };
 		0170DB3F1F152BC00041D4EE /* KSGrammarBookCatalogueFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DB3E1F152BC00041D4EE /* KSGrammarBookCatalogueFooterView.m */; };
-		0170DFB11F1610B60041D4EE /* KSAlertWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFB01F1610B60041D4EE /* KSAlertWindow.m */; };
 		0170DFB41F1611190041D4EE /* KSCertificateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFB31F1611190041D4EE /* KSCertificateView.m */; };
 		0170DFB61F16118F0041D4EE /* KSCertificateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0170DFB51F16118F0041D4EE /* KSCertificateView.xib */; };
 		0170DFB91F174CD60041D4EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFB81F174CD60041D4EE /* AppDelegate.m */; };
-		0170DFC31F1759FC0041D4EE /* KSCertificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFC11F1759FC0041D4EE /* KSCertificateViewController.m */; };
-		0170DFC41F1759FC0041D4EE /* KSCertificateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0170DFC21F1759FC0041D4EE /* KSCertificateViewController.xib */; };
 		0170DFC71F17863E0041D4EE /* KSAppDeclareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFC61F17863E0041D4EE /* KSAppDeclareView.m */; };
 		0170DFC91F17864A0041D4EE /* KSAppDeclareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0170DFC81F17864A0041D4EE /* KSAppDeclareView.xib */; };
+		0170DFCD1F178DBE0041D4EE /* KSGrammarCertificateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFCB1F178DBE0041D4EE /* KSGrammarCertificateController.m */; };
+		0170DFCE1F178DBE0041D4EE /* KSGrammarCertificateController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0170DFCC1F178DBE0041D4EE /* KSGrammarCertificateController.xib */; };
 		017CD9C21E978B5E00811B10 /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017CD9C11E978B5E00811B10 /* KVCViewController.m */; };
 		017CD9C51E978BAF00811B10 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 017CD9C41E978BAF00811B10 /* ProductModel.m */; };
 		017CD9C91E9DCE6200811B10 /* Rootcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 017CD9C81E9DCE6200811B10 /* Rootcell.m */; };
@@ -106,6 +105,8 @@
 		01C64D761E3605C600CC5E88 /* BlockAnimatonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C64D751E3605C600CC5E88 /* BlockAnimatonVC.m */; };
 		01C7F7FA1E7BC9CC007AE40B /* MultithReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C7F7F91E7BC9CC007AE40B /* MultithReadingViewController.m */; };
 		01C7F8011E7BCB47007AE40B /* Static_ConstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C7F8001E7BCB47007AE40B /* Static_ConstViewController.m */; };
+		01CC37181F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC37161F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m */; };
+		01CC37191F17DF6A00A8EA55 /* KSGrammarUnfinishedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CC37171F17DF6A00A8EA55 /* KSGrammarUnfinishedController.xib */; };
 		01CE35891E52D23100C082BB /* NetRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35881E52D23100C082BB /* NetRequestViewController.m */; };
 		01CE35AB1E546F3A00C082BB /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35AA1E546F3A00C082BB /* CollectionViewController.m */; };
 		01CE35AF1E546FA800C082BB /* CustomFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35AE1E546FA800C082BB /* CustomFlowLayout.m */; };
@@ -242,19 +243,17 @@
 		0170DB321F14CC060041D4EE /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		0170DB3D1F152BC00041D4EE /* KSGrammarBookCatalogueFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGrammarBookCatalogueFooterView.h; sourceTree = "<group>"; };
 		0170DB3E1F152BC00041D4EE /* KSGrammarBookCatalogueFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSGrammarBookCatalogueFooterView.m; sourceTree = "<group>"; };
-		0170DFAF1F1610B60041D4EE /* KSAlertWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAlertWindow.h; sourceTree = "<group>"; };
-		0170DFB01F1610B60041D4EE /* KSAlertWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAlertWindow.m; sourceTree = "<group>"; };
 		0170DFB21F1611190041D4EE /* KSCertificateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCertificateView.h; sourceTree = "<group>"; };
 		0170DFB31F1611190041D4EE /* KSCertificateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCertificateView.m; sourceTree = "<group>"; };
 		0170DFB51F16118F0041D4EE /* KSCertificateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSCertificateView.xib; sourceTree = "<group>"; };
 		0170DFB71F174CD60041D4EE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "I'm a Coder/AppDelegate.h"; sourceTree = SOURCE_ROOT; };
 		0170DFB81F174CD60041D4EE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "I'm a Coder/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
-		0170DFC01F1759FC0041D4EE /* KSCertificateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCertificateViewController.h; sourceTree = "<group>"; };
-		0170DFC11F1759FC0041D4EE /* KSCertificateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCertificateViewController.m; sourceTree = "<group>"; };
-		0170DFC21F1759FC0041D4EE /* KSCertificateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSCertificateViewController.xib; sourceTree = "<group>"; };
 		0170DFC51F17863E0041D4EE /* KSAppDeclareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAppDeclareView.h; sourceTree = "<group>"; };
 		0170DFC61F17863E0041D4EE /* KSAppDeclareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAppDeclareView.m; sourceTree = "<group>"; };
 		0170DFC81F17864A0041D4EE /* KSAppDeclareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSAppDeclareView.xib; sourceTree = "<group>"; };
+		0170DFCA1F178DBE0041D4EE /* KSGrammarCertificateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGrammarCertificateController.h; sourceTree = "<group>"; };
+		0170DFCB1F178DBE0041D4EE /* KSGrammarCertificateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSGrammarCertificateController.m; sourceTree = "<group>"; };
+		0170DFCC1F178DBE0041D4EE /* KSGrammarCertificateController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSGrammarCertificateController.xib; sourceTree = "<group>"; };
 		017CD9C01E978B5E00811B10 /* KVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
 		017CD9C11E978B5E00811B10 /* KVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
 		017CD9C31E978BAF00811B10 /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductModel.h; sourceTree = "<group>"; };
@@ -347,6 +346,9 @@
 		01C7F7F91E7BC9CC007AE40B /* MultithReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultithReadingViewController.m; sourceTree = "<group>"; };
 		01C7F7FF1E7BCB47007AE40B /* Static_ConstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Static_ConstViewController.h; sourceTree = "<group>"; };
 		01C7F8001E7BCB47007AE40B /* Static_ConstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Static_ConstViewController.m; sourceTree = "<group>"; };
+		01CC37151F17DF6A00A8EA55 /* KSGrammarUnfinishedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGrammarUnfinishedController.h; sourceTree = "<group>"; };
+		01CC37161F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSGrammarUnfinishedController.m; sourceTree = "<group>"; };
+		01CC37171F17DF6A00A8EA55 /* KSGrammarUnfinishedController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSGrammarUnfinishedController.xib; sourceTree = "<group>"; };
 		01CE35871E52D23100C082BB /* NetRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetRequestViewController.h; sourceTree = "<group>"; };
 		01CE35881E52D23100C082BB /* NetRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetRequestViewController.m; sourceTree = "<group>"; };
 		01CE35A91E546F3A00C082BB /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
@@ -1043,8 +1045,6 @@
 				0170DFBC1F1759CD0041D4EE /* Model */,
 				0170DFBB1F1759C50041D4EE /* View */,
 				0170DFBA1F1759BC0041D4EE /* ViewController */,
-				0170DFAF1F1610B60041D4EE /* KSAlertWindow.h */,
-				0170DFB01F1610B60041D4EE /* KSAlertWindow.m */,
 				0170DFC51F17863E0041D4EE /* KSAppDeclareView.h */,
 				0170DFC61F17863E0041D4EE /* KSAppDeclareView.m */,
 				0170DFC81F17864A0041D4EE /* KSAppDeclareView.xib */,
@@ -1058,9 +1058,12 @@
 		0170DFBA1F1759BC0041D4EE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0170DFC01F1759FC0041D4EE /* KSCertificateViewController.h */,
-				0170DFC11F1759FC0041D4EE /* KSCertificateViewController.m */,
-				0170DFC21F1759FC0041D4EE /* KSCertificateViewController.xib */,
+				0170DFCA1F178DBE0041D4EE /* KSGrammarCertificateController.h */,
+				0170DFCB1F178DBE0041D4EE /* KSGrammarCertificateController.m */,
+				0170DFCC1F178DBE0041D4EE /* KSGrammarCertificateController.xib */,
+				01CC37151F17DF6A00A8EA55 /* KSGrammarUnfinishedController.h */,
+				01CC37161F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m */,
+				01CC37171F17DF6A00A8EA55 /* KSGrammarUnfinishedController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1773,11 +1776,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0170DFC41F1759FC0041D4EE /* KSCertificateViewController.xib in Resources */,
+				01CC37191F17DF6A00A8EA55 /* KSGrammarUnfinishedController.xib in Resources */,
 				010BA9FD1E276DB3009E0ACE /* LaunchScreen.storyboard in Resources */,
 				01110EEC1F13729B00732172 /* KSGrammarBookCatalogueController.xib in Resources */,
 				010BA9FA1E276DB3009E0ACE /* Assets.xcassets in Resources */,
 				0170DFB61F16118F0041D4EE /* KSCertificateView.xib in Resources */,
+				0170DFCE1F178DBE0041D4EE /* KSGrammarCertificateController.xib in Resources */,
 				01110EF31F13729B00732172 /* KSGrammarBookCatalogueHeaderView.xib in Resources */,
 				010BA9F81E276DB3009E0ACE /* Main.storyboard in Resources */,
 				014E27BE1F13E1CF00051FAE /* index1.toc in Resources */,
@@ -1858,6 +1862,7 @@
 				010BA9EF1E276DB3009E0ACE /* main.m in Sources */,
 				01B819DF1EC1DDEF0042464C /* UIFont+XRZAdd.m in Sources */,
 				01CE35CD1E54AAEC00C082BB /* RunTimeViewController.m in Sources */,
+				01CC37181F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m in Sources */,
 				0170DB371F14CC060041D4EE /* MJPropertyType.m in Sources */,
 				010BAA561E276DED009E0ACE /* BaseViewController.m in Sources */,
 				0183A92D1E87ABCE005D40DE /* MacicViewController_one.m in Sources */,
@@ -1888,6 +1893,7 @@
 				01A824661EC019E200C1BDDB /* KSAlertImageView.m in Sources */,
 				011B0FC51ED2851C00643227 /* KSSlideCell.m in Sources */,
 				01877C851EE1614B00C86202 /* CountryDBTools.m in Sources */,
+				0170DFCD1F178DBE0041D4EE /* KSGrammarCertificateController.m in Sources */,
 				01CE35DD1E557C4100C082BB /* Const.m in Sources */,
 				0170DB3C1F14CC060041D4EE /* NSString+MJExtension.m in Sources */,
 				0170DB351F14CC060041D4EE /* MJProperty.m in Sources */,
@@ -1943,7 +1949,6 @@
 				01877C751EE1492B00C86202 /* FMDatabaseQueueManager.m in Sources */,
 				01CE35D41E54B0FC00C082BB /* RunModel.m in Sources */,
 				01CE35AF1E546FA800C082BB /* CustomFlowLayout.m in Sources */,
-				0170DFB11F1610B60041D4EE /* KSAlertWindow.m in Sources */,
 				0183A9281E87AAF8005D40DE /* MoveTransitionViewController.m in Sources */,
 				010BAA6F1E2782BC009E0ACE /* BaseTableViewCell.m in Sources */,
 				01110EF01F13729B00732172 /* KSGrammarBookCatalogueHeadCell.m in Sources */,
@@ -1951,7 +1956,6 @@
 				01CE35C21E546FB100C082BB /* Section_three_ReusableView.m in Sources */,
 				010BAA551E276DED009E0ACE /* BaseNavigationVC.m in Sources */,
 				0170DFB91F174CD60041D4EE /* AppDelegate.m in Sources */,
-				0170DFC31F1759FC0041D4EE /* KSCertificateViewController.m in Sources */,
 				0170DB3B1F14CC060041D4EE /* NSObject+MJProperty.m in Sources */,
 				01CE35ED1E56AA9000C082BB /* DataManager.m in Sources */,
 				01CE35BE1E546FB100C082BB /* Cell_three.m in Sources */,
@@ -2055,7 +2059,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2097,7 +2101,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2115,7 +2119,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/I'm a Coder/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "I'm a Coder/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xiaruzhen.I-m-a-Coder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2133,7 +2137,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/I'm a Coder/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "I'm a Coder/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xiaruzhen.I-m-a-Coder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2201,7 +2205,7 @@
 				010BAA161E276DB3009E0ACE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		010BAA171E276DB3009E0ACE /* Build configuration list for PBXNativeTarget "I'm a Coder" */ = {
 			isa = XCConfigurationList;
@@ -2210,7 +2214,7 @@
 				010BAA191E276DB3009E0ACE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		010BAA1A1E276DB3009E0ACE /* Build configuration list for PBXNativeTarget "I'm a CoderTests" */ = {
 			isa = XCConfigurationList;
@@ -2219,7 +2223,7 @@
 				010BAA1C1E276DB3009E0ACE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		010BAA1D1E276DB3009E0ACE /* Build configuration list for PBXNativeTarget "I'm a CoderUITests" */ = {
 			isa = XCConfigurationList;
@@ -2228,7 +2232,7 @@
 				010BAA1F1E276DB3009E0ACE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

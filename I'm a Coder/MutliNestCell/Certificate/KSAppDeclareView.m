@@ -10,12 +10,11 @@
 
 @implementation KSAppDeclareView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.backgroundColor = [UIColor whiteColor];
+    self.backBottomView.backgroundColor = [UIColor whiteColor];
+    self.bottomLabel.text = @"学英语\n就用金山词霸APP";
 }
-*/
 
 @end

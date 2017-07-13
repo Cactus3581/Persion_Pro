@@ -1,19 +1,19 @@
 //
-//  KSCertificateView.h
+//  KSCertificateViewController.h
 //  I'm a Coder
 //
-//  Created by xiaruzhen on 2017/7/12.
+//  Created by xiaruzhen on 2017/7/13.
 //  Copyright © 2017年 xiaruzhen. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface KSCertificateView : UIView
-
+@interface KSCertificateViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *backBottomView;
-@property (weak, nonatomic) IBOutlet UIImageView *logoView;
-@property (weak, nonatomic) IBOutlet UIImageView *qrCodeImageView;
-@property (weak, nonatomic) IBOutlet UILabel *bottomLabel;
+@property (weak, nonatomic) IBOutlet UIButton *saveImageButton;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *disMissButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *backViewTop;
 @property (weak, nonatomic) IBOutlet UIImageView *crownImageView;
@@ -25,6 +25,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timelabel;
 @property (weak, nonatomic) IBOutlet UIImageView *badgeImageView;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomViewH;
+@property (weak, nonatomic) IBOutlet UIButton *modifyNameButton;
 
 @end

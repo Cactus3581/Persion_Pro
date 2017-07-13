@@ -19,9 +19,10 @@ static CGFloat HeadCellW = 18.0f+30.0f+15.0f;
 }
 
 #pragma 处理数据
+//读取源数据，并转换
 + (void)dealDataWithSuccess:(void (^)(NSInteger section,NSInteger cell,NSInteger subCell,ScrollPosition scrollPosition,NSArray *resultArray))successBlock fail:(void (^)())failBlock {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSArray *array = [self getReadingChapter: @"7.4.9"];
+        NSArray *array = [self getReadingChapter: @"7.4.8"];
         NSInteger section = 0,row = 0,rowIn = 0;// 以上本地获取正在读的章节
         NSInteger section1 = 1,row1 = 1,rowIn1 = 1;// 记住本地获取正在读的章节
         NSMutableArray *arraySource = [NSMutableArray array];
@@ -62,17 +63,10 @@ static CGFloat HeadCellW = 18.0f+30.0f+15.0f;
     });
 }
 
-/**
- 知道章节号，遍历找到对应的model给它赋值；获取进度并赋值
- 
- @param arrayData array description
- @param chapterNumber chapterNumber description
- @param successBlock successBlock description
- @param failBlock failBlock description
- */
+//对所有model进行重新赋值：阅读进度，是否展开
 + (void)dealDataWithArray:(NSArray *)arrayData readChapter:(NSString *)chapterNumber success:(void (^)(NSInteger section,NSInteger cell,NSInteger subCell,ScrollPosition scrollPosition))successBlock fail:(void (^)())failBlock {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSArray *array = [self getReadingChapter:chapterNumber];
+        NSArray *array = [self getReadingChapter:@"7.4.9"];
         NSInteger section = 0,row = 0,rowIn = 0;// 以上本地获取正在读的章节,知道章节号，遍历找到对应的model给它赋值
         NSInteger section1 = 1,row1 = 1,rowIn1 = 1;// 记住本地获取正在读的章节
         for (KSGrammarBookCatalogueModel *catalogueModel in arrayData) {
@@ -100,6 +94,29 @@ static CGFloat HeadCellW = 18.0f+30.0f+15.0f;
         dispatch_async(dispatch_get_main_queue(), ^{
             if (array.count) {
                 successBlock(section1,row1,rowIn1,scrollPosition);
+            }else {
+                failBlock();
+            }
+        });
+    });
+}
+
+//对单个model操作：是否展开和正在读的章节赋值
++ (void)dealRowDWithArray:(NSArray *)arrayData readChapter:(NSString *)chapterNumber selected:(BOOL)selected success:(void (^)(NSInteger section,NSInteger cell,NSInteger subCell,ScrollPosition scrollPosition))successBlock fail:(void (^)())failBlock {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSArray *array = [self getReadingChapter:chapterNumber];
+        NSInteger section = [array[0] integerValue]-1;
+        NSInteger row = [array[1] integerValue]-1;
+        NSInteger rowIn = [array[2] integerValue]-1;// 以上本地获取正在读的章节,知道章节号，遍历找到对应的model给它赋值
+        KSGrammarBookCatalogueModel *catalogueModel = arrayData[section];
+        KSGrammarBookCatalogueSubModel *submodel = catalogueModel.detail[row];
+        KSGrammarBookCatalogueCellSubModel *cellModel = submodel.detail[rowIn];
+        cellModel.isReadingChapter = selected;
+        submodel.isExpand = selected;////需要展开
+        ScrollPosition scrollPosition = [self configuePosition:rowIn];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (array.count) {
+                successBlock(section,row,rowIn,scrollPosition);
             }else {
                 failBlock();
             }

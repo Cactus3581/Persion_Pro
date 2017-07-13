@@ -21,11 +21,13 @@
         self.windowLevel = UIWindowLevelAlert;
         // 这里，不能设置UIWindow的alpha属性，会影响里面的子view的透明度，这里我们用一张透明的图片
         // 设置背影半透明
-        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"alert_bg.png"]];
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 80)];
-        view.backgroundColor = [UIColor blackColor];
-        view.center = CGPointMake(160, 240);
-        [self addSubview:view];
+//        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"alert_bg.png"]];
+        
+        [self addSubview:self.certificateView];
+        self.certificateView.frame = self.bounds;
+//        [self.certificateView mas_makeConstraints:^(MASConstraintMaker *make) {
+////            make.top.bottom.leading.trailing.equalTo(self);
+//        }];
     }
     return self;
 }
@@ -40,7 +42,7 @@
 
 - (KSCertificateView *)certificateView {
     if (!_certificateView) {
-        _certificateView;
+        _certificateView = [[[NSBundle mainBundle] loadNibNamed:@"KSCertificateView" owner:self options:nil]lastObject];
     }
     return _certificateView;
 }

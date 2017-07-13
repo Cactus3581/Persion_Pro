@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vjU-fG-vmc" customClass="KSAppDeclareView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaD-GK-mpv" customClass="KSAppDeclareView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yaR-w2-tRJ">
+                            <rect key="frame" x="30" y="17.5" width="55" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="6ca-zo-W8J"/>
+                                <constraint firstAttribute="width" constant="55" id="fFV-oU-iUW"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学英语\n就用金山词霸APP" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nte-g3-38h">
+                            <rect key="frame" x="101" y="34.5" width="179" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrCoder" translatesAutoresizingMaskIntoConstraints="NO" id="Yue-6p-aEp">
+                            <rect key="frame" x="290" y="17.5" width="55" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="XJ9-eh-fUx"/>
+                                <constraint firstAttribute="width" constant="55" id="yrp-0C-VEg"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="nte-g3-38h" firstAttribute="leading" secondItem="yaR-w2-tRJ" secondAttribute="trailing" constant="16" id="91h-dO-t8E"/>
+                        <constraint firstAttribute="trailing" secondItem="Yue-6p-aEp" secondAttribute="trailing" constant="30" id="I65-oy-vlP"/>
+                        <constraint firstItem="yaR-w2-tRJ" firstAttribute="centerY" secondItem="vaD-GK-mpv" secondAttribute="centerY" id="Tng-bn-Rb0"/>
+                        <constraint firstItem="nte-g3-38h" firstAttribute="centerY" secondItem="yaR-w2-tRJ" secondAttribute="centerY" id="W1I-ea-YWG"/>
+                        <constraint firstItem="Yue-6p-aEp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nte-g3-38h" secondAttribute="trailing" constant="10" id="WwD-A3-M7F"/>
+                        <constraint firstItem="Yue-6p-aEp" firstAttribute="centerY" secondItem="vaD-GK-mpv" secondAttribute="centerY" id="qfG-nW-v29"/>
+                        <constraint firstItem="yaR-w2-tRJ" firstAttribute="leading" secondItem="vaD-GK-mpv" secondAttribute="leading" constant="30" id="qrM-ig-H5l"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="bottomLabel" destination="nte-g3-38h" id="XxZ-3t-s08"/>
+                        <outlet property="logoView" destination="yaR-w2-tRJ" id="b5b-ow-rxT"/>
+                        <outlet property="qrCodeImageView" destination="Yue-6p-aEp" id="Eu9-DK-fee"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vaD-GK-mpv" secondAttribute="bottom" id="Grh-L4-Mo1"/>
+                <constraint firstItem="vaD-GK-mpv" firstAttribute="top" secondItem="vjU-fG-vmc" secondAttribute="top" id="HpH-sO-qZS"/>
+                <constraint firstItem="vaD-GK-mpv" firstAttribute="leading" secondItem="vjU-fG-vmc" secondAttribute="leading" id="U7a-Sj-uwo"/>
+                <constraint firstAttribute="trailing" secondItem="vaD-GK-mpv" secondAttribute="trailing" id="coH-eO-6OC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backBottomView" destination="vaD-GK-mpv" id="wTI-fn-P7o"/>
+            </connections>
+            <point key="canvasLocation" x="-124.5" y="-160.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="55" height="55"/>
+        <image name="qrCoder" width="56" height="56"/>
+    </resources>
+</document>

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		010BA9EF1E276DB3009E0ACE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 010BA9EE1E276DB3009E0ACE /* main.m */; };
-		010BA9F21E276DB3009E0ACE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 010BA9F11E276DB3009E0ACE /* AppDelegate.m */; };
 		010BA9F81E276DB3009E0ACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010BA9F61E276DB3009E0ACE /* Main.storyboard */; };
 		010BA9FA1E276DB3009E0ACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010BA9F91E276DB3009E0ACE /* Assets.xcassets */; };
 		010BA9FD1E276DB3009E0ACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 010BA9FB1E276DB3009E0ACE /* LaunchScreen.storyboard */; };
@@ -59,6 +58,11 @@
 		0170DFB11F1610B60041D4EE /* KSAlertWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFB01F1610B60041D4EE /* KSAlertWindow.m */; };
 		0170DFB41F1611190041D4EE /* KSCertificateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFB31F1611190041D4EE /* KSCertificateView.m */; };
 		0170DFB61F16118F0041D4EE /* KSCertificateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0170DFB51F16118F0041D4EE /* KSCertificateView.xib */; };
+		0170DFB91F174CD60041D4EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFB81F174CD60041D4EE /* AppDelegate.m */; };
+		0170DFC31F1759FC0041D4EE /* KSCertificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFC11F1759FC0041D4EE /* KSCertificateViewController.m */; };
+		0170DFC41F1759FC0041D4EE /* KSCertificateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0170DFC21F1759FC0041D4EE /* KSCertificateViewController.xib */; };
+		0170DFC71F17863E0041D4EE /* KSAppDeclareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DFC61F17863E0041D4EE /* KSAppDeclareView.m */; };
+		0170DFC91F17864A0041D4EE /* KSAppDeclareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0170DFC81F17864A0041D4EE /* KSAppDeclareView.xib */; };
 		017CD9C21E978B5E00811B10 /* KVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017CD9C11E978B5E00811B10 /* KVCViewController.m */; };
 		017CD9C51E978BAF00811B10 /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 017CD9C41E978BAF00811B10 /* ProductModel.m */; };
 		017CD9C91E9DCE6200811B10 /* Rootcell.m in Sources */ = {isa = PBXBuildFile; fileRef = 017CD9C81E9DCE6200811B10 /* Rootcell.m */; };
@@ -145,8 +149,6 @@
 /* Begin PBXFileReference section */
 		010BA9EA1E276DB3009E0ACE /* I'm a Coder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I'm a Coder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		010BA9EE1E276DB3009E0ACE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		010BA9F01E276DB3009E0ACE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		010BA9F11E276DB3009E0ACE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		010BA9F71E276DB3009E0ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		010BA9F91E276DB3009E0ACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		010BA9FC1E276DB3009E0ACE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -245,6 +247,14 @@
 		0170DFB21F1611190041D4EE /* KSCertificateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCertificateView.h; sourceTree = "<group>"; };
 		0170DFB31F1611190041D4EE /* KSCertificateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCertificateView.m; sourceTree = "<group>"; };
 		0170DFB51F16118F0041D4EE /* KSCertificateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSCertificateView.xib; sourceTree = "<group>"; };
+		0170DFB71F174CD60041D4EE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "I'm a Coder/AppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		0170DFB81F174CD60041D4EE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "I'm a Coder/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		0170DFC01F1759FC0041D4EE /* KSCertificateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCertificateViewController.h; sourceTree = "<group>"; };
+		0170DFC11F1759FC0041D4EE /* KSCertificateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCertificateViewController.m; sourceTree = "<group>"; };
+		0170DFC21F1759FC0041D4EE /* KSCertificateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSCertificateViewController.xib; sourceTree = "<group>"; };
+		0170DFC51F17863E0041D4EE /* KSAppDeclareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAppDeclareView.h; sourceTree = "<group>"; };
+		0170DFC61F17863E0041D4EE /* KSAppDeclareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAppDeclareView.m; sourceTree = "<group>"; };
+		0170DFC81F17864A0041D4EE /* KSAppDeclareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSAppDeclareView.xib; sourceTree = "<group>"; };
 		017CD9C01E978B5E00811B10 /* KVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVCViewController.h; sourceTree = "<group>"; };
 		017CD9C11E978B5E00811B10 /* KVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVCViewController.m; sourceTree = "<group>"; };
 		017CD9C31E978BAF00811B10 /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductModel.h; sourceTree = "<group>"; };
@@ -1030,13 +1040,43 @@
 		0170DFAE1F160E0B0041D4EE /* Certificate */ = {
 			isa = PBXGroup;
 			children = (
+				0170DFBC1F1759CD0041D4EE /* Model */,
+				0170DFBB1F1759C50041D4EE /* View */,
+				0170DFBA1F1759BC0041D4EE /* ViewController */,
 				0170DFAF1F1610B60041D4EE /* KSAlertWindow.h */,
 				0170DFB01F1610B60041D4EE /* KSAlertWindow.m */,
+				0170DFC51F17863E0041D4EE /* KSAppDeclareView.h */,
+				0170DFC61F17863E0041D4EE /* KSAppDeclareView.m */,
+				0170DFC81F17864A0041D4EE /* KSAppDeclareView.xib */,
 				0170DFB21F1611190041D4EE /* KSCertificateView.h */,
 				0170DFB31F1611190041D4EE /* KSCertificateView.m */,
 				0170DFB51F16118F0041D4EE /* KSCertificateView.xib */,
 			);
 			path = Certificate;
+			sourceTree = "<group>";
+		};
+		0170DFBA1F1759BC0041D4EE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0170DFC01F1759FC0041D4EE /* KSCertificateViewController.h */,
+				0170DFC11F1759FC0041D4EE /* KSCertificateViewController.m */,
+				0170DFC21F1759FC0041D4EE /* KSCertificateViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0170DFBB1F1759C50041D4EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0170DFBC1F1759CD0041D4EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		017CD9BF1E978B4700811B10 /* KVC */ = {
@@ -1263,8 +1303,8 @@
 		01B819E71EC2B6E00042464C /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				010BA9F01E276DB3009E0ACE /* AppDelegate.h */,
-				010BA9F11E276DB3009E0ACE /* AppDelegate.m */,
+				0170DFB71F174CD60041D4EE /* AppDelegate.h */,
+				0170DFB81F174CD60041D4EE /* AppDelegate.m */,
 				010BAA201E276DDF009E0ACE /* RootTabBarViewController.h */,
 				010BAA211E276DDF009E0ACE /* RootTabBarViewController.m */,
 			);
@@ -1733,6 +1773,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0170DFC41F1759FC0041D4EE /* KSCertificateViewController.xib in Resources */,
 				010BA9FD1E276DB3009E0ACE /* LaunchScreen.storyboard in Resources */,
 				01110EEC1F13729B00732172 /* KSGrammarBookCatalogueController.xib in Resources */,
 				010BA9FA1E276DB3009E0ACE /* Assets.xcassets in Resources */,
@@ -1740,6 +1781,7 @@
 				01110EF31F13729B00732172 /* KSGrammarBookCatalogueHeaderView.xib in Resources */,
 				010BA9F81E276DB3009E0ACE /* Main.storyboard in Resources */,
 				014E27BE1F13E1CF00051FAE /* index1.toc in Resources */,
+				0170DFC91F17864A0041D4EE /* KSAppDeclareView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1812,7 +1854,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				010BA9F21E276DB3009E0ACE /* AppDelegate.m in Sources */,
 				01C7F7FA1E7BC9CC007AE40B /* MultithReadingViewController.m in Sources */,
 				010BA9EF1E276DB3009E0ACE /* main.m in Sources */,
 				01B819DF1EC1DDEF0042464C /* UIFont+XRZAdd.m in Sources */,
@@ -1862,6 +1903,7 @@
 				01877C501EDF225200C86202 /* KSProgressIndicatorView.m in Sources */,
 				016C195A1E51B35E002F910F /* BlockViewController.m in Sources */,
 				01877C511EDF225200C86202 /* KSProgressNumberBar.m in Sources */,
+				0170DFC71F17863E0041D4EE /* KSAppDeclareView.m in Sources */,
 				01877C7B1EE1492B00C86202 /* FMDatabasePool.m in Sources */,
 				01877C771EE1492B00C86202 /* DataBaseModel.m in Sources */,
 				010BAA8C1E2789B6009E0ACE /* CustomDrawView.m in Sources */,
@@ -1908,6 +1950,8 @@
 				010BAA941E27A315009E0ACE /* BaseModel.m in Sources */,
 				01CE35C21E546FB100C082BB /* Section_three_ReusableView.m in Sources */,
 				010BAA551E276DED009E0ACE /* BaseNavigationVC.m in Sources */,
+				0170DFB91F174CD60041D4EE /* AppDelegate.m in Sources */,
+				0170DFC31F1759FC0041D4EE /* KSCertificateViewController.m in Sources */,
 				0170DB3B1F14CC060041D4EE /* NSObject+MJProperty.m in Sources */,
 				01CE35ED1E56AA9000C082BB /* DataManager.m in Sources */,
 				01CE35BE1E546FB100C082BB /* Cell_three.m in Sources */,
@@ -2071,6 +2115,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/I'm a Coder/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "I'm a Coder/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xiaruzhen.I-m-a-Coder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2088,6 +2133,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/I'm a Coder/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "I'm a Coder/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xiaruzhen.I-m-a-Coder";
 				PRODUCT_NAME = "$(TARGET_NAME)";

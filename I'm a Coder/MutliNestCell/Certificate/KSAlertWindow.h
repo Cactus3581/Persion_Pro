@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface KSAlertWindow : UIWindow
+- (void)show ;
 
+- (void)dismiss ;
 @end

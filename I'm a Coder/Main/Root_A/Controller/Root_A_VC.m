@@ -28,6 +28,7 @@
 #import "TransitionListViewController.h"
 #import "KVCViewController.h"
 #import "KSGrammarBookCatalogueController.h"
+#import "KSCertificateViewController.h"
 
 @interface Root_A_VC ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) NSArray *array;
@@ -122,8 +123,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-        KSGrammarBookCatalogueController *sub_a = [[KSGrammarBookCatalogueController alloc]init];
-
+        //KSGrammarBookCatalogueController *sub_a = [[KSGrammarBookCatalogueController alloc]init];
+    KSCertificateViewController *sub_a = [[KSCertificateViewController alloc]init];
+    
+    [self presentViewController:sub_a animated:YES completion:nil];
 
     //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
 //        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
@@ -172,9 +175,9 @@
     //    KVCViewController *sub_a = [[KVCViewController alloc]init];
     
     
-    sub_a.hidesBottomBarWhenPushed = YES;
+//    sub_a.hidesBottomBarWhenPushed = YES;
     
-    [self.navigationController pushViewController:sub_a animated:NO];
+//    [self.navigationController pushViewController:sub_a animated:YES];
     
     //    [self transitionAnimation];
 }

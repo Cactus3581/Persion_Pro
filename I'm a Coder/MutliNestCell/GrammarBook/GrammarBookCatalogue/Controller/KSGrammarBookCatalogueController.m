@@ -13,13 +13,17 @@
 #import "MJExtension.h"
 #import "KSGrammarBookCatalogueFooterView.h"
 #import "Sub_B_ViewController.h"
+#import "KSCertificateView.h"
+#import "KSAlertWindow.h"
+#import "AppDelegate.h"
 
 #define kScreen_Width self.view.bounds.size.width
 @interface KSGrammarBookCatalogueController ()<UITableViewDelegate,UITableViewDataSource,KSGrammarBookCatalogueHeadCellDelegate,Sub_B_ViewControllerDelegate>
 @property (nonatomic,strong) NSArray *arraySource;//显示的数据
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSIndexPath *indexPath;
 @property (nonatomic, copy) NSString *chapterString;
+@property (nonatomic,strong) KSCertificateView *certificateView;
+
 
 @end
 
@@ -33,22 +37,42 @@ static CGFloat normalCellH = 72.0f;
 @implementation KSGrammarBookCatalogueController
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.navigationController.navigationBarHidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
-    [self initTableView];
-    [self initData];
+//    [self initTableView];
+//    [self initData];
+    
+//    KSAlertWindow *alert = [[KSAlertWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+
+//    [alert show];
+    
+    AppDelegate *delagete = [UIApplication sharedApplication].delegate;
+//    [delagete setInterfaceOrientationMaskWithAppDelegate:delagete fullscreen:NO];
+
+    
+    [self.view addSubview:self.certificateView];
+//    self.certificateView.frame = self.view.bounds;
+    [self.certificateView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.leading.trailing.equalTo(self.view);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 
+- (KSCertificateView *)certificateView {
+    if (!_certificateView) {
+        _certificateView = [[[NSBundle mainBundle] loadNibNamed:@"KSCertificateView" owner:self options:nil]lastObject];
+    }
+    return _certificateView;
+}
 #pragma mark -数据源
 - (void)initData {
     __weak typeof (self) weakSelf = self;
     [KSGrammarBookCatalogueModel dealDataWithSuccess:^(NSInteger section, NSInteger cell, NSInteger subCell, ScrollPosition scrollPosition, NSArray *resultArray) {
-        self.indexPath = [NSIndexPath indexPathForRow:cell inSection:section];
-        self.chapterString = [NSString stringWithFormat:@"%ld,%ld,%ld",section,cell,subCell];
+//        self.chapterString = [NSString stringWithFormat:@"%ld.%ld.%ld",section,cell,subCell];
         weakSelf.arraySource = resultArray.copy;
         [weakSelf.tableView reloadData];
         [weakSelf scrollPositionWithsection:section cell:cell subCell:subCell scrollPosition:scrollPosition animated:NO];
@@ -60,9 +84,8 @@ static CGFloat normalCellH = 72.0f;
 - (void)dealData {
     __weak typeof (self) weakSelf = self;
     [KSGrammarBookCatalogueModel dealDataWithArray:self.arraySource readChapter:self.chapterString success:^(NSInteger section, NSInteger cell, NSInteger subCell, ScrollPosition scrollPosition) {
-        self.indexPath = [NSIndexPath indexPathForRow:cell inSection:section];
-        [self.tableView reloadRowsAtIndexPaths:@[self.indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//        [weakSelf.tableView reloadData];
+//        self.chapterString = [NSString stringWithFormat:@"%ld.%ld.%ld",section,cell,subCell];
+        [weakSelf.tableView reloadData];
         [weakSelf scrollPositionWithsection:section cell:cell subCell:subCell scrollPosition:scrollPosition animated:NO];
     } fail:^{
         
@@ -197,21 +220,9 @@ static CGFloat normalCellH = 72.0f;
 
 #pragma mark - Cell delegate
 - (void)pushViewControllerWithModel:(KSGrammarBookCatalogueCellSubModel *)model indexPath:(NSIndexPath *)indexPath {
-    [self dealData];
-
-//    [self.tableView reloadRowsAtIndexPaths:@[self.indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//    [self performSelector:@selector(ewrerer) withObject:nil afterDelay:5.0];
-}
-
-- (void)ewrerer {
     Sub_B_ViewController *vc = [[Sub_B_ViewController alloc]init];
     vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
-}
-
-#pragma mark - Sub_B delegate
-- (void)pushViewControllerWithModel {
-    [self dealData];
 }
 
 - (void)expandCellAction:(UIButton *)expandButton expand:(BOOL)isExpand model:(KSGrammarBookCatalogueSubModel *)model indexPath:(NSIndexPath *)indexPath{
@@ -220,6 +231,29 @@ static CGFloat normalCellH = 72.0f;
     KSGrammarBookCatalogueSubModel *chapterCellModel = cellArray[indexPath.row];
     chapterCellModel.isExpand = !chapterCellModel.isExpand;
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+#pragma mark - Sub_B delegate
+- (void)pushViewControllerWithModel {
+    [self dealData];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return NO;
+}
+//一开始的方向  很重要
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationPortrait;
+}
+
+//支持旋转
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+//支持的方向 因为界面A我们只需要支持竖屏
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

@@ -31,6 +31,8 @@ typedef NS_ENUM (NSUInteger,ScrollPosition){
 + (void)dealDataWithSuccess:(void (^)(NSInteger section,NSInteger cell,NSInteger subCell,ScrollPosition scrollPosition,NSArray *resultArray))successBlock fail:(void (^)())failBlock;
 
 + (void)dealDataWithArray:(NSArray *)array readChapter:(NSString *)chapterNumber success:(void (^)(NSInteger section,NSInteger cell,NSInteger subCell,ScrollPosition scrollPosition))successBlock fail:(void (^)())failBlock;
+
++ (void)dealRowDWithArray:(NSArray *)arrayData readChapter:(NSString *)chapterNumber selected:(BOOL)selected success:(void (^)(NSInteger section,NSInteger cell,NSInteger subCell,ScrollPosition scrollPosition))successBlock fail:(void (^)())failBlock;
 @end
 
 // 一个大区里的大cell

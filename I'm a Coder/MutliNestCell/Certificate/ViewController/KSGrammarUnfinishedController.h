@@ -14,4 +14,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *keepButton;
 @property (weak, nonatomic) IBOutlet UILabel *bookNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *describeLabel;
+@property (nonatomic,strong) UIView *circleBackView;
 @end

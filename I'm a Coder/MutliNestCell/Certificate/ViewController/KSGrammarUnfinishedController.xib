@@ -53,13 +53,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="继续加油吧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lme-bP-FBH">
-                    <rect key="frame" x="50" y="395" width="275" height="23"/>
+                    <rect key="frame" x="50" y="415" width="275" height="23"/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新东方英语语法四级" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avw-wh-sLy">
-                    <rect key="frame" x="50" y="433" width="275" height="21"/>
+                    <rect key="frame" x="50" y="444" width="275" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -67,7 +67,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="lme-bP-FBH" firstAttribute="centerY" secondItem="y1a-yS-nY0" secondAttribute="centerY" constant="80" id="ELX-X7-KMt"/>
+                <constraint firstItem="lme-bP-FBH" firstAttribute="centerY" secondItem="y1a-yS-nY0" secondAttribute="centerY" constant="100" id="ELX-X7-KMt"/>
                 <constraint firstAttribute="bottom" secondItem="xsb-dY-km2" secondAttribute="bottom" constant="17" id="H4z-b2-7dV"/>
                 <constraint firstItem="uzi-xI-7kP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Rh6-bg-EQE"/>
                 <constraint firstItem="lme-bP-FBH" firstAttribute="trailing" secondItem="y1a-yS-nY0" secondAttribute="trailing" constant="-20" id="WlZ-wt-mS6"/>
@@ -76,7 +76,7 @@
                 <constraint firstItem="xsb-dY-km2" firstAttribute="trailing" secondItem="y1a-yS-nY0" secondAttribute="trailing" id="ahy-4V-ewK"/>
                 <constraint firstItem="xsb-dY-km2" firstAttribute="top" secondItem="y1a-yS-nY0" secondAttribute="bottom" constant="17" id="h13-nP-QiF"/>
                 <constraint firstItem="y1a-yS-nY0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iLp-Zm-tLD"/>
-                <constraint firstItem="avw-wh-sLy" firstAttribute="top" secondItem="lme-bP-FBH" secondAttribute="bottom" constant="15" id="kwx-Lb-wVN"/>
+                <constraint firstItem="avw-wh-sLy" firstAttribute="top" secondItem="lme-bP-FBH" secondAttribute="bottom" constant="6" id="kwx-Lb-wVN"/>
                 <constraint firstItem="avw-wh-sLy" firstAttribute="leading" secondItem="lme-bP-FBH" secondAttribute="leading" id="p4S-0q-0yd"/>
                 <constraint firstItem="y1a-yS-nY0" firstAttribute="top" secondItem="uzi-xI-7kP" secondAttribute="bottom" constant="25" id="sIA-IP-OrK"/>
                 <constraint firstItem="uzi-xI-7kP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="v7J-aC-bDs"/>

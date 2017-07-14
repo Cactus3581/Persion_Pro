@@ -38,6 +38,7 @@
 		01110EF31F13729B00732172 /* KSGrammarBookCatalogueHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01110EE81F13729B00732172 /* KSGrammarBookCatalogueHeaderView.xib */; };
 		011B0FC51ED2851C00643227 /* KSSlideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B0FC21ED2851C00643227 /* KSSlideCell.m */; };
 		011B0FC61ED2851C00643227 /* KSSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B0FC41ED2851C00643227 /* KSSlideView.m */; };
+		011F786E1F185E3F00184973 /* KSWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011F786D1F185E3F00184973 /* KSWaterWaveView.m */; };
 		01413BA71E48A1DA004521FE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01413BA61E48A1DA004521FE /* libsqlite3.tbd */; };
 		014891AE1E86818C0012E689 /* PopViewAnaimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 014891AD1E86818C0012E689 /* PopViewAnaimationVC.m */; };
 		014891B41E868B3B0012E689 /* Popview.m in Sources */ = {isa = PBXBuildFile; fileRef = 014891B31E868B3B0012E689 /* Popview.m */; };
@@ -92,6 +93,7 @@
 		01877C7D1EE1492B00C86202 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C6E1EE1492B00C86202 /* FMResultSet.m */; };
 		01877C801EE1531600C86202 /* FMDBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C7F1EE1531600C86202 /* FMDBTools.m */; };
 		01877C851EE1614B00C86202 /* CountryDBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C841EE1614B00C86202 /* CountryDBTools.m */; };
+		01A4B5C71F18749B00B9168F /* cycleBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A4B5C61F18749B00B9168F /* cycleBorder.png */; };
 		01A824661EC019E200C1BDDB /* KSAlertImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A824631EC019E200C1BDDB /* KSAlertImageView.m */; };
 		01A824671EC019E200C1BDDB /* MPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A824651EC019E200C1BDDB /* MPlayerView.m */; };
 		01B819DF1EC1DDEF0042464C /* UIFont+XRZAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B819DA1EC1DDEF0042464C /* UIFont+XRZAdd.m */; };
@@ -209,6 +211,8 @@
 		011B0FC21ED2851C00643227 /* KSSlideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSlideCell.m; sourceTree = "<group>"; };
 		011B0FC31ED2851C00643227 /* KSSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSSlideView.h; sourceTree = "<group>"; };
 		011B0FC41ED2851C00643227 /* KSSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSlideView.m; sourceTree = "<group>"; };
+		011F786C1F185E3F00184973 /* KSWaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSWaterWaveView.h; sourceTree = "<group>"; };
+		011F786D1F185E3F00184973 /* KSWaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSWaterWaveView.m; sourceTree = "<group>"; };
 		01413BA41E48A1D1004521FE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		01413BA61E48A1DA004521FE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		014891AC1E86818C0012E689 /* PopViewAnaimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewAnaimationVC.h; sourceTree = "<group>"; };
@@ -316,6 +320,7 @@
 		01877C7F1EE1531600C86202 /* FMDBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBTools.m; sourceTree = "<group>"; };
 		01877C831EE1614B00C86202 /* CountryDBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryDBTools.h; sourceTree = "<group>"; };
 		01877C841EE1614B00C86202 /* CountryDBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryDBTools.m; sourceTree = "<group>"; };
+		01A4B5C61F18749B00B9168F /* cycleBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycleBorder.png; sourceTree = "<group>"; };
 		01A824621EC019E200C1BDDB /* KSAlertImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAlertImageView.h; sourceTree = "<group>"; };
 		01A824631EC019E200C1BDDB /* KSAlertImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAlertImageView.m; sourceTree = "<group>"; };
 		01A824641EC019E200C1BDDB /* MPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPlayerView.h; sourceTree = "<group>"; };
@@ -1071,6 +1076,9 @@
 		0170DFBB1F1759C50041D4EE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				011F786C1F185E3F00184973 /* KSWaterWaveView.h */,
+				011F786D1F185E3F00184973 /* KSWaterWaveView.m */,
+				01A4B5C61F18749B00B9168F /* cycleBorder.png */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1782,6 +1790,7 @@
 				010BA9FA1E276DB3009E0ACE /* Assets.xcassets in Resources */,
 				0170DFB61F16118F0041D4EE /* KSCertificateView.xib in Resources */,
 				0170DFCE1F178DBE0041D4EE /* KSGrammarCertificateController.xib in Resources */,
+				01A4B5C71F18749B00B9168F /* cycleBorder.png in Resources */,
 				01110EF31F13729B00732172 /* KSGrammarBookCatalogueHeaderView.xib in Resources */,
 				010BA9F81E276DB3009E0ACE /* Main.storyboard in Resources */,
 				014E27BE1F13E1CF00051FAE /* index1.toc in Resources */,
@@ -1913,6 +1922,7 @@
 				01877C7B1EE1492B00C86202 /* FMDatabasePool.m in Sources */,
 				01877C771EE1492B00C86202 /* DataBaseModel.m in Sources */,
 				010BAA8C1E2789B6009E0ACE /* CustomDrawView.m in Sources */,
+				011F786E1F185E3F00184973 /* KSWaterWaveView.m in Sources */,
 				01CE35BF1E546FB100C082BB /* Cell_two.m in Sources */,
 				017CD9C51E978BAF00811B10 /* ProductModel.m in Sources */,
 				014891B41E868B3B0012E689 /* Popview.m in Sources */,

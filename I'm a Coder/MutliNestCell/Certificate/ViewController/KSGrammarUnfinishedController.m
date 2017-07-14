@@ -7,6 +7,7 @@
 //
 
 #import "KSGrammarUnfinishedController.h"
+#import "KSWaterWaveView.h"
 
 @interface KSGrammarUnfinishedController ()
 
@@ -27,22 +28,61 @@
     [super viewWillDisappear:animated];
 }
 
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    self.circleBackView.layer.cornerRadius  = self.circleBackView.bounds.size.width/2;
+    self.circleBackView.layer.masksToBounds = YES;
+    [self configueShadowColor];
+}
+
 #pragma mark - Configue Subviews
 - (void)configueView {
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self.keepButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     self.keepButton.layer.cornerRadius = 3.0f;
     self.keepButton.backgroundColor = [UIColor greenColor];
-    
-    [self configueShadowColor];
+    [self waterWave];
+}
+
+- (void)waterWave {
+    UIView *circleBackView = [[UIView alloc]init];
+    circleBackView.layer.borderWidth = 1.0f / [UIScreen mainScreen].scale;
+    circleBackView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    circleBackView.backgroundColor = [UIColor clearColor];
+    self.circleBackView = circleBackView;
+    [self.backImageVIew addSubview:self.circleBackView];
+    [self.circleBackView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.backImageVIew.mas_centerY).offset(40);
+        make.right.equalTo(self.backImageVIew).offset(-50);
+        make.left.equalTo(self.backImageVIew).offset(50);
+        make.height.mas_equalTo(self.circleBackView.mas_width).multipliedBy(1);
+    }];
+    KSWaterWaveView *waterWaveView = [KSWaterWaveView waterWaveView];
+    waterWaveView.percent = 0.56;
+    waterWaveView.speed = 0.1;
+    waterWaveView.peak = 6;
+    waterWaveView.titleText = @"完成度";
+    waterWaveView.titleFont = 16;
+    waterWaveView.titleColor = [UIColor blueColor];
+    waterWaveView.completeProgressText = @"56%";
+    waterWaveView.completeProgressColor = [UIColor blueColor];
+    waterWaveView.completeProgressFont = 75;
+    [self.circleBackView addSubview:waterWaveView];
+    [waterWaveView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.circleBackView);
+        make.right.equalTo(self.circleBackView).offset(-18);
+        make.left.equalTo(self.circleBackView).offset(18);
+        make.height.mas_equalTo(waterWaveView.mas_width).multipliedBy(1);
+    }];
+    [waterWaveView startWave];
 }
 
 #pragma mark - Configue ShadowColor
 - (void)configueShadowColor {
-    self.backImageVIew.layer.shadowColor = [UIColor blackColor].CGColor;//shadowColor阴影颜色
-    self.backImageVIew.layer.shadowOffset = CGSizeMake(0,0);//shadowOffset阴影偏移，默认(0, -3),这个跟shadowRadius配合使用
-    self.backImageVIew.layer.shadowOpacity = 0.6;//阴影透明度，默认0
-    self.backImageVIew.layer.shadowRadius = 10;//阴影半径，默认3
+    self.backImageVIew.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.backImageVIew.layer.shadowOffset = CGSizeMake(0,0);
+    self.backImageVIew.layer.shadowOpacity = 0.6;
+    self.backImageVIew.layer.shadowRadius = 10;
     //路径阴影
     UIBezierPath *path = [UIBezierPath bezierPath];
     float width = self.backImageVIew.bounds.size.width;

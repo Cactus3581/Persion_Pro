@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="kRa-PA-qpa" customClass="KSGrammarBookCatalogueHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="headview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssj-rI-gZx">
+                    <rect key="frame" x="33" y="40.5" width="391" height="25.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKS-pv-wHN">
+                    <rect key="frame" x="13" y="47.5" width="10" height="10"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="1mi-rh-laS"/>
+                        <constraint firstAttribute="height" constant="10" id="zvm-Cd-Hlc"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceF-bb-uOr">
+                    <rect key="frame" x="17.5" y="0.0" width="1" height="105"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="Amy-yP-G1g"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ssj-rI-gZx" firstAttribute="leading" secondItem="lKS-pv-wHN" secondAttribute="trailing" constant="10" id="Hpl-sp-KUa"/>
+                <constraint firstAttribute="trailing" secondItem="ssj-rI-gZx" secondAttribute="trailing" constant="10" id="Ocu-bL-uz9"/>
+                <constraint firstItem="ceF-bb-uOr" firstAttribute="top" secondItem="kRa-PA-qpa" secondAttribute="top" id="Q3H-cT-Zez"/>
+                <constraint firstAttribute="bottom" secondItem="ceF-bb-uOr" secondAttribute="bottom" id="Qjk-r9-bgn"/>
+                <constraint firstItem="lKS-pv-wHN" firstAttribute="centerY" secondItem="kRa-PA-qpa" secondAttribute="centerY" id="TIi-iO-Odf"/>
+                <constraint firstItem="ssj-rI-gZx" firstAttribute="centerY" secondItem="lKS-pv-wHN" secondAttribute="centerY" id="cnq-iB-UZg"/>
+                <constraint firstItem="ceF-bb-uOr" firstAttribute="centerX" secondItem="lKS-pv-wHN" secondAttribute="centerX" id="cnt-V7-FXz"/>
+                <constraint firstItem="lKS-pv-wHN" firstAttribute="leading" secondItem="kRa-PA-qpa" secondAttribute="leading" constant="13" id="uTh-7v-zDu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="chapterName" destination="ssj-rI-gZx" id="c4O-DV-4sI"/>
+                <outlet property="headView" destination="lKS-pv-wHN" id="cmq-Xr-3ZI"/>
+                <outlet property="lineView" destination="ceF-bb-uOr" id="5pJ-KI-lLq"/>
+                <outlet property="lineViewW" destination="Amy-yP-G1g" id="Vfg-vk-NHW"/>
+                <outlet property="lineviewTop" destination="Q3H-cT-Zez" id="Ogu-qN-Hby"/>
+            </connections>
+            <point key="canvasLocation" x="-268" y="-223.5"/>
+        </view>
+    </objects>
+</document>

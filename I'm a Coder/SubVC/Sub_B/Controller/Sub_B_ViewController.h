@@ -8,7 +8,15 @@
 
 #import "BaseViewController.h"
 
+@protocol Sub_B_ViewControllerDelegate <NSObject>
+@optional
+
+-(void) pushViewControllerWithModel;
+@end
+
 @interface Sub_B_ViewController : BaseViewController
 @property (nonatomic,strong) NSString *titleName;
 @property (nonatomic,assign) NSInteger row;
+@property (nonatomic, weak) id<Sub_B_ViewControllerDelegate> delegate;
+
 @end

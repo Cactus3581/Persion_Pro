@@ -41,10 +41,16 @@
 //    [self setMaskInLayer];
 //    [self setReset];
 
-    [KSProgressNumberBar show];
-    [self progressBarDownload];
+//    [KSProgressNumberBar show];
+//    [self progressBarDownload];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if (_delegate && [_delegate respondsToSelector:@selector(pushViewControllerWithModel)]) {
+        [_delegate pushViewControllerWithModel];
+    }
+}
 - (void)progressBarDownload
 {
     self.timer = [self timerWithSelector:@selector(setBarProgress)];

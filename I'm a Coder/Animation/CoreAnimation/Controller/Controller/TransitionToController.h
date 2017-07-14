@@ -9,7 +9,7 @@
 #import "BaseViewController.h"
 @class TransitionToController;
 @protocol TransitionToControllerDelegate <NSObject>
-
+@optional
 -(void) dismissButton:(TransitionToController *)viewController;
 
 - (id<UIViewControllerInteractiveTransitioning>)interactiveTransitionForPresent;

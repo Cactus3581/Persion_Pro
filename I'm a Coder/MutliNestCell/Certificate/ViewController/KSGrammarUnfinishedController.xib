@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KSGrammarUnfinishedController">
+            <connections>
+                <outlet property="backImageVIew" destination="y1a-yS-nY0" id="j0y-s7-B16"/>
+                <outlet property="bookNameLabel" destination="avw-wh-sLy" id="qqw-XH-tTa"/>
+                <outlet property="describeLabel" destination="lme-bP-FBH" id="NXG-JQ-5B5"/>
+                <outlet property="dismissButton" destination="uzi-xI-7kP" id="W4o-R6-bCh"/>
+                <outlet property="keepButton" destination="xsb-dY-km2" id="4SR-T9-CV1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzi-xI-7kP">
+                    <rect key="frame" x="30" y="20" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="MM9-gh-pjf"/>
+                        <constraint firstAttribute="height" constant="15" id="ZQw-im-sxU"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="circle_money"/>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="4ab-OF-0LV"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backView" translatesAutoresizingMaskIntoConstraints="NO" id="y1a-yS-nY0">
+                    <rect key="frame" x="30" y="60" width="315" height="533"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="y1a-yS-nY0" secondAttribute="height" multiplier="314:532" id="psx-zN-VS4"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsb-dY-km2">
+                    <rect key="frame" x="30" y="610" width="315" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="thz-nq-HwL"/>
+                    </constraints>
+                    <state key="normal" title="揭开下一章"/>
+                    <connections>
+                        <action selector="keepStepAction:" destination="-1" eventType="touchUpInside" id="wQA-5d-m7N"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="继续加油吧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lme-bP-FBH">
+                    <rect key="frame" x="50" y="415" width="275" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新东方英语语法四级" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avw-wh-sLy">
+                    <rect key="frame" x="50" y="444" width="275" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lme-bP-FBH" firstAttribute="centerY" secondItem="y1a-yS-nY0" secondAttribute="centerY" constant="100" id="ELX-X7-KMt"/>
+                <constraint firstAttribute="bottom" secondItem="xsb-dY-km2" secondAttribute="bottom" constant="17" id="H4z-b2-7dV"/>
+                <constraint firstItem="uzi-xI-7kP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Rh6-bg-EQE"/>
+                <constraint firstItem="lme-bP-FBH" firstAttribute="trailing" secondItem="y1a-yS-nY0" secondAttribute="trailing" constant="-20" id="WlZ-wt-mS6"/>
+                <constraint firstItem="xsb-dY-km2" firstAttribute="leading" secondItem="y1a-yS-nY0" secondAttribute="leading" id="ZVW-Z4-XXp"/>
+                <constraint firstItem="avw-wh-sLy" firstAttribute="trailing" secondItem="lme-bP-FBH" secondAttribute="trailing" id="Zzf-2I-l7y"/>
+                <constraint firstItem="xsb-dY-km2" firstAttribute="trailing" secondItem="y1a-yS-nY0" secondAttribute="trailing" id="ahy-4V-ewK"/>
+                <constraint firstItem="xsb-dY-km2" firstAttribute="top" secondItem="y1a-yS-nY0" secondAttribute="bottom" constant="17" id="h13-nP-QiF"/>
+                <constraint firstItem="y1a-yS-nY0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iLp-Zm-tLD"/>
+                <constraint firstItem="avw-wh-sLy" firstAttribute="top" secondItem="lme-bP-FBH" secondAttribute="bottom" constant="6" id="kwx-Lb-wVN"/>
+                <constraint firstItem="avw-wh-sLy" firstAttribute="leading" secondItem="lme-bP-FBH" secondAttribute="leading" id="p4S-0q-0yd"/>
+                <constraint firstItem="y1a-yS-nY0" firstAttribute="top" secondItem="uzi-xI-7kP" secondAttribute="bottom" constant="25" id="sIA-IP-OrK"/>
+                <constraint firstItem="uzi-xI-7kP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="v7J-aC-bDs"/>
+                <constraint firstItem="lme-bP-FBH" firstAttribute="leading" secondItem="y1a-yS-nY0" secondAttribute="leading" constant="20" id="yhd-lr-bqe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backView" width="314" height="529"/>
+        <image name="circle_money" width="19" height="19"/>
+    </resources>
+</document>

@@ -25,16 +25,15 @@
 #import "MasonryViewController.h"
 #import "PopViewAnaimationVC.h"
 #import "TransitionViewController.h"
-
 #import "TransitionListViewController.h"
 #import "KVCViewController.h"
+#import "KSGrammarBookCatalogueController.h"
+#import "KSGrammarCertificateController.h"
+#import "KSGrammarUnfinishedController.h"
 
 @interface Root_A_VC ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) NSArray *array;
 @property (nonatomic,strong) Sub_A_ViewController *sub_A_ViewController;
-
-
-
 @end
 
 @implementation Root_A_VC
@@ -125,8 +124,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+        //KSGrammarBookCatalogueController *sub_a = [[KSGrammarBookCatalogueController alloc]init];
+//    KSCertificateViewController *sub_a = [[KSCertificateViewController alloc]init];
+    
+//    KSGrammarCertificateController *sub_a = [[KSGrammarCertificateController alloc]init];
+    
+    KSGrammarUnfinishedController *sub_a = [[KSGrammarUnfinishedController alloc]init];
+
+
+    
+    [self presentViewController:sub_a animated:YES completion:nil];
+
     //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
-        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
+//        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
     //    Sub_C_ViewController *sub_a = [[Sub_C_ViewController alloc]init];
     
     //    BlockAnimatonVC *sub_a = [[BlockAnimatonVC alloc]init];
@@ -172,9 +182,9 @@
     //    KVCViewController *sub_a = [[KVCViewController alloc]init];
     
     
-    sub_a.hidesBottomBarWhenPushed = YES;
+//    sub_a.hidesBottomBarWhenPushed = YES;
     
-    [self.navigationController pushViewController:sub_a animated:YES];
+//    [self.navigationController pushViewController:sub_a animated:YES];
     
     //    [self transitionAnimation];
 }

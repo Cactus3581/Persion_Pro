@@ -35,10 +35,12 @@
 }
 
 #pragma mark - 圆环图片赋值
+/*
 - (void)drawRect:(CGRect)rect {
     UIImage *cycleImage = [UIImage imageNamed:@"cycleBorder.png"];
     [cycleImage drawInRect:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
 }
+ */
 
 #pragma mark - 开始动画
 - (void)startWave {

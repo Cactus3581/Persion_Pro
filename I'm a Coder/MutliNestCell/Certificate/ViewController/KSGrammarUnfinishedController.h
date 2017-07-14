@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *bookNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *describeLabel;
 @property (nonatomic,strong) UIView *circleBackView;
+@property (nonatomic,strong) UIView *circleLittleBackView;
+
 @end

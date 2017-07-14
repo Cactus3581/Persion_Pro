@@ -31,7 +31,7 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     self.circleBackView.layer.cornerRadius  = self.circleBackView.bounds.size.width/2;
-    self.circleBackView.layer.masksToBounds = YES;
+    self.circleLittleBackView.layer.cornerRadius  = self.circleLittleBackView.bounds.size.width/2;
     [self configueShadowColor];
 }
 
@@ -57,6 +57,20 @@
         make.left.equalTo(self.backImageVIew).offset(50);
         make.height.mas_equalTo(self.circleBackView.mas_width).multipliedBy(1);
     }];
+    
+    
+    self.circleLittleBackView = [[UIView alloc]init];
+    self.circleLittleBackView.layer.borderWidth = 1.0f / [UIScreen mainScreen].scale;
+    self.circleLittleBackView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.circleLittleBackView.backgroundColor = [UIColor clearColor];
+    [self.circleBackView addSubview:self.circleLittleBackView];
+    [self.circleLittleBackView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.circleBackView);
+        make.right.equalTo(self.circleBackView).offset(-16);
+        make.left.equalTo(self.circleBackView).offset(16);
+        make.height.mas_equalTo(self.circleLittleBackView.mas_width).multipliedBy(1);
+    }];
+    
     KSWaterWaveView *waterWaveView = [KSWaterWaveView waterWaveView];
     waterWaveView.percent = 0.56;
     waterWaveView.speed = 0.1;
@@ -67,11 +81,11 @@
     waterWaveView.completeProgressText = @"56%";
     waterWaveView.completeProgressColor = [UIColor blueColor];
     waterWaveView.completeProgressFont = 75;
-    [self.circleBackView addSubview:waterWaveView];
+    [self.circleLittleBackView addSubview:waterWaveView];
     [waterWaveView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.circleBackView);
-        make.right.equalTo(self.circleBackView).offset(-18);
-        make.left.equalTo(self.circleBackView).offset(18);
+        make.centerY.equalTo(self.circleLittleBackView);
+        make.right.equalTo(self.circleLittleBackView).offset(-2);
+        make.left.equalTo(self.circleLittleBackView).offset(2);
         make.height.mas_equalTo(waterWaveView.mas_width).multipliedBy(1);
     }];
     [waterWaveView startWave];

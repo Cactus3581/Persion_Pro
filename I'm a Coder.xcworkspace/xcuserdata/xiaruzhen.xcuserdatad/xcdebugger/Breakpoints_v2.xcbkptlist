@@ -3,6 +3,7 @@
    type = "0"
    version = "2.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
@@ -15,11 +16,16 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
+=======
+   <Breakpoints>
+      <BreakpointProxy
+>>>>>>> develop
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "I&apos;m a Coder/SubVC/Sub_B/ZYProgressIndicator.m"
             timestampString = "517855544.949065"
             startingColumnNumber = "9223372036854775807"
@@ -63,6 +69,15 @@
 =======
             landmarkName = "-setBarProgress"
 >>>>>>> develop
+=======
+            filePath = "I&apos;m a Coder/MutliNestCell/GrammarBook/GrammarBookCatalogue/View/KSGrammarBookCatalogueCell.m"
+            timestampString = "522172740.734361"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-setSelected:animated:"
+>>>>>>> develop
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -72,6 +87,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "I&apos;m a Coder/SubVC/Sub_B/View/ZYProgressBar.m"
             timestampString = "518066627.17231"
             startingColumnNumber = "9223372036854775807"
@@ -159,10 +175,22 @@
             startingLineNumber = "78"
             endingLineNumber = "78"
             landmarkName = "-setProgresss:"
+=======
+            filePath = "I&apos;m a Coder/MutliNestCell/GrammarBook/GrammarBookCatalogue/View/KSGrammarBookCatalogueCell.m"
+            timestampString = "522226242.413958"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-setHighlighted:animated:"
+>>>>>>> develop
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 =======
 >>>>>>> develop
 </Bucket>

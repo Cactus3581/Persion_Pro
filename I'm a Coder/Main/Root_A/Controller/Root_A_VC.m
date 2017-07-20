@@ -43,9 +43,6 @@
     self.array = @[@"视图与图层",@"CALayer",@"drawRect_cg",@"drawLayer_oc",@"drawLayer_cg"];
     self.navigationItem.leftBarButtonItem = nil;
     self.navigationItem.rightBarButtonItem = nil;
-    
-    
-    
 //    self.navigationItem.leftBarButtonItem = backNavigationItem;
     
     UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -124,16 +121,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-        //KSGrammarBookCatalogueController *sub_a = [[KSGrammarBookCatalogueController alloc]init];
-//    KSCertificateViewController *sub_a = [[KSCertificateViewController alloc]init];
+    KSGrammarBookCatalogueController *sub_a = [[KSGrammarBookCatalogueController alloc]init];
     
-//    KSGrammarCertificateController *sub_a = [[KSGrammarCertificateController alloc]init];
+    KSGrammarCertificateController *sub_b = [[KSGrammarCertificateController alloc]init];
     
-    KSGrammarUnfinishedController *sub_a = [[KSGrammarUnfinishedController alloc]init];
+    KSGrammarUnfinishedController *sub_c = [[KSGrammarUnfinishedController alloc]init];
 
+    if (indexPath.row ==0) {
+        [self.navigationController pushViewController:sub_a animated:NO];
 
+    }else if (indexPath.row ==1) {
+        [self presentViewController:sub_b animated:YES completion:nil];
+
+    }else if (indexPath.row ==2) {
+        [self presentViewController:sub_c animated:YES completion:nil];
+
+    }
     
-    [self presentViewController:sub_a animated:YES completion:nil];
 
     //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
 //        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];

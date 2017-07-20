@@ -9,6 +9,7 @@
 #import "KSGrammarCertificateController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "KSAppDeclareView.h"
+
 @interface KSGrammarCertificateController ()
 @end
 
@@ -156,6 +157,7 @@
         rect.size = ((UIScrollView *)theView).contentSize;
     }
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+//    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [theView.layer renderInContext:context];
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();

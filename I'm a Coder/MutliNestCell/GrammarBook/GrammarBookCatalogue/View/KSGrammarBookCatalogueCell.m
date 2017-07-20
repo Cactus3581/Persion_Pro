@@ -19,6 +19,23 @@
     return self;
 }
 
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    if(selected){
+        self.scheduleLabel.textColor = [UIColor greenColor];
+    }
+    else {
+    }
+}
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    [super setHighlighted:highlighted animated:animated];
+    if (highlighted) {
+        self.backView.backgroundColor = [UIColor purpleColor];
+    }else {
+    }
+}
 - (void)setIsReadingChapter:(BOOL)isReadingChapter {
     _isReadingChapter = isReadingChapter;
     if (isReadingChapter) {

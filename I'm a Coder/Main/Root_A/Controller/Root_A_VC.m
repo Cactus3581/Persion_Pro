@@ -43,11 +43,6 @@
     self.array = @[@"视图与图层",@"CALayer",@"drawRect_cg",@"drawLayer_oc",@"drawLayer_cg"];
     self.navigationItem.leftBarButtonItem = nil;
     self.navigationItem.rightBarButtonItem = nil;
-    
-    
-    
-    
-    
 //    self.navigationItem.leftBarButtonItem = backNavigationItem;
     
     UIButton *bt = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -133,7 +128,7 @@
     KSGrammarUnfinishedController *sub_c = [[KSGrammarUnfinishedController alloc]init];
 
     if (indexPath.row ==0) {
-        [self.navigationController pushViewController:sub_a animated:YES];
+        [self.navigationController pushViewController:sub_a animated:NO];
 
     }else if (indexPath.row ==1) {
         [self presentViewController:sub_b animated:YES completion:nil];

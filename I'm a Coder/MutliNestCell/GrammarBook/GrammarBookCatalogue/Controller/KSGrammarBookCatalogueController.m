@@ -22,8 +22,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, copy) NSString *chapterString;
 @property (nonatomic,strong) KSCertificateView *certificateView;
-
-
 @end
 
 static CGFloat headViewH = 40.0f;
@@ -36,25 +34,16 @@ static CGFloat normalCellH = 72.0f;
 @implementation KSGrammarBookCatalogueController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    self.navigationController.navigationBarHidden = YES;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
-//    [self initTableView];
-//    [self initData];
-    
-//    KSAlertWindow *alert = [[KSAlertWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-
-//    [alert show];
-    
-    AppDelegate *delagete = [UIApplication sharedApplication].delegate;
-//    [delagete setInterfaceOrientationMaskWithAppDelegate:delagete fullscreen:NO];
-
-    
-    [self.view addSubview:self.certificateView];
-//    self.certificateView.frame = self.view.bounds;
-    [self.certificateView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.leading.trailing.equalTo(self.view);
-    }];
+    [self initTableView];
+    [self initData];
+    //多次push
+    /*
+    Sub_B_ViewController *vc = [[Sub_B_ViewController alloc]init];
+    vc.delegate = self;
+    [self.navigationController pushViewController:vc animated:YES];
+     */
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -235,24 +224,6 @@ static CGFloat normalCellH = 72.0f;
 #pragma mark - Sub_B delegate
 - (void)pushViewControllerWithModel {
     [self dealData];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    return NO;
-}
-//一开始的方向  很重要
--(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return UIInterfaceOrientationPortrait;
-}
-
-//支持旋转
-- (BOOL)shouldAutorotate {
-    return NO;
-}
-
-//支持的方向 因为界面A我们只需要支持竖屏
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

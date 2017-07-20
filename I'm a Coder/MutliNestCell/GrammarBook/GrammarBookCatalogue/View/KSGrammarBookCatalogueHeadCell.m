@@ -141,18 +141,21 @@ static CGFloat normalCellH = 72.0f;
     cell.titleLabel.text = submodel.title;
     cell.scheduleLabel.text = submodel.schedule;
     cell.isReadingChapter = submodel.isReadingChapter;
-    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-    cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
+//    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
+//    cell.selectedBackgroundView.backgroundColor =  [UIColor colorWithRed:228/256.0 green:228/256.0 blue:228/256.0 alpha:1.];
+//    cell.titleLabel.highlightedTextColor = [UIColor redColor];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+
     KSGrammarBookCatalogueCellSubModel *submodel = self.dataArray[indexPath.row];
-    submodel.isReadingChapter = !submodel.isReadingChapter;
-    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    if (_delegate && [_delegate respondsToSelector:@selector(pushViewControllerWithModel:indexPath:)]) {
-        [_delegate pushViewControllerWithModel:submodel indexPath:indexPath];
-    }
+//    submodel.isReadingChapter = !submodel.isReadingChapter;
+//    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+//    if (_delegate && [_delegate respondsToSelector:@selector(pushViewControllerWithModel:indexPath:)]) {
+//        [_delegate pushViewControllerWithModel:submodel indexPath:indexPath];
+//    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

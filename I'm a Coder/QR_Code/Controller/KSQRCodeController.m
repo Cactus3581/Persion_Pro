@@ -7,7 +7,6 @@
 //
 
 #import "KSQRCodeController.h"
-#import "KSQRCodeView.h"
 #import <AVFoundation/AVFoundation.h>
 #import <ImageIO/ImageIO.h>
 
@@ -22,7 +21,7 @@
 /** 扫描支持的编码格式的数组 */
 @property (nonatomic, strong) NSMutableArray * metadataObjectTypes;
 /** 遮罩层 */
-@property (weak, nonatomic) IBOutlet KSQRCodeView *maskView;
+@property (weak, nonatomic) IBOutlet UIView *maskView;
 
 /** 返回按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
@@ -38,22 +37,20 @@
 
 @implementation KSQRCodeController
 
-
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self.maskView removeAnimation];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self congigureCapture];
-    [self congigureSunviews];
+    [self congigureSubViews];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
 }
 
 /**
  *  添加遮罩层
  */
-- (void)congigureSunviews{
+- (void)congigureSubViews{
     //返回提示Label
     CGFloat backHint_width = 60;
     CGFloat backHint_height = 30;
@@ -83,11 +80,6 @@
     self.flashlightHintLabel.textAlignment = NSTextAlignmentCenter;
     self.flashlightHintLabel.textColor = [UIColor whiteColor];
 //    [self.view addSubview:self.flashlightHintLabel];
-    
-    
-//    self.backHintLabel.center = CGPointMake(100, CGRectGetMaxY(self.backButton.frame) + CGRectGetHeight(self.backHintLabel.frame) / 2);
-//    self.flashlight.center = CGPointMake(SCREEN_WIDTH - 100, SCREEN_HEIGHT / 2);
-//    self.flashlightHintLabel.center = CGPointMake(SCREEN_WIDTH - 100, CGRectGetMaxY(self.flashlight.frame) + CGRectGetHeight(self.flashlightHintLabel.frame) / 2);
 }
 
 /**
@@ -120,7 +112,6 @@
     
     //设置扫描支持的编码格式(如下设置条形码和二维码兼容)
     metadataOutput.metadataObjectTypes = self.metadataObjectTypes;
-    
     //开始捕获
     [self.session startRunning];
 }
@@ -200,10 +191,6 @@
             [self dismissViewControllerAnimated:YES completion:nil];
         }
     }
-}
-
-- (BOOL)prefersStatusBarHidden {
-    return YES;
 }
 
 @end

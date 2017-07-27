@@ -75,8 +75,8 @@
     // layer基本属性
 //    [self creatlayer];
     
-//    [self testshapeLayer];// 测试在mask情况下，贝塞尔曲线的frame，shapelayer的frame，如何受影响.
-    [self creatshapeLayer]; //一般绘制shapelayer的方法
+    [self testshapeLayer];// 测试在mask情况下，贝塞尔曲线的frame，shapelayer的frame，如何受影响.
+//    [self creatshapeLayer]; //一般绘制shapelayer的方法
 //    [self creatshapeLayer_one];  //与CAGradientLayer联合使用，绘制渐变加载条动画
 //    [self creatshapeLayer_two]; //扇形动画
 //    [self creatshapeLayer_three]; //绘制起泡-不规则图形
@@ -138,12 +138,12 @@
 //    //测试1
     self.shapeLayer =[CAShapeLayer layer] ;
     //设置layer的frame，会改变贝塞尔曲线的frame，它根据layer的frame而改变，也就是说它作为子layer存在（在坐标系统上是存在这种父子关系的，其他不是）
-    self.shapeLayer.frame = CGRectMake(200, 70, 150, 150);
+    self.shapeLayer.frame = CGRectMake(200, 340, 60, 10);
     self.shapeLayer.backgroundColor = [UIColor greenColor].CGColor;
     
     
     // bezierPathWithOvalInRect:xy坐标也是从左上开始，150不是半径!是宽度跟高度
-    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 150, 150)];
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(10, 10, 150, 150)];
 
     self.shapeLayer.path = path.CGPath;
     self.shapeLayer.fillColor = [UIColor blueColor].CGColor;

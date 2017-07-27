@@ -93,6 +93,16 @@
 		01877C7D1EE1492B00C86202 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C6E1EE1492B00C86202 /* FMResultSet.m */; };
 		01877C801EE1531600C86202 /* FMDBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C7F1EE1531600C86202 /* FMDBTools.m */; };
 		01877C851EE1614B00C86202 /* CountryDBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 01877C841EE1614B00C86202 /* CountryDBTools.m */; };
+		019557541F29D5F8007A5E98 /* KSQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019557531F29D5F8007A5E98 /* KSQRCodeViewController.m */; };
+		019557571F29D615007A5E98 /* KSQRCodeMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 019557561F29D615007A5E98 /* KSQRCodeMaskView.m */; };
+		019557611F29DC9E007A5E98 /* Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019557591F29DC9E007A5E98 /* Down@2x.png */; };
+		019557621F29DC9E007A5E98 /* Flashlight_H@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0195575A1F29DC9E007A5E98 /* Flashlight_H@2x.png */; };
+		019557631F29DC9E007A5E98 /* Flashlight_N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0195575B1F29DC9E007A5E98 /* Flashlight_N@2x.png */; };
+		019557641F29DC9E007A5E98 /* QRCodeScanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0195575C1F29DC9E007A5E98 /* QRCodeScanLine@2x.png */; };
+		019557651F29DC9E007A5E98 /* ScanQR1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0195575D1F29DC9E007A5E98 /* ScanQR1@2x.png */; };
+		019557661F29DC9E007A5E98 /* ScanQR2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0195575E1F29DC9E007A5E98 /* ScanQR2@2x.png */; };
+		019557671F29DC9E007A5E98 /* ScanQR3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0195575F1F29DC9E007A5E98 /* ScanQR3@2x.png */; };
+		019557681F29DC9E007A5E98 /* ScanQR4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019557601F29DC9E007A5E98 /* ScanQR4@2x.png */; };
 		01A4B5C71F18749B00B9168F /* cycleBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A4B5C61F18749B00B9168F /* cycleBorder.png */; };
 		01A824661EC019E200C1BDDB /* KSAlertImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A824631EC019E200C1BDDB /* KSAlertImageView.m */; };
 		01A824671EC019E200C1BDDB /* MPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A824651EC019E200C1BDDB /* MPlayerView.m */; };
@@ -140,8 +150,6 @@
 		01D13CDC1F29762C001A71D6 /* KSQRCodeScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CCB1F29762C001A71D6 /* KSQRCodeScanLineAnimation.m */; };
 		01D13CDD1F29762C001A71D6 /* KSQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CCD1F29762C001A71D6 /* KSQRCodeScanView.m */; };
 		01D13CDE1F29762C001A71D6 /* KSQRCodeScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CCF1F29762C001A71D6 /* KSQRCodeScanViewStyle.m */; };
-		01D13CDF1F29762C001A71D6 /* KSQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CD11F29762C001A71D6 /* KSQRCodeView.m */; };
-		01D13CE01F29762C001A71D6 /* KSQRCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D13CD21F29762C001A71D6 /* KSQRCodeView.xib */; };
 		01EDC9AC1E7EAA21005FD15D /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EDC9AB1E7EAA21005FD15D /* MasonryViewController.m */; };
 		EFEC54DE43CFADDD858EEBE0 /* libPods-I'm a Coder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AB8EAAE3E6172C67696FD2 /* libPods-I'm a Coder.a */; };
 /* End PBXBuildFile section */
@@ -334,6 +342,18 @@
 		01877C7F1EE1531600C86202 /* FMDBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBTools.m; sourceTree = "<group>"; };
 		01877C831EE1614B00C86202 /* CountryDBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryDBTools.h; sourceTree = "<group>"; };
 		01877C841EE1614B00C86202 /* CountryDBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryDBTools.m; sourceTree = "<group>"; };
+		019557521F29D5F8007A5E98 /* KSQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeViewController.h; sourceTree = "<group>"; };
+		019557531F29D5F8007A5E98 /* KSQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeViewController.m; sourceTree = "<group>"; };
+		019557551F29D615007A5E98 /* KSQRCodeMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeMaskView.h; sourceTree = "<group>"; };
+		019557561F29D615007A5E98 /* KSQRCodeMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeMaskView.m; sourceTree = "<group>"; };
+		019557591F29DC9E007A5E98 /* Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Down@2x.png"; sourceTree = "<group>"; };
+		0195575A1F29DC9E007A5E98 /* Flashlight_H@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flashlight_H@2x.png"; sourceTree = "<group>"; };
+		0195575B1F29DC9E007A5E98 /* Flashlight_N@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flashlight_N@2x.png"; sourceTree = "<group>"; };
+		0195575C1F29DC9E007A5E98 /* QRCodeScanLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QRCodeScanLine@2x.png"; sourceTree = "<group>"; };
+		0195575D1F29DC9E007A5E98 /* ScanQR1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR1@2x.png"; sourceTree = "<group>"; };
+		0195575E1F29DC9E007A5E98 /* ScanQR2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR2@2x.png"; sourceTree = "<group>"; };
+		0195575F1F29DC9E007A5E98 /* ScanQR3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR3@2x.png"; sourceTree = "<group>"; };
+		019557601F29DC9E007A5E98 /* ScanQR4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR4@2x.png"; sourceTree = "<group>"; };
 		01A4B5C61F18749B00B9168F /* cycleBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycleBorder.png; sourceTree = "<group>"; };
 		01A824621EC019E200C1BDDB /* KSAlertImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAlertImageView.h; sourceTree = "<group>"; };
 		01A824631EC019E200C1BDDB /* KSAlertImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAlertImageView.m; sourceTree = "<group>"; };
@@ -427,9 +447,6 @@
 		01D13CCD1F29762C001A71D6 /* KSQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanView.m; sourceTree = "<group>"; };
 		01D13CCE1F29762C001A71D6 /* KSQRCodeScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeScanViewStyle.h; sourceTree = "<group>"; };
 		01D13CCF1F29762C001A71D6 /* KSQRCodeScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanViewStyle.m; sourceTree = "<group>"; };
-		01D13CD01F29762C001A71D6 /* KSQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeView.h; sourceTree = "<group>"; };
-		01D13CD11F29762C001A71D6 /* KSQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeView.m; sourceTree = "<group>"; };
-		01D13CD21F29762C001A71D6 /* KSQRCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSQRCodeView.xib; sourceTree = "<group>"; };
 		01EDC9AA1E7EAA21005FD15D /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		01EDC9AB1E7EAA21005FD15D /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		1F3D98718E44B94A2D89722F /* Pods-I'm a Coder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm a Coder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-I'm a Coder/Pods-I'm a Coder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1337,6 +1354,21 @@
 			path = SubTools;
 			sourceTree = "<group>";
 		};
+		019557581F29DC9E007A5E98 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				019557591F29DC9E007A5E98 /* Down@2x.png */,
+				0195575A1F29DC9E007A5E98 /* Flashlight_H@2x.png */,
+				0195575B1F29DC9E007A5E98 /* Flashlight_N@2x.png */,
+				0195575C1F29DC9E007A5E98 /* QRCodeScanLine@2x.png */,
+				0195575D1F29DC9E007A5E98 /* ScanQR1@2x.png */,
+				0195575E1F29DC9E007A5E98 /* ScanQR2@2x.png */,
+				0195575F1F29DC9E007A5E98 /* ScanQR3@2x.png */,
+				019557601F29DC9E007A5E98 /* ScanQR4@2x.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 		01B819E31EC2B6AE0042464C /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
@@ -1721,9 +1753,6 @@
 				01D13CCD1F29762C001A71D6 /* KSQRCodeScanView.m */,
 				01D13CCE1F29762C001A71D6 /* KSQRCodeScanViewStyle.h */,
 				01D13CCF1F29762C001A71D6 /* KSQRCodeScanViewStyle.m */,
-				01D13CD01F29762C001A71D6 /* KSQRCodeView.h */,
-				01D13CD11F29762C001A71D6 /* KSQRCodeView.m */,
-				01D13CD21F29762C001A71D6 /* KSQRCodeView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1731,10 +1760,15 @@
 		01D9313E1F28531B0064D13C /* QR_Code */ = {
 			isa = PBXGroup;
 			children = (
+				019557581F29DC9E007A5E98 /* resource */,
 				01D13CB71F29762C001A71D6 /* Controller */,
 				01D13CC11F29762C001A71D6 /* Model */,
 				01D13CC41F29762C001A71D6 /* Tool */,
 				01D13CC71F29762C001A71D6 /* View */,
+				019557521F29D5F8007A5E98 /* KSQRCodeViewController.h */,
+				019557531F29D5F8007A5E98 /* KSQRCodeViewController.m */,
+				019557551F29D615007A5E98 /* KSQRCodeMaskView.h */,
+				019557561F29D615007A5E98 /* KSQRCodeMaskView.m */,
 			);
 			path = QR_Code;
 			sourceTree = "<group>";
@@ -1888,19 +1922,26 @@
 			files = (
 				01CC37191F17DF6A00A8EA55 /* KSGrammarUnfinishedController.xib in Resources */,
 				010BA9FD1E276DB3009E0ACE /* LaunchScreen.storyboard in Resources */,
+				019557651F29DC9E007A5E98 /* ScanQR1@2x.png in Resources */,
 				01110EEC1F13729B00732172 /* KSGrammarBookCatalogueController.xib in Resources */,
 				01D13CD61F29762C001A71D6 /* KSQRCodeScanBaseController.xib in Resources */,
 				010BA9FA1E276DB3009E0ACE /* Assets.xcassets in Resources */,
 				0170DFB61F16118F0041D4EE /* KSCertificateView.xib in Resources */,
 				0170DFCE1F178DBE0041D4EE /* KSGrammarCertificateController.xib in Resources */,
 				01A4B5C71F18749B00B9168F /* cycleBorder.png in Resources */,
+				019557661F29DC9E007A5E98 /* ScanQR2@2x.png in Resources */,
+				019557611F29DC9E007A5E98 /* Down@2x.png in Resources */,
 				01D13CD81F29762C001A71D6 /* KSQRCodeScanController.xib in Resources */,
+				019557631F29DC9E007A5E98 /* Flashlight_N@2x.png in Resources */,
+				019557681F29DC9E007A5E98 /* ScanQR4@2x.png in Resources */,
 				01110EF31F13729B00732172 /* KSGrammarBookCatalogueHeaderView.xib in Resources */,
 				010BA9F81E276DB3009E0ACE /* Main.storyboard in Resources */,
+				019557671F29DC9E007A5E98 /* ScanQR3@2x.png in Resources */,
 				014E27BE1F13E1CF00051FAE /* index1.toc in Resources */,
-				01D13CE01F29762C001A71D6 /* KSQRCodeView.xib in Resources */,
+				019557621F29DC9E007A5E98 /* Flashlight_H@2x.png in Resources */,
 				0170DFC91F17864A0041D4EE /* KSAppDeclareView.xib in Resources */,
 				01D13CD41F29762C001A71D6 /* KSQRCodeController.xib in Resources */,
+				019557641F29DC9E007A5E98 /* QRCodeScanLine@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2029,6 +2070,7 @@
 				016C195A1E51B35E002F910F /* BlockViewController.m in Sources */,
 				01877C511EDF225200C86202 /* KSProgressNumberBar.m in Sources */,
 				0170DFC71F17863E0041D4EE /* KSAppDeclareView.m in Sources */,
+				019557571F29D615007A5E98 /* KSQRCodeMaskView.m in Sources */,
 				01877C7B1EE1492B00C86202 /* FMDatabasePool.m in Sources */,
 				01877C771EE1492B00C86202 /* DataBaseModel.m in Sources */,
 				010BAA8C1E2789B6009E0ACE /* CustomDrawView.m in Sources */,
@@ -2038,6 +2080,7 @@
 				014891B41E868B3B0012E689 /* Popview.m in Sources */,
 				010BAA221E276DDF009E0ACE /* RootTabBarViewController.m in Sources */,
 				01B819E61EC2B6BD0042464C /* suanfa.c in Sources */,
+				019557541F29D5F8007A5E98 /* KSQRCodeViewController.m in Sources */,
 				01EDC9AC1E7EAA21005FD15D /* MasonryViewController.m in Sources */,
 				01CE35DA1E54B62200C082BB /* NSObject+Log.m in Sources */,
 				0170DB3F1F152BC00041D4EE /* KSGrammarBookCatalogueFooterView.m in Sources */,
@@ -2053,7 +2096,6 @@
 				0170DB361F14CC060041D4EE /* MJPropertyKey.m in Sources */,
 				01D13CDB1F29762C001A71D6 /* KSQRCodeNetLatticeAnimation.m in Sources */,
 				01CE35D71E54B58B00C082BB /* NSObject+Propery.m in Sources */,
-				01D13CDF1F29762C001A71D6 /* KSQRCodeView.m in Sources */,
 				01877C741EE1492B00C86202 /* FMDatabaseManager.m in Sources */,
 				010BAA491E276DE6009E0ACE /* Root_B_VC.m in Sources */,
 				010BAA661E27805F009E0ACE /* Sub_A_ViewController.m in Sources */,

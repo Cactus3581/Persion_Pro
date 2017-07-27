@@ -32,6 +32,9 @@
 #import "KSGrammarUnfinishedController.h"
 #import "KSQRCodeScanController.h"
 #import "KSQRCodeScanViewStyle.h"
+#import "KSQRCodeController.h"
+#import "KSQRCodeViewController.h"
+
 
 @interface Root_A_VC ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) NSArray *array;
@@ -186,15 +189,16 @@
     //    TransitionViewController *sub_a = [[TransitionViewController alloc]init];
     //    TransitionListViewController *sub_a = [[TransitionListViewController alloc]init];
     
-    //    KVCViewController *sub_a = [[KVCViewController alloc]init];
+//        KSQRCodeController *sub_a = [[KSQRCodeController alloc]init];
+    KSQRCodeViewController *sub_a = [[KSQRCodeViewController alloc]init];
+
     
+    sub_a.hidesBottomBarWhenPushed = YES;
     
-//    sub_a.hidesBottomBarWhenPushed = YES;
-    
-//    [self.navigationController pushViewController:sub_a animated:YES];
+    [self.navigationController pushViewController:sub_a animated:YES];
     
     //    [self transitionAnimation];
-    [self qrcode];
+//    [self qrcode];
 }
 
 - (void)qrcode {

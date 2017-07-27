@@ -2245,7 +2245,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/I'm a Coder/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "I'm a Coder/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xiaruzhen.I-m-a-Coder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2263,7 +2263,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/I'm a Coder/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = "I'm a Coder/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xiaruzhen.I-m-a-Coder";
 				PRODUCT_NAME = "$(TARGET_NAME)";

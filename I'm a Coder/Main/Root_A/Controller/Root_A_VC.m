@@ -31,6 +31,7 @@
 #import "KSGrammarCertificateController.h"
 #import "KSGrammarUnfinishedController.h"
 #import "KSQRCodeScanController.h"
+#import "KSQRCodeScanViewStyle.h"
 
 @interface Root_A_VC ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) NSArray *array;
@@ -138,7 +139,7 @@
 //        [self presentViewController:sub_c animated:YES completion:nil];
 //
 //    }
-    KSQRCodeScanController *sub_a = [[KSQRCodeScanController alloc]init];
+//    KSQRCodeScanController *sub_a = [[KSQRCodeScanController alloc]init];
 
 
     //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
@@ -190,11 +191,37 @@
     
 //    sub_a.hidesBottomBarWhenPushed = YES;
     
-    [self.navigationController pushViewController:sub_a animated:YES];
+//    [self.navigationController pushViewController:sub_a animated:YES];
     
     //    [self transitionAnimation];
+    [self qrcode];
 }
 
+- (void)qrcode {
+    KSQRCodeScanController *vc = [[KSQRCodeScanController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.style = [self InnerStyle];
+    vc.isOpenInterestRect = YES;
+    vc.scanCodeType = SCT_QRCode;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (KSQRCodeScanViewStyle*)InnerStyle{
+    //设置扫码区域参数
+    KSQRCodeScanViewStyle *style = [[KSQRCodeScanViewStyle alloc]init];
+    style.centerUpOffset = 44;
+    style.photoframeAngleStyle = KScanViewPhotoframeAngleStyle_Inner;
+    style.photoframeLineW = 3;
+    style.photoframeAngleW = 18;
+    style.photoframeAngleH = 18;
+    style.isNeedShowRetangle = NO;
+    style.anmiationStyle = KScanViewAnimationStyle_LineMove;
+    //线条图片
+    UIImage *imgLine = [UIImage imageNamed:@"qrcode_scan_line"];
+    style.animationImage = imgLine;
+    return style;
+}
 
 - (void)transitionAnimation
 {

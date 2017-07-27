@@ -128,6 +128,20 @@
 		01CE35EA1E5609EA00C082BB /* ArchiverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35E91E5609EA00C082BB /* ArchiverModel.m */; };
 		01CE35ED1E56AA9000C082BB /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35EC1E56AA9000C082BB /* DataManager.m */; };
 		01CE35F01E56B15300C082BB /* ArchiverSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35EF1E56B15300C082BB /* ArchiverSubModel.m */; };
+		01D13CD31F29762C001A71D6 /* KSQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CB91F29762C001A71D6 /* KSQRCodeController.m */; };
+		01D13CD41F29762C001A71D6 /* KSQRCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D13CBA1F29762C001A71D6 /* KSQRCodeController.xib */; };
+		01D13CD51F29762C001A71D6 /* KSQRCodeScanBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CBC1F29762C001A71D6 /* KSQRCodeScanBaseController.m */; };
+		01D13CD61F29762C001A71D6 /* KSQRCodeScanBaseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D13CBD1F29762C001A71D6 /* KSQRCodeScanBaseController.xib */; };
+		01D13CD71F29762C001A71D6 /* KSQRCodeScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CBF1F29762C001A71D6 /* KSQRCodeScanController.m */; };
+		01D13CD81F29762C001A71D6 /* KSQRCodeScanController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D13CC01F29762C001A71D6 /* KSQRCodeScanController.xib */; };
+		01D13CD91F29762C001A71D6 /* KSQRCodeScanResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CC31F29762C001A71D6 /* KSQRCodeScanResult.m */; };
+		01D13CDA1F29762C001A71D6 /* KSQRCodeScanTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CC61F29762C001A71D6 /* KSQRCodeScanTool.m */; };
+		01D13CDB1F29762C001A71D6 /* KSQRCodeNetLatticeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CC91F29762C001A71D6 /* KSQRCodeNetLatticeAnimation.m */; };
+		01D13CDC1F29762C001A71D6 /* KSQRCodeScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CCB1F29762C001A71D6 /* KSQRCodeScanLineAnimation.m */; };
+		01D13CDD1F29762C001A71D6 /* KSQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CCD1F29762C001A71D6 /* KSQRCodeScanView.m */; };
+		01D13CDE1F29762C001A71D6 /* KSQRCodeScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CCF1F29762C001A71D6 /* KSQRCodeScanViewStyle.m */; };
+		01D13CDF1F29762C001A71D6 /* KSQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CD11F29762C001A71D6 /* KSQRCodeView.m */; };
+		01D13CE01F29762C001A71D6 /* KSQRCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D13CD21F29762C001A71D6 /* KSQRCodeView.xib */; };
 		01EDC9AC1E7EAA21005FD15D /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EDC9AB1E7EAA21005FD15D /* MasonryViewController.m */; };
 		EFEC54DE43CFADDD858EEBE0 /* libPods-I'm a Coder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AB8EAAE3E6172C67696FD2 /* libPods-I'm a Coder.a */; };
 /* End PBXBuildFile section */
@@ -392,6 +406,30 @@
 		01CE35EC1E56AA9000C082BB /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		01CE35EE1E56B15300C082BB /* ArchiverSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiverSubModel.h; sourceTree = "<group>"; };
 		01CE35EF1E56B15300C082BB /* ArchiverSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiverSubModel.m; sourceTree = "<group>"; };
+		01D13CB81F29762C001A71D6 /* KSQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeController.h; sourceTree = "<group>"; };
+		01D13CB91F29762C001A71D6 /* KSQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeController.m; sourceTree = "<group>"; };
+		01D13CBA1F29762C001A71D6 /* KSQRCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSQRCodeController.xib; sourceTree = "<group>"; };
+		01D13CBB1F29762C001A71D6 /* KSQRCodeScanBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeScanBaseController.h; sourceTree = "<group>"; };
+		01D13CBC1F29762C001A71D6 /* KSQRCodeScanBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanBaseController.m; sourceTree = "<group>"; };
+		01D13CBD1F29762C001A71D6 /* KSQRCodeScanBaseController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSQRCodeScanBaseController.xib; sourceTree = "<group>"; };
+		01D13CBE1F29762C001A71D6 /* KSQRCodeScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeScanController.h; sourceTree = "<group>"; };
+		01D13CBF1F29762C001A71D6 /* KSQRCodeScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanController.m; sourceTree = "<group>"; };
+		01D13CC01F29762C001A71D6 /* KSQRCodeScanController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSQRCodeScanController.xib; sourceTree = "<group>"; };
+		01D13CC21F29762C001A71D6 /* KSQRCodeScanResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeScanResult.h; sourceTree = "<group>"; };
+		01D13CC31F29762C001A71D6 /* KSQRCodeScanResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanResult.m; sourceTree = "<group>"; };
+		01D13CC51F29762C001A71D6 /* KSQRCodeScanTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeScanTool.h; sourceTree = "<group>"; };
+		01D13CC61F29762C001A71D6 /* KSQRCodeScanTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanTool.m; sourceTree = "<group>"; };
+		01D13CC81F29762C001A71D6 /* KSQRCodeNetLatticeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeNetLatticeAnimation.h; sourceTree = "<group>"; };
+		01D13CC91F29762C001A71D6 /* KSQRCodeNetLatticeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeNetLatticeAnimation.m; sourceTree = "<group>"; };
+		01D13CCA1F29762C001A71D6 /* KSQRCodeScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeScanLineAnimation.h; sourceTree = "<group>"; };
+		01D13CCB1F29762C001A71D6 /* KSQRCodeScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanLineAnimation.m; sourceTree = "<group>"; };
+		01D13CCC1F29762C001A71D6 /* KSQRCodeScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeScanView.h; sourceTree = "<group>"; };
+		01D13CCD1F29762C001A71D6 /* KSQRCodeScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanView.m; sourceTree = "<group>"; };
+		01D13CCE1F29762C001A71D6 /* KSQRCodeScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeScanViewStyle.h; sourceTree = "<group>"; };
+		01D13CCF1F29762C001A71D6 /* KSQRCodeScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanViewStyle.m; sourceTree = "<group>"; };
+		01D13CD01F29762C001A71D6 /* KSQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeView.h; sourceTree = "<group>"; };
+		01D13CD11F29762C001A71D6 /* KSQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeView.m; sourceTree = "<group>"; };
+		01D13CD21F29762C001A71D6 /* KSQRCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSQRCodeView.xib; sourceTree = "<group>"; };
 		01EDC9AA1E7EAA21005FD15D /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		01EDC9AB1E7EAA21005FD15D /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		1F3D98718E44B94A2D89722F /* Pods-I'm a Coder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm a Coder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-I'm a Coder/Pods-I'm a Coder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -451,6 +489,7 @@
 		010BA9EC1E276DB3009E0ACE /* I'm a Coder */ = {
 			isa = PBXGroup;
 			children = (
+				01D9313E1F28531B0064D13C /* QR_Code */,
 				0170DB071F14BC800041D4EE /* Frameworks */,
 				01110ED41F13728900732172 /* MutliNestCell */,
 				01B819E71EC2B6E00042464C /* Root */,
@@ -1637,6 +1676,69 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		01D13CB71F29762C001A71D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01D13CB81F29762C001A71D6 /* KSQRCodeController.h */,
+				01D13CB91F29762C001A71D6 /* KSQRCodeController.m */,
+				01D13CBA1F29762C001A71D6 /* KSQRCodeController.xib */,
+				01D13CBB1F29762C001A71D6 /* KSQRCodeScanBaseController.h */,
+				01D13CBC1F29762C001A71D6 /* KSQRCodeScanBaseController.m */,
+				01D13CBD1F29762C001A71D6 /* KSQRCodeScanBaseController.xib */,
+				01D13CBE1F29762C001A71D6 /* KSQRCodeScanController.h */,
+				01D13CBF1F29762C001A71D6 /* KSQRCodeScanController.m */,
+				01D13CC01F29762C001A71D6 /* KSQRCodeScanController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		01D13CC11F29762C001A71D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01D13CC21F29762C001A71D6 /* KSQRCodeScanResult.h */,
+				01D13CC31F29762C001A71D6 /* KSQRCodeScanResult.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01D13CC41F29762C001A71D6 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				01D13CC51F29762C001A71D6 /* KSQRCodeScanTool.h */,
+				01D13CC61F29762C001A71D6 /* KSQRCodeScanTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		01D13CC71F29762C001A71D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01D13CC81F29762C001A71D6 /* KSQRCodeNetLatticeAnimation.h */,
+				01D13CC91F29762C001A71D6 /* KSQRCodeNetLatticeAnimation.m */,
+				01D13CCA1F29762C001A71D6 /* KSQRCodeScanLineAnimation.h */,
+				01D13CCB1F29762C001A71D6 /* KSQRCodeScanLineAnimation.m */,
+				01D13CCC1F29762C001A71D6 /* KSQRCodeScanView.h */,
+				01D13CCD1F29762C001A71D6 /* KSQRCodeScanView.m */,
+				01D13CCE1F29762C001A71D6 /* KSQRCodeScanViewStyle.h */,
+				01D13CCF1F29762C001A71D6 /* KSQRCodeScanViewStyle.m */,
+				01D13CD01F29762C001A71D6 /* KSQRCodeView.h */,
+				01D13CD11F29762C001A71D6 /* KSQRCodeView.m */,
+				01D13CD21F29762C001A71D6 /* KSQRCodeView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01D9313E1F28531B0064D13C /* QR_Code */ = {
+			isa = PBXGroup;
+			children = (
+				01D13CB71F29762C001A71D6 /* Controller */,
+				01D13CC11F29762C001A71D6 /* Model */,
+				01D13CC41F29762C001A71D6 /* Tool */,
+				01D13CC71F29762C001A71D6 /* View */,
+			);
+			path = QR_Code;
+			sourceTree = "<group>";
+		};
 		01EDC9951E7E8571005FD15D /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
@@ -1787,14 +1889,18 @@
 				01CC37191F17DF6A00A8EA55 /* KSGrammarUnfinishedController.xib in Resources */,
 				010BA9FD1E276DB3009E0ACE /* LaunchScreen.storyboard in Resources */,
 				01110EEC1F13729B00732172 /* KSGrammarBookCatalogueController.xib in Resources */,
+				01D13CD61F29762C001A71D6 /* KSQRCodeScanBaseController.xib in Resources */,
 				010BA9FA1E276DB3009E0ACE /* Assets.xcassets in Resources */,
 				0170DFB61F16118F0041D4EE /* KSCertificateView.xib in Resources */,
 				0170DFCE1F178DBE0041D4EE /* KSGrammarCertificateController.xib in Resources */,
 				01A4B5C71F18749B00B9168F /* cycleBorder.png in Resources */,
+				01D13CD81F29762C001A71D6 /* KSQRCodeScanController.xib in Resources */,
 				01110EF31F13729B00732172 /* KSGrammarBookCatalogueHeaderView.xib in Resources */,
 				010BA9F81E276DB3009E0ACE /* Main.storyboard in Resources */,
 				014E27BE1F13E1CF00051FAE /* index1.toc in Resources */,
+				01D13CE01F29762C001A71D6 /* KSQRCodeView.xib in Resources */,
 				0170DFC91F17864A0041D4EE /* KSAppDeclareView.xib in Resources */,
+				01D13CD41F29762C001A71D6 /* KSQRCodeController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1874,6 +1980,7 @@
 				01CC37181F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m in Sources */,
 				0170DB371F14CC060041D4EE /* MJPropertyType.m in Sources */,
 				010BAA561E276DED009E0ACE /* BaseViewController.m in Sources */,
+				01D13CD31F29762C001A71D6 /* KSQRCodeController.m in Sources */,
 				0183A92D1E87ABCE005D40DE /* MacicViewController_one.m in Sources */,
 				01C7F8011E7BCB47007AE40B /* Static_ConstViewController.m in Sources */,
 				01877C761EE1492B00C86202 /* ClassModel.m in Sources */,
@@ -1881,14 +1988,17 @@
 				01877C441EDF123C00C86202 /* ZYProgressBar.m in Sources */,
 				01C64D4F1E35EAFA00CC5E88 /* Sub_C_ViewController.m in Sources */,
 				01C64D611E36015E00CC5E88 /* CustomLayer_CG.m in Sources */,
+				01D13CD91F29762C001A71D6 /* KSQRCodeScanResult.m in Sources */,
 				01877C731EE1492B00C86202 /* DatabaseViewController.m in Sources */,
 				01CE35C01E546FB100C082BB /* CustomCollectionCell.m in Sources */,
+				01D13CD51F29762C001A71D6 /* KSQRCodeScanBaseController.m in Sources */,
 				01CE35C31E546FB100C082BB /* Section_two_ReusableView.m in Sources */,
 				0183A90F1E86AFAC005D40DE /* TransitionToController.m in Sources */,
 				01877C7C1EE1492B00C86202 /* FMDatabaseQueue.m in Sources */,
 				01C64D731E3605AF00CC5E88 /* CoreAnimationVC.m in Sources */,
 				010BAA4A1E276DE6009E0ACE /* Root_C_VC.m in Sources */,
 				010BAA791E2787E0009E0ACE /* Sub_B_ViewController.m in Sources */,
+				01D13CDD1F29762C001A71D6 /* KSQRCodeScanView.m in Sources */,
 				016C19501E4C177A002F910F /* AboutCopyViewController.m in Sources */,
 				0183A9331E87AF50005D40DE /* BaseToViewController.m in Sources */,
 				0183A9301E87AF45005D40DE /* BaseFromViewController.m in Sources */,
@@ -1938,9 +2048,12 @@
 				017CD9C91E9DCE6200811B10 /* Rootcell.m in Sources */,
 				010BAA8F1E278AD6009E0ACE /* PathViewByBezier.m in Sources */,
 				0183A90C1E86AF19005D40DE /* TransitionViewController.m in Sources */,
+				01D13CDA1F29762C001A71D6 /* KSQRCodeScanTool.m in Sources */,
 				0170DB391F14CC060041D4EE /* NSObject+MJCoding.m in Sources */,
 				0170DB361F14CC060041D4EE /* MJPropertyKey.m in Sources */,
+				01D13CDB1F29762C001A71D6 /* KSQRCodeNetLatticeAnimation.m in Sources */,
 				01CE35D71E54B58B00C082BB /* NSObject+Propery.m in Sources */,
+				01D13CDF1F29762C001A71D6 /* KSQRCodeView.m in Sources */,
 				01877C741EE1492B00C86202 /* FMDatabaseManager.m in Sources */,
 				010BAA491E276DE6009E0ACE /* Root_B_VC.m in Sources */,
 				010BAA661E27805F009E0ACE /* Sub_A_ViewController.m in Sources */,
@@ -1954,6 +2067,7 @@
 				0170DB3A1F14CC060041D4EE /* NSObject+MJKeyValue.m in Sources */,
 				01CE35F01E56B15300C082BB /* ArchiverSubModel.m in Sources */,
 				017CD9C21E978B5E00811B10 /* KVCViewController.m in Sources */,
+				01D13CDE1F29762C001A71D6 /* KSQRCodeScanViewStyle.m in Sources */,
 				01877C791EE1492B00C86202 /* FMDatabase.m in Sources */,
 				011B0FC61ED2851C00643227 /* KSSlideView.m in Sources */,
 				01877C751EE1492B00C86202 /* FMDatabaseQueueManager.m in Sources */,
@@ -1974,6 +2088,8 @@
 				01C64D761E3605C600CC5E88 /* BlockAnimatonVC.m in Sources */,
 				0183A91C1E8787BE005D40DE /* GestureTransition.m in Sources */,
 				01110EEB1F13729B00732172 /* KSGrammarBookCatalogueController.m in Sources */,
+				01D13CDC1F29762C001A71D6 /* KSQRCodeScanLineAnimation.m in Sources */,
+				01D13CD71F29762C001A71D6 /* KSQRCodeScanController.m in Sources */,
 				01CE35EA1E5609EA00C082BB /* ArchiverModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

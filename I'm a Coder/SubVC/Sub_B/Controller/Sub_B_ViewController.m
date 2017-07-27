@@ -35,7 +35,7 @@
     [super viewDidLoad];
     self.title =self.titleName;
     self.view.backgroundColor = [UIColor greenColor];
-//    [self dealWithData];
+    [self dealWithData];
 //    [self set3DRotate];
 //    [self set3DMakeRotationn];
 //    [self setMaskInLayer];
@@ -76,8 +76,8 @@
 //    [self creatlayer];
     
 //    [self testshapeLayer];// 测试在mask情况下，贝塞尔曲线的frame，shapelayer的frame，如何受影响.
-//    [self creatshapeLayer]; //一般绘制shapelayer的方法
-    [self creatshapeLayer_one];  //与CAGradientLayer联合使用，绘制渐变加载条动画
+    [self creatshapeLayer]; //一般绘制shapelayer的方法
+//    [self creatshapeLayer_one];  //与CAGradientLayer联合使用，绘制渐变加载条动画
 //    [self creatshapeLayer_two]; //扇形动画
 //    [self creatshapeLayer_three]; //绘制起泡-不规则图形
     
@@ -276,7 +276,10 @@
     self.shapeLayer.frame = CGRectMake(0, 0, 80, 150);
     self.shapeLayer.backgroundColor = [UIColor greenColor].CGColor;
 
-    UIBezierPath  *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(K_width/2, K_height/2) radius:100 startAngle:0 endAngle:M_PI*2 clockwise:YES];
+//    UIBezierPath  *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(K_width/2, K_height/2) radius:100 startAngle:0 endAngle:M_PI*2 clockwise:YES];
+    
+    UIBezierPath  *path = [UIBezierPath bezierPathWithRect:CGRectMake(100, 100, 100, 100)];
+
     self.shapeLayer.path = path.CGPath;
     self.shapeLayer.strokeColor = [UIColor redColor].CGColor;
     self.shapeLayer.fillColor = [UIColor purpleColor].CGColor;
@@ -290,13 +293,14 @@
     
 //    self.shapeLayer.masksToBounds = YES;
 
-    [self.view.layer addSublayer:self.shapeLayer];
-    
-    CABasicAnimation *anmation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    anmation.fromValue = @0.0;
-    anmation.toValue = @1;
-    anmation.duration = 2.5;
-    anmation.repeatCount = MAXFLOAT;
+//    [self.view.layer addSublayer:self.shapeLayer];
+    self.view.layer.mask = self.shapeLayer;
+
+//    CABasicAnimation *anmation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+//    anmation.fromValue = @0.0;
+//    anmation.toValue = @1;
+//    anmation.duration = 2.5;
+//    anmation.repeatCount = MAXFLOAT;
 //    [self.shapeLayer addAnimation:anmation forKey:@"strokeEnd"];
 }
 

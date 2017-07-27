@@ -7,6 +7,7 @@
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+<<<<<<< HEAD
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -21,10 +22,13 @@
       <BreakpointProxy
 >>>>>>> develop
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+=======
+>>>>>>> develop
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
 <<<<<<< HEAD
             filePath = "I&apos;m a Coder/SubVC/Sub_B/ZYProgressIndicator.m"
             timestampString = "517855544.949065"
@@ -185,6 +189,10 @@
             landmarkName = "-setHighlighted:animated:"
 >>>>>>> develop
             landmarkType = "7">
+=======
+            scope = "0"
+            stopOnStyle = "0">
+>>>>>>> develop
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

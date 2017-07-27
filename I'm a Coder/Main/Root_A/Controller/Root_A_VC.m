@@ -30,6 +30,11 @@
 #import "KSGrammarBookCatalogueController.h"
 #import "KSGrammarCertificateController.h"
 #import "KSGrammarUnfinishedController.h"
+#import "KSQRCodeScanController.h"
+#import "KSQRCodeScanViewStyle.h"
+#import "KSQRCodeController.h"
+#import "KSQRCodeViewController.h"
+
 
 @interface Root_A_VC ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) NSArray *array;
@@ -121,23 +126,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    KSGrammarBookCatalogueController *sub_a = [[KSGrammarBookCatalogueController alloc]init];
-    
-    KSGrammarCertificateController *sub_b = [[KSGrammarCertificateController alloc]init];
-    
-    KSGrammarUnfinishedController *sub_c = [[KSGrammarUnfinishedController alloc]init];
+//    KSGrammarBookCatalogueController *sub_a = [[KSGrammarBookCatalogueController alloc]init];
+//    
+//    KSGrammarCertificateController *sub_b = [[KSGrammarCertificateController alloc]init];
+//    
+//    KSGrammarUnfinishedController *sub_c = [[KSGrammarUnfinishedController alloc]init];
+//
+//    if (indexPath.row ==0) {
+//        [self.navigationController pushViewController:sub_a animated:NO];
+//
+//    }else if (indexPath.row ==1) {
+//        [self presentViewController:sub_b animated:YES completion:nil];
+//
+//    }else if (indexPath.row ==2) {
+//        [self presentViewController:sub_c animated:YES completion:nil];
+//
+//    }
+//    KSQRCodeScanController *sub_a = [[KSQRCodeScanController alloc]init];
 
-    if (indexPath.row ==0) {
-        [self.navigationController pushViewController:sub_a animated:NO];
-
-    }else if (indexPath.row ==1) {
-        [self presentViewController:sub_b animated:YES completion:nil];
-
-    }else if (indexPath.row ==2) {
-        [self presentViewController:sub_c animated:YES completion:nil];
-
-    }
-    
 
     //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
 //        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
@@ -183,16 +189,43 @@
     //    TransitionViewController *sub_a = [[TransitionViewController alloc]init];
     //    TransitionListViewController *sub_a = [[TransitionListViewController alloc]init];
     
-    //    KVCViewController *sub_a = [[KVCViewController alloc]init];
+//        KSQRCodeController *sub_a = [[KSQRCodeController alloc]init];
+    KSQRCodeViewController *sub_a = [[KSQRCodeViewController alloc]init];
+
     
+    sub_a.hidesBottomBarWhenPushed = YES;
     
-//    sub_a.hidesBottomBarWhenPushed = YES;
-    
-//    [self.navigationController pushViewController:sub_a animated:YES];
+    [self.navigationController pushViewController:sub_a animated:YES];
     
     //    [self transitionAnimation];
+//    [self qrcode];
 }
 
+- (void)qrcode {
+    KSQRCodeScanController *vc = [[KSQRCodeScanController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.style = [self InnerStyle];
+    vc.isOpenInterestRect = YES;
+    vc.scanCodeType = SCT_QRCode;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (KSQRCodeScanViewStyle*)InnerStyle{
+    //设置扫码区域参数
+    KSQRCodeScanViewStyle *style = [[KSQRCodeScanViewStyle alloc]init];
+    style.centerUpOffset = 44;
+    style.photoframeAngleStyle = KScanViewPhotoframeAngleStyle_Inner;
+    style.photoframeLineW = 3;
+    style.photoframeAngleW = 18;
+    style.photoframeAngleH = 18;
+    style.isNeedShowRetangle = NO;
+    style.anmiationStyle = KScanViewAnimationStyle_LineMove;
+    //线条图片
+    UIImage *imgLine = [UIImage imageNamed:@"qrcode_scan_line"];
+    style.animationImage = imgLine;
+    return style;
+}
 
 - (void)transitionAnimation
 {

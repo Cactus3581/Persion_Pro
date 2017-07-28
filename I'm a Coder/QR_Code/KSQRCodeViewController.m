@@ -30,6 +30,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleDeviceOrientationDidChange:)
+                                                 name:UIDeviceOrientationDidChangeNotification
+                                               object:nil];
     [self capture];
     self.maskView = [[KSQRCodeMaskView alloc] init];
     [self.view addSubview:self.maskView];
@@ -57,10 +61,16 @@
     self.session.sessionPreset = AVCaptureSessionPresetHigh;
     [self.session addInput:input];
     [self.session addOutput:metadataOutput];
+    // Session output
+    AVCaptureConnection *connection = [metadataOutput connectionWithMediaType:AVMediaTypeVideo];
+    connection.videoOrientation = AVCaptureVideoOrientationPortrait;
+
     self.previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     self.previewLayer.frame = self.view.bounds;
     self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     self.previewLayer.backgroundColor = [UIColor yellowColor].CGColor;
+    self.previewLayer.connection.videoOrientation = AVCaptureVideoOrientationPortrait;
+
     [self.view.layer addSublayer:self.previewLayer];
     //设置扫描支持的编码格式(如下设置条形码和二维码兼容)
     metadataOutput.metadataObjectTypes = self.metadataObjectTypes;
@@ -99,37 +109,11 @@
     self.previewLayer.frame = self.view.bounds;
     self.previewLayer.frame = CGRectMake(0, 0, size.width, size.height);
     [self.maskView set_preview_frame:CGRectMake(0, 0, size.width, size.height)];
-    [self shouldRotateToOrientation:(UIDeviceOrientation)[UIApplication sharedApplication].statusBarOrientation];
 }
 
-
--(void)shouldRotateToOrientation:(UIDeviceOrientation)orientation {
-    UIDeviceOrientation deviceOrientation;
-    switch (orientation) {
-        case UIDeviceOrientationPortrait:
-            deviceOrientation = UIDeviceOrientationPortrait;
-            break;
-        case UIDeviceOrientationPortraitUpsideDown:
-            deviceOrientation = UIDeviceOrientationPortraitUpsideDown;
-            break;
-        case UIDeviceOrientationLandscapeLeft:
-            deviceOrientation = UIDeviceOrientationLandscapeLeft;
-            break;
-        case UIDeviceOrientationLandscapeRight:
-            deviceOrientation = UIDeviceOrientationLandscapeRight;
-            break;
-            
-        default:
-            deviceOrientation = UIDeviceOrientationPortrait;
-            break;
-    }
-    
-    [self set_preview_videoOrientation:deviceOrientation];
-}
-
-- (void)set_preview_videoOrientation:(UIDeviceOrientation)deviceOrientation {
+- (void)handleDeviceOrientationDidChange:(UIDeviceOrientation)interfaceOrientation {
     AVCaptureVideoOrientation video_orientation;
-    switch (deviceOrientation) {
+    switch (interfaceOrientation) {
         case UIDeviceOrientationPortrait:
             video_orientation = AVCaptureVideoOrientationPortrait;
             break;
@@ -149,7 +133,6 @@
     }
     [_previewLayer connection].videoOrientation = video_orientation;//旋转相机
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

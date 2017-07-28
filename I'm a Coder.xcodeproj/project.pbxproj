@@ -138,8 +138,6 @@
 		01CE35EA1E5609EA00C082BB /* ArchiverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35E91E5609EA00C082BB /* ArchiverModel.m */; };
 		01CE35ED1E56AA9000C082BB /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35EC1E56AA9000C082BB /* DataManager.m */; };
 		01CE35F01E56B15300C082BB /* ArchiverSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35EF1E56B15300C082BB /* ArchiverSubModel.m */; };
-		01D13CD31F29762C001A71D6 /* KSQRCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CB91F29762C001A71D6 /* KSQRCodeController.m */; };
-		01D13CD41F29762C001A71D6 /* KSQRCodeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D13CBA1F29762C001A71D6 /* KSQRCodeController.xib */; };
 		01D13CD51F29762C001A71D6 /* KSQRCodeScanBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CBC1F29762C001A71D6 /* KSQRCodeScanBaseController.m */; };
 		01D13CD61F29762C001A71D6 /* KSQRCodeScanBaseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01D13CBD1F29762C001A71D6 /* KSQRCodeScanBaseController.xib */; };
 		01D13CD71F29762C001A71D6 /* KSQRCodeScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D13CBF1F29762C001A71D6 /* KSQRCodeScanController.m */; };
@@ -426,9 +424,6 @@
 		01CE35EC1E56AA9000C082BB /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		01CE35EE1E56B15300C082BB /* ArchiverSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiverSubModel.h; sourceTree = "<group>"; };
 		01CE35EF1E56B15300C082BB /* ArchiverSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiverSubModel.m; sourceTree = "<group>"; };
-		01D13CB81F29762C001A71D6 /* KSQRCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeController.h; sourceTree = "<group>"; };
-		01D13CB91F29762C001A71D6 /* KSQRCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeController.m; sourceTree = "<group>"; };
-		01D13CBA1F29762C001A71D6 /* KSQRCodeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSQRCodeController.xib; sourceTree = "<group>"; };
 		01D13CBB1F29762C001A71D6 /* KSQRCodeScanBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeScanBaseController.h; sourceTree = "<group>"; };
 		01D13CBC1F29762C001A71D6 /* KSQRCodeScanBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanBaseController.m; sourceTree = "<group>"; };
 		01D13CBD1F29762C001A71D6 /* KSQRCodeScanBaseController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSQRCodeScanBaseController.xib; sourceTree = "<group>"; };
@@ -1711,9 +1706,6 @@
 		01D13CB71F29762C001A71D6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				01D13CB81F29762C001A71D6 /* KSQRCodeController.h */,
-				01D13CB91F29762C001A71D6 /* KSQRCodeController.m */,
-				01D13CBA1F29762C001A71D6 /* KSQRCodeController.xib */,
 				01D13CBB1F29762C001A71D6 /* KSQRCodeScanBaseController.h */,
 				01D13CBC1F29762C001A71D6 /* KSQRCodeScanBaseController.m */,
 				01D13CBD1F29762C001A71D6 /* KSQRCodeScanBaseController.xib */,
@@ -1940,7 +1932,6 @@
 				014E27BE1F13E1CF00051FAE /* index1.toc in Resources */,
 				019557621F29DC9E007A5E98 /* Flashlight_H@2x.png in Resources */,
 				0170DFC91F17864A0041D4EE /* KSAppDeclareView.xib in Resources */,
-				01D13CD41F29762C001A71D6 /* KSQRCodeController.xib in Resources */,
 				019557641F29DC9E007A5E98 /* QRCodeScanLine@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2021,7 +2012,6 @@
 				01CC37181F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m in Sources */,
 				0170DB371F14CC060041D4EE /* MJPropertyType.m in Sources */,
 				010BAA561E276DED009E0ACE /* BaseViewController.m in Sources */,
-				01D13CD31F29762C001A71D6 /* KSQRCodeController.m in Sources */,
 				0183A92D1E87ABCE005D40DE /* MacicViewController_one.m in Sources */,
 				01C7F8011E7BCB47007AE40B /* Static_ConstViewController.m in Sources */,
 				01877C761EE1492B00C86202 /* ClassModel.m in Sources */,

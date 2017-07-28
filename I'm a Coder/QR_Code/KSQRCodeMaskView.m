@@ -34,11 +34,28 @@ static CGFloat bedge = 60;
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.shapeLayer.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+//    self.shapeLayer.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
 //    [self.bezier appendPath:[[UIBezierPath bezierPathWithRect:CGRectMake(kScreenWidth/2-kScreenWidthUnique/6*4.0/2, kScreenHeight/2-kScreenWidthUnique/6*4.0/2, kScreenWidthUnique/6*4.0, kScreenWidthUnique/6*4.0)] bezierPathByReversingPath]];
 //    [self.bezier appendPath:[[UIBezierPath bezierPathWithRect:CGRectMake(self.backView.frame.origin.x, self.backView.frame.origin.y, kScreenWidthUnique/6*4.0, kScreenWidthUnique/6*4.0)] bezierPathByReversingPath]];
-
 }
+
+- (CAShapeLayer *)shapeLayer {
+    if (!_shapeLayer) {
+        _shapeLayer = [CAShapeLayer layer];
+        _shapeLayer.fillColor = [UIColor redColor].CGColor;
+    }
+//    _shapeLayer.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+    return _shapeLayer;
+}
+
+//- (UIBezierPath *)bezier {
+//    if (!_bezier) {
+//        //扫描框
+////       _bezier = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+////        [_bezier appendPath:[[UIBezierPath bezierPathWithRect:CGRectMake(kScreenWidth/2-kScreenWidthUnique/6*4.0/2, kScreenHeight/2-kScreenWidthUnique/6*4.0/2, kScreenWidthUnique/6*4.0, kScreenWidthUnique/6*4.0)] bezierPathByReversingPath]];
+//    }
+//    return _bezier;
+//}
 
 - (void)initSubViews {
     //遮罩层
@@ -51,15 +68,12 @@ static CGFloat bedge = 60;
     }];
     
     //扫描框
-    self.bezier = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
-    [self.bezier appendPath:[[UIBezierPath bezierPathWithRect:CGRectMake(kScreenWidth/2-kScreenWidthUnique/6*4.0/2, kScreenHeight/2-kScreenWidthUnique/6*4.0/2, kScreenWidthUnique/6*4.0, kScreenWidthUnique/6*4.0)] bezierPathByReversingPath]];
-
-    self.shapeLayer = [CAShapeLayer layer];
-    self.shapeLayer.fillColor = [UIColor redColor].CGColor;
     self.shapeLayer.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+   _bezier = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+
+    [self.bezier appendPath:[[UIBezierPath bezierPathWithRect:CGRectMake(kScreenWidth/2-kScreenWidthUnique/6*4.0/2, kScreenHeight/2-kScreenWidthUnique/6*4.0/2, kScreenWidthUnique/6*4.0, kScreenWidthUnique/6*4.0)] bezierPathByReversingPath]];
     self.shapeLayer.path = self.bezier.CGPath;
     self.maskView.layer.mask = self.shapeLayer;
-//    [self.layer addSublayer:self.shapeLayer];
     
     //边框背景
     self.backView = [[UIView alloc]init];
@@ -121,13 +135,24 @@ static CGFloat bedge = 60;
 }
 
 - (void)set_preview_frame:(CGRect)rect {
-    self.shapeLayer.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
-    [self.bezier appendPath:[[UIBezierPath bezierPathWithRect:CGRectMake(667/2-kScreenWidthUnique/6*4.0/2, 375/2-kScreenWidthUnique/6*4.0/2, kScreenWidthUnique/6*4.0, kScreenWidthUnique/6*4.0)] bezierPathByReversingPath]];
+    [_shapeLayer removeFromSuperlayer];
+    _shapeLayer = nil;
+    _bezier = nil;
+    //扫描框
+    self.shapeLayer.frame = CGRectMake(0, 0,rect.size.width,rect.size.height);
+    _bezier = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, rect.size.width,rect.size.height)];
+
+    [self.bezier appendPath:[[UIBezierPath bezierPathWithRect:CGRectMake(rect.size.width/2-kScreenWidthUnique/6*4.0/2, rect.size.height/2-kScreenWidthUnique/6*4.0/2, kScreenWidthUnique/6*4.0, kScreenWidthUnique/6*4.0)] bezierPathByReversingPath]];
+
+    self.shapeLayer.path = self.bezier.CGPath;
+//    [self.layer addSublayer:self.shapeLayer];
+    
+    self.maskView.layer.mask = self.shapeLayer;
+
+//    self.shapeLayer.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+//    [self.bezier appendPath:[[UIBezierPath bezierPathWithRect:CGRectMake(667/2-kScreenWidthUnique/6*4.0/2, 375/2-kScreenWidthUnique/6*4.0/2, kScreenWidthUnique/6*4.0, kScreenWidthUnique/6*4.0)] bezierPathByReversingPath]];
 //    [self.bezier appendPath:[[UIBezierPath bezierPathWithRect:CGRectMake(self.backView.frame.origin.x, self.backView.frame.origin.y, kScreenWidthUnique/6*4.0, kScreenWidthUnique/6*4.0)] bezierPathByReversingPath]];
 }
 
-- (void)removeAnimation{
-    
-}
 
 @end

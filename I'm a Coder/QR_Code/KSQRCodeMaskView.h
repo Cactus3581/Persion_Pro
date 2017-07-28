@@ -12,8 +12,4 @@
 
 - (void)set_preview_frame:(CGRect)rect;
 
-/**
- *  移除动画
- */
-- (void)removeAnimation;
 @end

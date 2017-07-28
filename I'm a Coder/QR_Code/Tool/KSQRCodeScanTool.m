@@ -51,6 +51,7 @@
 - (instancetype)initWithPreView:(UIView*)preView ObjectType:(NSArray*)objType success:(void(^)(NSArray<KSQRCodeScanResult*> *array))block {
     if (self = [super init]) {
         [self initParaWithPreView:preView ObjectType:objType cropRect:CGRectZero success:block];
+    
     }
     return self;
 }
@@ -119,6 +120,10 @@
         [_input.device setFocusMode:AVCaptureFocusModeContinuousAutoFocus];
         [_input.device unlockForConfiguration];
     }
+}
+
+- (void)set_preview_frame:(CGRect)rect {
+    _preview.frame = rect;
 }
 
 - (CGFloat)getVideoMaxScale {

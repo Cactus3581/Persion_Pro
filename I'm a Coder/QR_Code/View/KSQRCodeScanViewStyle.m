@@ -16,7 +16,11 @@
         _whRatio = 1.0;
         _colorRetangleLine = [UIColor whiteColor];
         _centerUpOffset = 44;
-        _xScanRetangleOffset = 60;
+        if([[PowerWordUtilities utils] isPad]) {
+            _xScanRetangleOffset = kScreenUniqueWidth/4.0;
+        }else{
+            _xScanRetangleOffset = 60;
+        }
         _anmiationStyle = KScanViewAnimationStyle_LineMove;
         _photoframeAngleStyle = KScanViewPhotoframeAngleStyle_Outer;
         _colorAngle = [UIColor colorWithRed:0. green:167./255. blue:231./255. alpha:1.0];

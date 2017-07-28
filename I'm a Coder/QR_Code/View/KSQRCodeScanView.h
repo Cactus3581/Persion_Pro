@@ -32,7 +32,8 @@
 - (void)startDeviceReadyingWithText:(NSString*)text;
 
 /**
- *  设备启动完成
+ *  设备启动完成： 关闭相机启动中的文字提示
+
  */
 - (void)stopDeviceReadying;
 

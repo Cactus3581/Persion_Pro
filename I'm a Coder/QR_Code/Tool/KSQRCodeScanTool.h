@@ -135,4 +135,7 @@
  */
 + (UIImage*)createBarCodeWithString:(NSString*)text QRSize:(CGSize)size;
 
+
+- (void)set_preview_frame:(CGRect)rect;
+
 @end

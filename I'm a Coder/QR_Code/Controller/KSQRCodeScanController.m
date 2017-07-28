@@ -7,20 +7,16 @@
 //
 
 #import "KSQRCodeScanController.h"
-#import <AFHTTPSessionManager.h>
+
 @interface KSQRCodeScanController ()
 
 @end
 
 @implementation KSQRCodeScanController
 
-- (IBAction)dismissAction:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.cameraInvokeMsg = @"相机启动中";
+    self.cameraInvokeMsg = @"正在加载";
 }
 
 #pragma mark -实现类继承该方法，作出对应处理
@@ -43,45 +39,72 @@
     if (!strResult) {
         strResult = @"识别失败";
     }
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismiss];
 }
 
 - (void)showNextVCWithScanResult:(KSQRCodeScanResult*)strResult {
-    NSString *strScanned = strResult.strScanned;
-    NSString * urlString =[NSString stringWithFormat:@"%@&client=%@",strScanned,@(3)];
-    NSLog(@"%@",urlString);
-    NSLog(@"%@",strScanned);
-    NSString *urlStr = [urlString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString * urlString =[NSString stringWithFormat:@"%@&client=%@",strResult.strScanned,@([[PowerWordUtilities utils] clientType])];
+    //NSString *urlStr = [urlString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     AFHTTPSessionManager *httpManager = [AFHTTPSessionManager manager];
-    httpManager.responseSerializer.acceptableContentTypes = [httpManager.responseSerializer.acceptableContentTypes setByAddingObjectsFromSet:[NSSet setWithObjects:@"application/json", @"text/html",@"text/plain",nil]];
+    httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:kContentType];
     //[httpManager.requestSerializer setValue:@"" forHTTPHeaderField:@""];
-    
     __weak typeof(self) weakSelf = self;
-    [httpManager POST:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
-        [weakSelf popAlertMsgWithScanResult:nil];
-    }];
-    
-    
-        if ([strScanned hasPrefix:@"http"]) {
-            NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&client=%@",strScanned,@(3)]];
-    
-            if ([[UIApplication sharedApplication] canOpenURL: url]) {
-                [[UIApplication sharedApplication] openURL: url];
-            }
+    [httpManager POST:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        NSDictionary *allHeaders = response.allHeaderFields;
+        NSString *location = KSValidateDict(allHeaders)[@"Location"];
+        NSInteger type ;
+        if ([KSValidateString(location) hasPrefix:@"http"]) {
+            type = 0;
         }else {
-            AFHTTPSessionManager *httpManager = [AFHTTPSessionManager manager];
-            httpManager.responseSerializer.acceptableContentTypes = [httpManager.responseSerializer.acceptableContentTypes setByAddingObjectsFromSet:[NSSet setWithObjects:@"application/json", @"text/html",@"text/plain",nil]];
-            //[httpManager.requestSerializer setValue:@"" forHTTPHeaderField:@""];
-            [httpManager POST:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                NSLog(@"%@",responseObject);
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                NSLog(@"%@",error);
-            }];
+            type = 2;
         }
-    
+        [KSDynamicViewControllerHelper pushViewControllerWithNavigationController:nil pushType:type linkData:location];
+        [weakSelf removeSelf];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [weakSelf.qRScanView stopScanAnimation];
+        [weakSelf stopScan];
+        [weakSelf showAlert];
+    }];
+}
+
+- (void)showAlert {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"服务器返回error" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"重现扫描" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self.qRScanView startScanAnimation];
+        [self reStartDevice];
+    }];
+    [alertController addAction:alertAction];
+    UIAlertAction *alertActionCancel = [UIAlertAction actionWithTitle:@"放弃" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self dismiss];
+    }];
+    [alertController addAction:alertActionCancel];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)removeSelf {
+    if (self.navigationController) {
+        NSMutableArray *array = [NSMutableArray arrayWithArray:self.navigationController.viewControllers];
+        [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([obj isKindOfClass:[self class]]) {
+                [array removeObject:obj];
+                *stop = YES;
+            }
+        }];
+        self.navigationController.viewControllers = array;
+    }
+}
+
+- (IBAction)dismissAction:(id)sender {
+    [self dismiss];
+}
+
+- (void)dismiss {
+    if (self.navigationController) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -62,8 +62,6 @@
     [_qRScanView startDeviceReadyingWithText:_cameraInvokeMsg];
 }
 
-
-
 #pragma mark - 启动设备
 - (void)startScan {
 //    UIView *videoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
@@ -81,13 +79,13 @@
             //设置只识别框内区域
             cropRect = [KSQRCodeScanView getScanRectWithPreView:self.view style:_style];
         }
-        
+
         NSString *strCode = AVMetadataObjectTypeQRCode;
         if (_scanCodeType != SCT_BarCodeITF ) {
             strCode = [self codeWithType:_scanCodeType];
         }
         //AVMetadataObjectTypeITF14Code 扫码效果不行,另外只能输入一个码制，虽然接口是可以输入多个码制
-        self.scanTool = [[KSQRCodeScanTool alloc]initWithPreView:videoView ObjectType:@[strCode] cropRect:cropRect success:^(NSArray<KSQRCodeScanResult *> *array) {
+        self.scanTool = [[KSQRCodeScanTool alloc]initWithPreView:self.view ObjectType:@[strCode] cropRect:cropRect success:^(NSArray<KSQRCodeScanResult *> *array) {
             [weakSelf scanResultWithArray:array];
         }];
         [_scanTool setNeedCaptureImage:_isNeedScanImage];
@@ -226,6 +224,13 @@
         return NO;
     }
     return YES;
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    if (_scanTool) {
+        [_scanTool set_preview_frame:CGRectMake(0, 0, size.width, size.height)];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

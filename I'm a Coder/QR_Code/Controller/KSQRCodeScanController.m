@@ -32,7 +32,6 @@
         [self popAlertMsgWithScanResult:nil];
         return;
     }
-    [self showNextVCWithScanResult:scanResult];
 }
 
 - (void)popAlertMsgWithScanResult:(NSString*)strResult {
@@ -42,31 +41,7 @@
     [self dismiss];
 }
 
-- (void)showNextVCWithScanResult:(KSQRCodeScanResult*)strResult {
-    NSString * urlString =[NSString stringWithFormat:@"%@&client=%@",strResult.strScanned,@([[PowerWordUtilities utils] clientType])];
-    //NSString *urlStr = [urlString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    AFHTTPSessionManager *httpManager = [AFHTTPSessionManager manager];
-    httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:kContentType];
-    //[httpManager.requestSerializer setValue:@"" forHTTPHeaderField:@""];
-    __weak typeof(self) weakSelf = self;
-    [httpManager POST:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-        NSDictionary *allHeaders = response.allHeaderFields;
-        NSString *location = KSValidateDict(allHeaders)[@"Location"];
-        NSInteger type ;
-        if ([KSValidateString(location) hasPrefix:@"http"]) {
-            type = 0;
-        }else {
-            type = 2;
-        }
-        [KSDynamicViewControllerHelper pushViewControllerWithNavigationController:nil pushType:type linkData:location];
-        [weakSelf removeSelf];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [weakSelf.qRScanView stopScanAnimation];
-        [weakSelf stopScan];
-        [weakSelf showAlert];
-    }];
-}
+
 
 - (void)showAlert {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"服务器返回error" preferredStyle:UIAlertControllerStyleAlert];

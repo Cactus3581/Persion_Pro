@@ -12,6 +12,7 @@
 #import "PathViewByBezier.h"
 #import "ZYProgressBar.h"
 #import "KSProgressNumberBar.h"
+#import "circleView.h"
 
 #define widthBt [UIScreen mainScreen].bounds.size.width/5.0
 #define heightBt 30.0
@@ -35,7 +36,8 @@
     [super viewDidLoad];
     self.title =self.titleName;
     self.view.backgroundColor = [UIColor greenColor];
-    [self dealWithData];
+    [self configureCircleView];
+//    [self dealWithData];
 //    [self set3DRotate];
 //    [self set3DMakeRotationn];
 //    [self setMaskInLayer];
@@ -43,6 +45,16 @@
 
 //    [KSProgressNumberBar show];
 //    [self progressBarDownload];
+}
+
+- (void)configureCircleView {
+    circleView *view = [[circleView alloc]init];
+    [self.view addSubview:view];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.mas_equalTo(186.0);
+        make.center.equalTo(self.view);
+    }];
+    [view setTotlaScore:710 score:100];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -75,7 +87,7 @@
     // layer基本属性
 //    [self creatlayer];
     
-    [self testshapeLayer];// 测试在mask情况下，贝塞尔曲线的frame，shapelayer的frame，如何受影响.
+//    [self testshapeLayer];// 测试在mask情况下，贝塞尔曲线的frame，shapelayer的frame，如何受影响.
 //    [self creatshapeLayer]; //一般绘制shapelayer的方法
 //    [self creatshapeLayer_one];  //与CAGradientLayer联合使用，绘制渐变加载条动画
 //    [self creatshapeLayer_two]; //扇形动画
@@ -91,7 +103,7 @@
 
     
     // 渐变色
-//        [self creatgradientLayer];//颜色渐变-滑动解锁
+        [self creatgradientLayer];//颜色渐变-滑动解锁
     //    [self creatgradientLayer_two];//png渐变
     //    [self creatgradientLayer_three];//png覆盖图层
     
@@ -701,15 +713,17 @@
                           
                           (__bridge id)[UIColor redColor].CGColor,
                           
-                          (__bridge id)[UIColor purpleColor].CGColor,
+                          (__bridge id)[UIColor greenColor].CGColor,
                           
-                          (__bridge id)[UIColor cyanColor].CGColor
-                          
+                          (__bridge id)[UIColor yellowColor].CGColor,
+                          (__bridge id)[UIColor blueColor].CGColor,
+//                          (__bridge id)[UIColor purpleColor].CGColor
+
                           ];
 
     //设置好 colors 要设置好与之相对应的 locations 值
 
-    gradientLayer.locations=@[@.25,@.5,@.75];
+    gradientLayer.locations=@[@.5,@0.9];
     //CAGradientLayer 默认的渐变方向是从上到下，即垂直方向。
     //映射locations中第一个位置，用单位向量表示，比如（0，0）表示从左上角开始变化。默认值是(0.5,0.0)
     //映射locations中最后一个位置，用单位向量表示，比如（1，1）表示到右下角变化结束。默认值是(0.5,1.0)。
@@ -722,38 +736,38 @@
     [self.view.layer addSublayer:gradientLayer];
 
     
-    
-    //label文字:文字是模型 提供轮廓
-    
-    UILabel *label=[[UILabel alloc]initWithFrame:gradientLayer.bounds];
-    // 疑问：label只是用来做文字裁剪，能否不添加到view上。
-    // 必须要把Label添加到view上，如果不添加到view上，label的图层就不会调用drawRect方法绘制文字，也就没有文字裁剪了。
-    // 如何验证，自定义Label,重写drawRect方法，看是否调用,发现不添加上去，就不会调用
-    [self.view addSubview:label];
-    
-    label.alpha=0.5;
-    
-    label.text=@"滑动解锁 >>";
-    
-    label.textAlignment=NSTextAlignmentCenter;
-    
-    label.font=[UIFont boldSystemFontOfSize:30];
-    // mask层工作原理:按照透明度裁剪，只保留非透明部分，文字就是非透明的，因此除了文字，其他都被裁剪掉，这样就只会显示文字下面渐变层的内容，相当于留了文字的区域，让渐变层去填充文字的颜色。
-    // 设置渐变层的裁剪层  注意:一旦把label层设置为mask层，label层就不能显示了,会直接从父层中移除，然后作为渐变层的mask层
-    gradientLayer.mask=label.layer;
-    
-    // 添加色变动画：将keyPath赋值为“locations”是让CAGradientLayer的locations属性做动画，因为locations对应着颜色，那么颜色也会跟着动，最终的显示效果就是：
-    CABasicAnimation *theAnima=[CABasicAnimation animationWithKeyPath:@"locations"];
-    
-    theAnima.fromValue=@[@0,@0,@0.25];
-    
-    theAnima.toValue=@[@0.25,@1,@1];
-    
-    theAnima.duration=2.5;
-    
-    theAnima.repeatCount=HUGE;
+//    
+//    //label文字:文字是模型 提供轮廓
+//    
+//    UILabel *label=[[UILabel alloc]initWithFrame:gradientLayer.bounds];
+//    // 疑问：label只是用来做文字裁剪，能否不添加到view上。
+//    // 必须要把Label添加到view上，如果不添加到view上，label的图层就不会调用drawRect方法绘制文字，也就没有文字裁剪了。
+//    // 如何验证，自定义Label,重写drawRect方法，看是否调用,发现不添加上去，就不会调用
+//    [self.view addSubview:label];
+//    
+//    label.alpha=0.5;
+//    
+//    label.text=@"滑动解锁 >>";
+//    
+//    label.textAlignment=NSTextAlignmentCenter;
+//    
+//    label.font=[UIFont boldSystemFontOfSize:30];
+//    // mask层工作原理:按照透明度裁剪，只保留非透明部分，文字就是非透明的，因此除了文字，其他都被裁剪掉，这样就只会显示文字下面渐变层的内容，相当于留了文字的区域，让渐变层去填充文字的颜色。
+//    // 设置渐变层的裁剪层  注意:一旦把label层设置为mask层，label层就不能显示了,会直接从父层中移除，然后作为渐变层的mask层
+//    gradientLayer.mask=label.layer;
+//    
+//    // 添加色变动画：将keyPath赋值为“locations”是让CAGradientLayer的locations属性做动画，因为locations对应着颜色，那么颜色也会跟着动，最终的显示效果就是：
+//    CABasicAnimation *theAnima=[CABasicAnimation animationWithKeyPath:@"locations"];
+//    
+//    theAnima.fromValue=@[@0,@0,@0.25];
+//    
+//    theAnima.toValue=@[@0.25,@1,@1];
+//    
+//    theAnima.duration=2.5;
+//    
+//    theAnima.repeatCount=HUGE;
 
-    [gradientLayer addAnimation:theAnima forKey:@"locations"];
+//    [gradientLayer addAnimation:theAnima forKey:@"locations"];
     
 }
 #pragma mark - 创建gradientLayer png渐变

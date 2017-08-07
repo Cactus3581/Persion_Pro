@@ -39,6 +39,12 @@
 		011B0FC51ED2851C00643227 /* KSSlideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B0FC21ED2851C00643227 /* KSSlideCell.m */; };
 		011B0FC61ED2851C00643227 /* KSSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B0FC41ED2851C00643227 /* KSSlideView.m */; };
 		011F786E1F185E3F00184973 /* KSWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011F786D1F185E3F00184973 /* KSWaterWaveView.m */; };
+		013C970C1F389F2300BE557E /* AVplayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C97091F389F2300BE557E /* AVplayerView.m */; };
+		013C970D1F389F2300BE557E /* PLayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C970B1F389F2300BE557E /* PLayButton.m */; };
+		013C97101F389FAA00BE557E /* AVPLayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C970F1F389FAA00BE557E /* AVPLayViewController.m */; };
+		013C97131F38A02E00BE557E /* AVSecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C97121F38A02E00BE557E /* AVSecondController.m */; };
+		013C971D1F38B03600BE557E /* AudioPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C971C1F38B03600BE557E /* AudioPlayerManager.m */; };
+		013C97201F38B11D00BE557E /* AudioPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C971F1F38B11D00BE557E /* AudioPlayerView.m */; };
 		01413BA71E48A1DA004521FE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01413BA61E48A1DA004521FE /* libsqlite3.tbd */; };
 		014891AE1E86818C0012E689 /* PopViewAnaimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 014891AD1E86818C0012E689 /* PopViewAnaimationVC.m */; };
 		014891B41E868B3B0012E689 /* Popview.m in Sources */ = {isa = PBXBuildFile; fileRef = 014891B31E868B3B0012E689 /* Popview.m */; };
@@ -138,6 +144,7 @@
 		01CE35EA1E5609EA00C082BB /* ArchiverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35E91E5609EA00C082BB /* ArchiverModel.m */; };
 		01CE35ED1E56AA9000C082BB /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35EC1E56AA9000C082BB /* DataManager.m */; };
 		01CE35F01E56B15300C082BB /* ArchiverSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35EF1E56B15300C082BB /* ArchiverSubModel.m */; };
+		01CED3F91F35F1EB00C01377 /* circleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CED3F81F35F1EB00C01377 /* circleView.m */; };
 		01DEAEAE1F2AEB0F009B19E4 /* KSQRCodeScanBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DEAE9A1F2AEB0F009B19E4 /* KSQRCodeScanBaseController.m */; };
 		01DEAEAF1F2AEB0F009B19E4 /* KSQRCodeScanBaseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DEAE9B1F2AEB0F009B19E4 /* KSQRCodeScanBaseController.xib */; };
 		01DEAEB01F2AEB0F009B19E4 /* KSQRCodeScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DEAE9D1F2AEB0F009B19E4 /* KSQRCodeScanController.m */; };
@@ -233,6 +240,18 @@
 		011B0FC41ED2851C00643227 /* KSSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSlideView.m; sourceTree = "<group>"; };
 		011F786C1F185E3F00184973 /* KSWaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSWaterWaveView.h; sourceTree = "<group>"; };
 		011F786D1F185E3F00184973 /* KSWaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSWaterWaveView.m; sourceTree = "<group>"; };
+		013C97081F389F2300BE557E /* AVplayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVplayerView.h; sourceTree = "<group>"; };
+		013C97091F389F2300BE557E /* AVplayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVplayerView.m; sourceTree = "<group>"; };
+		013C970A1F389F2300BE557E /* PLayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLayButton.h; sourceTree = "<group>"; };
+		013C970B1F389F2300BE557E /* PLayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLayButton.m; sourceTree = "<group>"; };
+		013C970E1F389FAA00BE557E /* AVPLayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPLayViewController.h; sourceTree = "<group>"; };
+		013C970F1F389FAA00BE557E /* AVPLayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPLayViewController.m; sourceTree = "<group>"; };
+		013C97111F38A02E00BE557E /* AVSecondController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVSecondController.h; sourceTree = "<group>"; };
+		013C97121F38A02E00BE557E /* AVSecondController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVSecondController.m; sourceTree = "<group>"; };
+		013C971B1F38B03600BE557E /* AudioPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerManager.h; sourceTree = "<group>"; };
+		013C971C1F38B03600BE557E /* AudioPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerManager.m; sourceTree = "<group>"; };
+		013C971E1F38B11D00BE557E /* AudioPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerView.h; sourceTree = "<group>"; };
+		013C971F1F38B11D00BE557E /* AudioPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerView.m; sourceTree = "<group>"; };
 		01413BA41E48A1D1004521FE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		01413BA61E48A1DA004521FE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		014891AC1E86818C0012E689 /* PopViewAnaimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewAnaimationVC.h; sourceTree = "<group>"; };
@@ -424,6 +443,8 @@
 		01CE35EC1E56AA9000C082BB /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		01CE35EE1E56B15300C082BB /* ArchiverSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiverSubModel.h; sourceTree = "<group>"; };
 		01CE35EF1E56B15300C082BB /* ArchiverSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiverSubModel.m; sourceTree = "<group>"; };
+		01CED3F71F35F1EB00C01377 /* circleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circleView.h; sourceTree = "<group>"; };
+		01CED3F81F35F1EB00C01377 /* circleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = circleView.m; sourceTree = "<group>"; };
 		01DEAE991F2AEB0F009B19E4 /* KSQRCodeScanBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSQRCodeScanBaseController.h; sourceTree = "<group>"; };
 		01DEAE9A1F2AEB0F009B19E4 /* KSQRCodeScanBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanBaseController.m; sourceTree = "<group>"; };
 		01DEAE9B1F2AEB0F009B19E4 /* KSQRCodeScanBaseController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSQRCodeScanBaseController.xib; sourceTree = "<group>"; };
@@ -501,6 +522,7 @@
 		010BA9EC1E276DB3009E0ACE /* I'm a Coder */ = {
 			isa = PBXGroup;
 			children = (
+				013C97071F389F2300BE557E /* AVplayerView */,
 				01D9313E1F28531B0064D13C /* QR_Code */,
 				0170DB071F14BC800041D4EE /* Frameworks */,
 				01110ED41F13728900732172 /* MutliNestCell */,
@@ -970,6 +992,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		013C97071F389F2300BE557E /* AVplayerView */ = {
+			isa = PBXGroup;
+			children = (
+				013C97081F389F2300BE557E /* AVplayerView.h */,
+				013C97091F389F2300BE557E /* AVplayerView.m */,
+				013C970A1F389F2300BE557E /* PLayButton.h */,
+				013C970B1F389F2300BE557E /* PLayButton.m */,
+				013C970E1F389FAA00BE557E /* AVPLayViewController.h */,
+				013C970F1F389FAA00BE557E /* AVPLayViewController.m */,
+				013C97111F38A02E00BE557E /* AVSecondController.h */,
+				013C97121F38A02E00BE557E /* AVSecondController.m */,
+				013C971B1F38B03600BE557E /* AudioPlayerManager.h */,
+				013C971C1F38B03600BE557E /* AudioPlayerManager.m */,
+				013C971E1F38B11D00BE557E /* AudioPlayerView.h */,
+				013C971F1F38B11D00BE557E /* AudioPlayerView.m */,
+			);
+			path = AVplayerView;
+			sourceTree = "<group>";
+		};
 		01413B851E489F82004521FE /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -1391,6 +1432,7 @@
 		01C64D621E36051B00CC5E88 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				01CED3F61F35F1D100C01377 /* CIrcle */,
 				0183A9061E86AEEA005D40DE /* Transition */,
 				01C64D641E36055400CC5E88 /* CoreAnimation */,
 				01C64D631E36054500CC5E88 /* BlockAnimation */,
@@ -1701,6 +1743,15 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		01CED3F61F35F1D100C01377 /* CIrcle */ = {
+			isa = PBXGroup;
+			children = (
+				01CED3F71F35F1EB00C01377 /* circleView.h */,
+				01CED3F81F35F1EB00C01377 /* circleView.m */,
+			);
+			path = CIrcle;
 			sourceTree = "<group>";
 		};
 		01D9313E1F28531B0064D13C /* QR_Code */ = {
@@ -2055,6 +2106,7 @@
 				01CE35AB1E546F3A00C082BB /* CollectionViewController.m in Sources */,
 				0170DFB41F1611190041D4EE /* KSCertificateView.m in Sources */,
 				0170DB341F14CC060041D4EE /* MJFoundation.m in Sources */,
+				013C970D1F389F2300BE557E /* PLayButton.m in Sources */,
 				01877C501EDF225200C86202 /* KSProgressIndicatorView.m in Sources */,
 				016C195A1E51B35E002F910F /* BlockViewController.m in Sources */,
 				01877C511EDF225200C86202 /* KSProgressNumberBar.m in Sources */,
@@ -2073,6 +2125,7 @@
 				019557541F29D5F8007A5E98 /* KSQRCodeViewController.m in Sources */,
 				01EDC9AC1E7EAA21005FD15D /* MasonryViewController.m in Sources */,
 				01CE35DA1E54B62200C082BB /* NSObject+Log.m in Sources */,
+				013C97101F389FAA00BE557E /* AVPLayViewController.m in Sources */,
 				0170DB3F1F152BC00041D4EE /* KSGrammarBookCatalogueFooterView.m in Sources */,
 				014891AE1E86818C0012E689 /* PopViewAnaimationVC.m in Sources */,
 				01877C781EE1492B00C86202 /* SchoolModel.m in Sources */,
@@ -2093,8 +2146,10 @@
 				01CE35C11E546FB100C082BB /* Section_one_ReusableView.m in Sources */,
 				0183A9231E87A91C005D40DE /* TransitionListViewController.m in Sources */,
 				01877C7D1EE1492B00C86202 /* FMResultSet.m in Sources */,
+				013C970C1F389F2300BE557E /* AVplayerView.m in Sources */,
 				010BAA6C1E278209009E0ACE /* BaseTableViewVC.m in Sources */,
 				01877C451EDF123C00C86202 /* ZYProgressIndicator.m in Sources */,
+				013C971D1F38B03600BE557E /* AudioPlayerManager.m in Sources */,
 				01A824671EC019E200C1BDDB /* MPlayerView.m in Sources */,
 				0170DB3A1F14CC060041D4EE /* NSObject+MJKeyValue.m in Sources */,
 				01CE35F01E56B15300C082BB /* ArchiverSubModel.m in Sources */,
@@ -2107,6 +2162,7 @@
 				01DEAEB21F2AEB0F009B19E4 /* KSQRCodeScanResult.m in Sources */,
 				0183A9281E87AAF8005D40DE /* MoveTransitionViewController.m in Sources */,
 				01DEAEB31F2AEB0F009B19E4 /* KSQRCodeScanTool.m in Sources */,
+				013C97201F38B11D00BE557E /* AudioPlayerView.m in Sources */,
 				010BAA6F1E2782BC009E0ACE /* BaseTableViewCell.m in Sources */,
 				01110EF01F13729B00732172 /* KSGrammarBookCatalogueHeadCell.m in Sources */,
 				010BAA941E27A315009E0ACE /* BaseModel.m in Sources */,
@@ -2121,7 +2177,9 @@
 				01DEAEB51F2AEB0F009B19E4 /* KSQRCodeScanLineAnimation.m in Sources */,
 				01C64D761E3605C600CC5E88 /* BlockAnimatonVC.m in Sources */,
 				0183A91C1E8787BE005D40DE /* GestureTransition.m in Sources */,
+				013C97131F38A02E00BE557E /* AVSecondController.m in Sources */,
 				01110EEB1F13729B00732172 /* KSGrammarBookCatalogueController.m in Sources */,
+				01CED3F91F35F1EB00C01377 /* circleView.m in Sources */,
 				01CE35EA1E5609EA00C082BB /* ArchiverModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

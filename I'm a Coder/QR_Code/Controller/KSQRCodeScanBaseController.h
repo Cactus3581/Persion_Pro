@@ -11,7 +11,6 @@
 #import "KSQRCodeScanResult.h"
 #import "KSQRCodeScanView.h"
 #import "KSQRCodeScanTool.h"
-#import "KSBaseViewController.h"
 
 typedef NS_ENUM(NSInteger, SCANCODETYPE) {
     SCT_QRCode, //QR二维码
@@ -31,7 +30,7 @@ typedef NS_ENUM(NSInteger, SCANCODETYPE) {
 
 @end
 
-@interface KSQRCodeScanBaseController : KSBaseViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface KSQRCodeScanBaseController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 #pragma mark ---- 需要初始化参数 ------
 /**

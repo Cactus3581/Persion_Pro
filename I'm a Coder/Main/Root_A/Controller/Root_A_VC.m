@@ -32,8 +32,8 @@
 #import "KSGrammarUnfinishedController.h"
 #import "KSQRCodeScanController.h"
 #import "KSQRCodeScanViewStyle.h"
-#import "KSQRCodeController.h"
 #import "KSQRCodeViewController.h"
+#import "AVPLayViewController.h"
 
 
 @interface Root_A_VC ()<UITableViewDataSource,UITableViewDelegate>
@@ -147,6 +147,8 @@
 
     //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
 //        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
+    AVPLayViewController *sub_a = [[AVPLayViewController alloc]init];
+
     //    Sub_C_ViewController *sub_a = [[Sub_C_ViewController alloc]init];
     
     //    BlockAnimatonVC *sub_a = [[BlockAnimatonVC alloc]init];
@@ -190,7 +192,7 @@
     //    TransitionListViewController *sub_a = [[TransitionListViewController alloc]init];
     
 //        KSQRCodeController *sub_a = [[KSQRCodeController alloc]init];
-    KSQRCodeViewController *sub_a = [[KSQRCodeViewController alloc]init];
+//    KSQRCodeViewController *sub_a = [[KSQRCodeViewController alloc]init];
 
     
     sub_a.hidesBottomBarWhenPushed = YES;

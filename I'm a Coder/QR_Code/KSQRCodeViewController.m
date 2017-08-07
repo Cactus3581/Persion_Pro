@@ -46,6 +46,52 @@
     [super viewWillDisappear:animated];
 }
 
+- (void)ds {
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 200, 50)];
+    CGFloat cornerRadius = 4;
+    view.backgroundColor = [UIColor lightGrayColor];
+    [self .view addSubview:view];
+    
+    CGFloat viewWidth = CGRectGetWidth(view.frame);
+    CGFloat viewHeight = CGRectGetHeight(view.frame);
+    
+    CGFloat arrowX = 55.;
+    CGFloat arrowY = 7.;
+    CGFloat arrowLength = 10.;
+    CGPoint point1 = CGPointMake(0, 0);
+    CGPoint point2 = CGPointMake(viewWidth, 0);
+    CGPoint point3 = CGPointMake(viewWidth, viewHeight - arrowY);
+    //key point 4,5,6
+    CGPoint point4 = CGPointMake(arrowX + arrowLength, viewHeight - arrowY);
+    CGPoint point5 = CGPointMake(arrowX + arrowLength/2.0, viewHeight);
+    CGPoint point6 = CGPointMake(arrowX, viewHeight - arrowY);
+    
+    CGPoint point7 = CGPointMake(0, viewHeight - arrowY);
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    if (cornerRadius == 0) {
+        [path moveToPoint:point1];
+        [path addLineToPoint:point2];
+        [path addLineToPoint:point3];
+        [path addLineToPoint:point4];
+        [path addLineToPoint:point5];
+        [path addLineToPoint:point6];
+        [path addLineToPoint:point7];
+    }else{
+        //顺序有影响
+        [path addArcWithCenter:CGPointMake(cornerRadius, cornerRadius) radius:cornerRadius startAngle:2*M_PI_2 endAngle:3*M_PI_2 clockwise:YES];
+        [path addArcWithCenter:CGPointMake(viewWidth-cornerRadius, cornerRadius) radius:cornerRadius startAngle:3*M_PI_2 endAngle:0 clockwise:YES];
+        [path addArcWithCenter:CGPointMake(viewWidth-cornerRadius, viewHeight-cornerRadius-arrowY) radius:cornerRadius startAngle:0 endAngle:M_PI_2 clockwise:YES];
+        [path addLineToPoint:point4];
+        [path addLineToPoint:point5];
+        [path addLineToPoint:point6];
+        [path addArcWithCenter:CGPointMake(cornerRadius, viewHeight-cornerRadius-arrowY) radius:cornerRadius startAngle:M_PI_2 endAngle:M_PI clockwise:YES];
+    }
+    [path closePath];
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.path = path.CGPath;
+    view.layer.mask = layer;
+}
+
 - (void)capture{
     //获取摄像设备
     self.device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];

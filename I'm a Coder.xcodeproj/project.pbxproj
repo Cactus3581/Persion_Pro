@@ -45,10 +45,19 @@
 		013C97131F38A02E00BE557E /* AVSecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C97121F38A02E00BE557E /* AVSecondController.m */; };
 		013C971D1F38B03600BE557E /* AudioPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C971C1F38B03600BE557E /* AudioPlayerManager.m */; };
 		013C97201F38B11D00BE557E /* AudioPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C971F1F38B11D00BE557E /* AudioPlayerView.m */; };
+		013C97241F39BFEF00BE557E /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C97231F39BFEF00BE557E /* CircleProgressView.m */; };
 		01413BA71E48A1DA004521FE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01413BA61E48A1DA004521FE /* libsqlite3.tbd */; };
 		014891AE1E86818C0012E689 /* PopViewAnaimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 014891AD1E86818C0012E689 /* PopViewAnaimationVC.m */; };
 		014891B41E868B3B0012E689 /* Popview.m in Sources */ = {isa = PBXBuildFile; fileRef = 014891B31E868B3B0012E689 /* Popview.m */; };
 		014E27BE1F13E1CF00051FAE /* index1.toc in Resources */ = {isa = PBXBuildFile; fileRef = 014E27BD1F13E1CF00051FAE /* index1.toc */; };
+		014ECD781F400C6C00D0E559 /* TBloaderURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD751F400C6C00D0E559 /* TBloaderURLConnection.m */; };
+		014ECD791F400C6C00D0E559 /* TBVideoRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD771F400C6C00D0E559 /* TBVideoRequestTask.m */; };
+		014ECD7D1F40218700D0E559 /* KSResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD7C1F40218700D0E559 /* KSResourceLoader.m */; };
+		014ECD801F40219B00D0E559 /* KSRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD7F1F40219B00D0E559 /* KSRequestTask.m */; };
+		014ECD841F4022BB00D0E559 /* KSFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD831F4022BB00D0E559 /* KSFileHandle.m */; };
+		014ECD8B1F4023B200D0E559 /* NSString+SULoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD871F4023B200D0E559 /* NSString+SULoader.m */; };
+		014ECD8C1F4023B200D0E559 /* NSURL+SULoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD891F4023B200D0E559 /* NSURL+SULoader.m */; };
+		014ECD901F40242200D0E559 /* KSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD8F1F40242200D0E559 /* KSPlayer.m */; };
 		016C19501E4C177A002F910F /* AboutCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C194F1E4C177A002F910F /* AboutCopyViewController.m */; };
 		016C195A1E51B35E002F910F /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C19591E51B35E002F910F /* BlockViewController.m */; };
 		0170DB331F14CC060041D4EE /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DB201F14CC060041D4EE /* MJExtensionConst.m */; };
@@ -156,6 +165,11 @@
 		01DEAEB61F2AEB0F009B19E4 /* KSQRCodeScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DEAEAB1F2AEB0F009B19E4 /* KSQRCodeScanView.m */; };
 		01DEAEB71F2AEB0F009B19E4 /* KSQRCodeScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DEAEAD1F2AEB0F009B19E4 /* KSQRCodeScanViewStyle.m */; };
 		01EDC9AC1E7EAA21005FD15D /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EDC9AB1E7EAA21005FD15D /* MasonryViewController.m */; };
+		01F353ED1F3D9A7300CD7C14 /* KSPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F353EC1F3D9A7300CD7C14 /* KSPlayerView.m */; };
+		01F353F21F3D9D9E00CD7C14 /* KSPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F353F01F3D9D9E00CD7C14 /* KSPlayerViewController.m */; };
+		01F353F31F3D9D9E00CD7C14 /* KSPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F353F11F3D9D9E00CD7C14 /* KSPlayerViewController.xib */; };
+		01F353F71F3D9DBB00CD7C14 /* KSSecondPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F353F51F3D9DBB00CD7C14 /* KSSecondPlayController.m */; };
+		01F353F81F3D9DBB00CD7C14 /* KSSecondPlayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F353F61F3D9DBB00CD7C14 /* KSSecondPlayController.xib */; };
 		EFEC54DE43CFADDD858EEBE0 /* libPods-I'm a Coder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AB8EAAE3E6172C67696FD2 /* libPods-I'm a Coder.a */; };
 /* End PBXBuildFile section */
 
@@ -252,6 +266,8 @@
 		013C971C1F38B03600BE557E /* AudioPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerManager.m; sourceTree = "<group>"; };
 		013C971E1F38B11D00BE557E /* AudioPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerView.h; sourceTree = "<group>"; };
 		013C971F1F38B11D00BE557E /* AudioPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerView.m; sourceTree = "<group>"; };
+		013C97221F39BFEF00BE557E /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
+		013C97231F39BFEF00BE557E /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
 		01413BA41E48A1D1004521FE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		01413BA61E48A1DA004521FE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		014891AC1E86818C0012E689 /* PopViewAnaimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewAnaimationVC.h; sourceTree = "<group>"; };
@@ -259,6 +275,23 @@
 		014891B21E868B3B0012E689 /* Popview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Popview.h; sourceTree = "<group>"; };
 		014891B31E868B3B0012E689 /* Popview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Popview.m; sourceTree = "<group>"; };
 		014E27BD1F13E1CF00051FAE /* index1.toc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index1.toc; sourceTree = "<group>"; };
+		014ECD741F400C6C00D0E559 /* TBloaderURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBloaderURLConnection.h; sourceTree = "<group>"; };
+		014ECD751F400C6C00D0E559 /* TBloaderURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBloaderURLConnection.m; sourceTree = "<group>"; };
+		014ECD761F400C6C00D0E559 /* TBVideoRequestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVideoRequestTask.h; sourceTree = "<group>"; };
+		014ECD771F400C6C00D0E559 /* TBVideoRequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVideoRequestTask.m; sourceTree = "<group>"; };
+		014ECD7B1F40218700D0E559 /* KSResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSResourceLoader.h; sourceTree = "<group>"; };
+		014ECD7C1F40218700D0E559 /* KSResourceLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSResourceLoader.m; sourceTree = "<group>"; };
+		014ECD7E1F40219B00D0E559 /* KSRequestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSRequestTask.h; sourceTree = "<group>"; };
+		014ECD7F1F40219B00D0E559 /* KSRequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSRequestTask.m; sourceTree = "<group>"; };
+		014ECD821F4022BB00D0E559 /* KSFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFileHandle.h; sourceTree = "<group>"; };
+		014ECD831F4022BB00D0E559 /* KSFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFileHandle.m; sourceTree = "<group>"; };
+		014ECD861F4023B200D0E559 /* NSString+SULoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SULoader.h"; sourceTree = "<group>"; };
+		014ECD871F4023B200D0E559 /* NSString+SULoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SULoader.m"; sourceTree = "<group>"; };
+		014ECD881F4023B200D0E559 /* NSURL+SULoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SULoader.h"; sourceTree = "<group>"; };
+		014ECD891F4023B200D0E559 /* NSURL+SULoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SULoader.m"; sourceTree = "<group>"; };
+		014ECD8A1F4023B200D0E559 /* SULoaderCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SULoaderCategory.h; sourceTree = "<group>"; };
+		014ECD8E1F40242200D0E559 /* KSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPlayer.h; sourceTree = "<group>"; };
+		014ECD8F1F40242200D0E559 /* KSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPlayer.m; sourceTree = "<group>"; };
 		016C194E1E4C177A002F910F /* AboutCopyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutCopyViewController.h; sourceTree = "<group>"; };
 		016C194F1E4C177A002F910F /* AboutCopyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutCopyViewController.m; sourceTree = "<group>"; };
 		016C19581E51B35E002F910F /* BlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -465,6 +498,14 @@
 		01DEAEAD1F2AEB0F009B19E4 /* KSQRCodeScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSQRCodeScanViewStyle.m; sourceTree = "<group>"; };
 		01EDC9AA1E7EAA21005FD15D /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		01EDC9AB1E7EAA21005FD15D /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
+		01F353EB1F3D9A7300CD7C14 /* KSPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPlayerView.h; sourceTree = "<group>"; };
+		01F353EC1F3D9A7300CD7C14 /* KSPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPlayerView.m; sourceTree = "<group>"; };
+		01F353EF1F3D9D9E00CD7C14 /* KSPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPlayerViewController.h; sourceTree = "<group>"; };
+		01F353F01F3D9D9E00CD7C14 /* KSPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPlayerViewController.m; sourceTree = "<group>"; };
+		01F353F11F3D9D9E00CD7C14 /* KSPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSPlayerViewController.xib; sourceTree = "<group>"; };
+		01F353F41F3D9DBB00CD7C14 /* KSSecondPlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSSecondPlayController.h; sourceTree = "<group>"; };
+		01F353F51F3D9DBB00CD7C14 /* KSSecondPlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSecondPlayController.m; sourceTree = "<group>"; };
+		01F353F61F3D9DBB00CD7C14 /* KSSecondPlayController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSSecondPlayController.xib; sourceTree = "<group>"; };
 		1F3D98718E44B94A2D89722F /* Pods-I'm a Coder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm a Coder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-I'm a Coder/Pods-I'm a Coder.debug.xcconfig"; sourceTree = "<group>"; };
 		88C21673B7503327DE7C04BA /* Pods-I'm a Coder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I'm a Coder.release.xcconfig"; path = "Pods/Target Support Files/Pods-I'm a Coder/Pods-I'm a Coder.release.xcconfig"; sourceTree = "<group>"; };
 		E3AB8EAAE3E6172C67696FD2 /* libPods-I'm a Coder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-I'm a Coder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -522,6 +563,8 @@
 		010BA9EC1E276DB3009E0ACE /* I'm a Coder */ = {
 			isa = PBXGroup;
 			children = (
+				01F353E71F3D9A0B00CD7C14 /* Play */,
+				013C97211F39BFDC00BE557E /* CircleProgress */,
 				013C97071F389F2300BE557E /* AVplayerView */,
 				01D9313E1F28531B0064D13C /* QR_Code */,
 				0170DB071F14BC800041D4EE /* Frameworks */,
@@ -1011,6 +1054,15 @@
 			path = AVplayerView;
 			sourceTree = "<group>";
 		};
+		013C97211F39BFDC00BE557E /* CircleProgress */ = {
+			isa = PBXGroup;
+			children = (
+				013C97221F39BFEF00BE557E /* CircleProgressView.h */,
+				013C97231F39BFEF00BE557E /* CircleProgressView.m */,
+			);
+			path = CircleProgress;
+			sourceTree = "<group>";
+		};
 		01413B851E489F82004521FE /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
@@ -1048,6 +1100,47 @@
 				014891B31E868B3B0012E689 /* Popview.m */,
 			);
 			path = PopViewAnaimation;
+			sourceTree = "<group>";
+		};
+		014ECD7A1F40217900D0E559 /* DownloadTool */ = {
+			isa = PBXGroup;
+			children = (
+				014ECD7B1F40218700D0E559 /* KSResourceLoader.h */,
+				014ECD7C1F40218700D0E559 /* KSResourceLoader.m */,
+				014ECD7E1F40219B00D0E559 /* KSRequestTask.h */,
+				014ECD7F1F40219B00D0E559 /* KSRequestTask.m */,
+			);
+			path = DownloadTool;
+			sourceTree = "<group>";
+		};
+		014ECD811F4022B300D0E559 /* FileTool */ = {
+			isa = PBXGroup;
+			children = (
+				014ECD821F4022BB00D0E559 /* KSFileHandle.h */,
+				014ECD831F4022BB00D0E559 /* KSFileHandle.m */,
+			);
+			path = FileTool;
+			sourceTree = "<group>";
+		};
+		014ECD851F4023B200D0E559 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				014ECD861F4023B200D0E559 /* NSString+SULoader.h */,
+				014ECD871F4023B200D0E559 /* NSString+SULoader.m */,
+				014ECD881F4023B200D0E559 /* NSURL+SULoader.h */,
+				014ECD891F4023B200D0E559 /* NSURL+SULoader.m */,
+				014ECD8A1F4023B200D0E559 /* SULoaderCategory.h */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		014ECD8D1F40241900D0E559 /* AVPlayTool */ = {
+			isa = PBXGroup;
+			children = (
+				014ECD8E1F40242200D0E559 /* KSPlayer.h */,
+				014ECD8F1F40242200D0E559 /* KSPlayer.m */,
+			);
+			path = AVPlayTool;
 			sourceTree = "<group>";
 		};
 		016C194C1E4C1750002F910F /* AboutCopy */ = {
@@ -1842,6 +1935,53 @@
 			path = MasonryVC;
 			sourceTree = "<group>";
 		};
+		01F353E71F3D9A0B00CD7C14 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				01F353EE1F3D9D8B00CD7C14 /* Controller */,
+				01F353EA1F3D9A4900CD7C14 /* Tool */,
+				01F353E91F3D9A4000CD7C14 /* View */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
+		01F353E91F3D9A4000CD7C14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01F353EB1F3D9A7300CD7C14 /* KSPlayerView.h */,
+				01F353EC1F3D9A7300CD7C14 /* KSPlayerView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01F353EA1F3D9A4900CD7C14 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				014ECD8D1F40241900D0E559 /* AVPlayTool */,
+				014ECD851F4023B200D0E559 /* Category */,
+				014ECD811F4022B300D0E559 /* FileTool */,
+				014ECD7A1F40217900D0E559 /* DownloadTool */,
+				014ECD741F400C6C00D0E559 /* TBloaderURLConnection.h */,
+				014ECD751F400C6C00D0E559 /* TBloaderURLConnection.m */,
+				014ECD761F400C6C00D0E559 /* TBVideoRequestTask.h */,
+				014ECD771F400C6C00D0E559 /* TBVideoRequestTask.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		01F353EE1F3D9D8B00CD7C14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01F353EF1F3D9D9E00CD7C14 /* KSPlayerViewController.h */,
+				01F353F01F3D9D9E00CD7C14 /* KSPlayerViewController.m */,
+				01F353F11F3D9D9E00CD7C14 /* KSPlayerViewController.xib */,
+				01F353F41F3D9DBB00CD7C14 /* KSSecondPlayController.h */,
+				01F353F51F3D9DBB00CD7C14 /* KSSecondPlayController.m */,
+				01F353F61F3D9DBB00CD7C14 /* KSSecondPlayController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		52786EB4054BE6DA88D010B7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1980,6 +2120,8 @@
 				019557671F29DC9E007A5E98 /* ScanQR3@2x.png in Resources */,
 				01DEAEB11F2AEB0F009B19E4 /* KSQRCodeScanController.xib in Resources */,
 				014E27BE1F13E1CF00051FAE /* index1.toc in Resources */,
+				01F353F81F3D9DBB00CD7C14 /* KSSecondPlayController.xib in Resources */,
+				01F353F31F3D9D9E00CD7C14 /* KSPlayerViewController.xib in Resources */,
 				019557621F29DC9E007A5E98 /* Flashlight_H@2x.png in Resources */,
 				0170DFC91F17864A0041D4EE /* KSAppDeclareView.xib in Resources */,
 				019557641F29DC9E007A5E98 /* QRCodeScanLine@2x.png in Resources */,
@@ -2061,6 +2203,8 @@
 				01B819DF1EC1DDEF0042464C /* UIFont+XRZAdd.m in Sources */,
 				01DEAEAE1F2AEB0F009B19E4 /* KSQRCodeScanBaseController.m in Sources */,
 				01CE35CD1E54AAEC00C082BB /* RunTimeViewController.m in Sources */,
+				014ECD8B1F4023B200D0E559 /* NSString+SULoader.m in Sources */,
+				013C97241F39BFEF00BE557E /* CircleProgressView.m in Sources */,
 				01CC37181F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m in Sources */,
 				0170DB371F14CC060041D4EE /* MJPropertyType.m in Sources */,
 				010BAA561E276DED009E0ACE /* BaseViewController.m in Sources */,
@@ -2069,6 +2213,7 @@
 				01877C761EE1492B00C86202 /* ClassModel.m in Sources */,
 				01877C7A1EE1492B00C86202 /* FMDatabaseAdditions.m in Sources */,
 				01877C441EDF123C00C86202 /* ZYProgressBar.m in Sources */,
+				014ECD791F400C6C00D0E559 /* TBVideoRequestTask.m in Sources */,
 				01C64D4F1E35EAFA00CC5E88 /* Sub_C_ViewController.m in Sources */,
 				01C64D611E36015E00CC5E88 /* CustomLayer_CG.m in Sources */,
 				01877C731EE1492B00C86202 /* DatabaseViewController.m in Sources */,
@@ -2081,6 +2226,7 @@
 				010BAA791E2787E0009E0ACE /* Sub_B_ViewController.m in Sources */,
 				016C19501E4C177A002F910F /* AboutCopyViewController.m in Sources */,
 				0183A9331E87AF50005D40DE /* BaseToViewController.m in Sources */,
+				014ECD781F400C6C00D0E559 /* TBloaderURLConnection.m in Sources */,
 				0183A9301E87AF45005D40DE /* BaseFromViewController.m in Sources */,
 				01B819E01EC1DDEF0042464C /* XRZCGUtilities.m in Sources */,
 				0183A9191E878671005D40DE /* VCAnimation.m in Sources */,
@@ -2095,6 +2241,7 @@
 				01877C851EE1614B00C86202 /* CountryDBTools.m in Sources */,
 				0170DFCD1F178DBE0041D4EE /* KSGrammarCertificateController.m in Sources */,
 				01CE35DD1E557C4100C082BB /* Const.m in Sources */,
+				014ECD801F40219B00D0E559 /* KSRequestTask.m in Sources */,
 				0170DB3C1F14CC060041D4EE /* NSString+MJExtension.m in Sources */,
 				0170DB351F14CC060041D4EE /* MJProperty.m in Sources */,
 				010BAA891E2789A6009E0ACE /* CustomDrawLayer.m in Sources */,
@@ -2107,6 +2254,7 @@
 				0170DFB41F1611190041D4EE /* KSCertificateView.m in Sources */,
 				0170DB341F14CC060041D4EE /* MJFoundation.m in Sources */,
 				013C970D1F389F2300BE557E /* PLayButton.m in Sources */,
+				01F353F71F3D9DBB00CD7C14 /* KSSecondPlayController.m in Sources */,
 				01877C501EDF225200C86202 /* KSProgressIndicatorView.m in Sources */,
 				016C195A1E51B35E002F910F /* BlockViewController.m in Sources */,
 				01877C511EDF225200C86202 /* KSProgressNumberBar.m in Sources */,
@@ -2125,6 +2273,7 @@
 				019557541F29D5F8007A5E98 /* KSQRCodeViewController.m in Sources */,
 				01EDC9AC1E7EAA21005FD15D /* MasonryViewController.m in Sources */,
 				01CE35DA1E54B62200C082BB /* NSObject+Log.m in Sources */,
+				014ECD841F4022BB00D0E559 /* KSFileHandle.m in Sources */,
 				013C97101F389FAA00BE557E /* AVPLayViewController.m in Sources */,
 				0170DB3F1F152BC00041D4EE /* KSGrammarBookCatalogueFooterView.m in Sources */,
 				014891AE1E86818C0012E689 /* PopViewAnaimationVC.m in Sources */,
@@ -2137,6 +2286,7 @@
 				0183A90C1E86AF19005D40DE /* TransitionViewController.m in Sources */,
 				0170DB391F14CC060041D4EE /* NSObject+MJCoding.m in Sources */,
 				0170DB361F14CC060041D4EE /* MJPropertyKey.m in Sources */,
+				014ECD7D1F40218700D0E559 /* KSResourceLoader.m in Sources */,
 				01CE35D71E54B58B00C082BB /* NSObject+Propery.m in Sources */,
 				01877C741EE1492B00C86202 /* FMDatabaseManager.m in Sources */,
 				01DEAEB71F2AEB0F009B19E4 /* KSQRCodeScanViewStyle.m in Sources */,
@@ -2146,6 +2296,7 @@
 				01CE35C11E546FB100C082BB /* Section_one_ReusableView.m in Sources */,
 				0183A9231E87A91C005D40DE /* TransitionListViewController.m in Sources */,
 				01877C7D1EE1492B00C86202 /* FMResultSet.m in Sources */,
+				01F353ED1F3D9A7300CD7C14 /* KSPlayerView.m in Sources */,
 				013C970C1F389F2300BE557E /* AVplayerView.m in Sources */,
 				010BAA6C1E278209009E0ACE /* BaseTableViewVC.m in Sources */,
 				01877C451EDF123C00C86202 /* ZYProgressIndicator.m in Sources */,
@@ -2160,6 +2311,7 @@
 				01CE35D41E54B0FC00C082BB /* RunModel.m in Sources */,
 				01CE35AF1E546FA800C082BB /* CustomFlowLayout.m in Sources */,
 				01DEAEB21F2AEB0F009B19E4 /* KSQRCodeScanResult.m in Sources */,
+				014ECD901F40242200D0E559 /* KSPlayer.m in Sources */,
 				0183A9281E87AAF8005D40DE /* MoveTransitionViewController.m in Sources */,
 				01DEAEB31F2AEB0F009B19E4 /* KSQRCodeScanTool.m in Sources */,
 				013C97201F38B11D00BE557E /* AudioPlayerView.m in Sources */,
@@ -2179,6 +2331,8 @@
 				0183A91C1E8787BE005D40DE /* GestureTransition.m in Sources */,
 				013C97131F38A02E00BE557E /* AVSecondController.m in Sources */,
 				01110EEB1F13729B00732172 /* KSGrammarBookCatalogueController.m in Sources */,
+				014ECD8C1F4023B200D0E559 /* NSURL+SULoader.m in Sources */,
+				01F353F21F3D9D9E00CD7C14 /* KSPlayerViewController.m in Sources */,
 				01CED3F91F35F1EB00C01377 /* circleView.m in Sources */,
 				01CE35EA1E5609EA00C082BB /* ArchiverModel.m in Sources */,
 			);

@@ -34,6 +34,7 @@
 #import "KSQRCodeScanViewStyle.h"
 #import "KSQRCodeViewController.h"
 #import "AVPLayViewController.h"
+#import "KSPlayerViewController.h"
 
 
 @interface Root_A_VC ()<UITableViewDataSource,UITableViewDelegate>
@@ -147,7 +148,9 @@
 
     //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
 //        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
-    AVPLayViewController *sub_a = [[AVPLayViewController alloc]init];
+    KSPlayerViewController *sub_a = [[KSPlayerViewController alloc]init];
+
+//    AVPLayViewController *sub_a = [[AVPLayViewController alloc]init];
 
     //    Sub_C_ViewController *sub_a = [[Sub_C_ViewController alloc]init];
     

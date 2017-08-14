@@ -13,6 +13,7 @@
 #import "ZYProgressBar.h"
 #import "KSProgressNumberBar.h"
 #import "circleView.h"
+#import "CircleProgressView.h"
 
 #define widthBt [UIScreen mainScreen].bounds.size.width/5.0
 #define heightBt 30.0
@@ -27,6 +28,7 @@
 @property (nonatomic,strong)NSTimer *timer;
 @property (nonatomic,strong)ZYProgressBar *progressBar;
 @property (nonatomic,assign)CGFloat progress;
+@property (nonatomic,strong)UIView *aview;
 
 @end
 
@@ -35,18 +37,74 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title =self.titleName;
-    self.view.backgroundColor = [UIColor greenColor];
-    [self configureCircleView];
+    self.view.backgroundColor = [UIColor whiteColor];
+//    [self initCircleProgress];
+//    [self configureCircleView];
 //    [self dealWithData];
 //    [self set3DRotate];
+//        [self creatlayer];
+
 //    [self set3DMakeRotationn];
 //    [self setMaskInLayer];
 //    [self setReset];
 
 //    [KSProgressNumberBar show];
 //    [self progressBarDownload];
+    [self setBig];
 }
 
+- (void)setBig {
+     self.aview = [[UIView alloc]initWithFrame:CGRectMake(100, 300, 60, 60)];
+    self.aview.backgroundColor = [UIColor greenColor];
+    self.aview.layer.cornerRadius = 30;
+    [self.view addSubview:self.aview];
+    [self performSelector:@selector(scan) withObject:nil afterDelay:2.0];
+
+//    CABasicAnimation *anmation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+//    anmation.fromValue = @0.0;
+//    anmation.toValue = @1;
+//    anmation.duration = 2.5;
+//    anmation.repeatCount = MAXFLOAT;
+//    [self.shapeLayer addAnimation:anmation forKey:@""];
+}
+- (void)scan {
+    [self transitionWithType:@"suckEffect" WithSubtype:@"kCATransitionFromRight" ForView:self.aview];
+
+}
+- (void) transitionWithType:(NSString *) type WithSubtype:(NSString *) subtype ForView : (UIView *) view
+{
+    //创建CATransition对象
+    CATransition *animation = [CATransition animation];
+    
+    //设置运动时间
+    animation.duration = 0.5;
+    
+    //设置运动type
+    animation.type = type;
+    if (subtype != nil) {
+        
+        //设置子类
+        animation.subtype = subtype;
+    }
+    
+    //设置运动速度
+    animation.timingFunction = UIViewAnimationOptionCurveEaseInOut;
+    
+    [view.layer addAnimation:animation forKey:@"animation"];
+}
+- (void)initCircleProgress {
+    CircleProgressView * donut = [[CircleProgressView alloc]init];
+    donut.frame = CGRectMake(20, 100, 140, 140);
+    donut.baseColour = [[UIColor blackColor] colorWithAlphaComponent:0.2f];
+    donut.fromColour = [UIColor redColor];
+    donut.toColour = [UIColor blueColor];
+    donut.lineWidth = 20.0f;
+    donut.duration = 2.0f;
+    [donut layout];
+    [self.view addSubview:donut];
+    [donut animateTo:0.5f];
+
+}
 - (void)configureCircleView {
     circleView *view = [[circleView alloc]init];
     [self.view addSubview:view];
@@ -852,17 +910,17 @@
 - (void)MakeRotationBt
 {
     //方法一
-//    CATransform3D transform = CATransform3DIdentity;
-//    transform = CATransform3DMakeRotation(70/180.0 * M_PI,1, 0, 0);
-//    transform.m34 = 0.0005;
-//    self.test_layer.transform =  transform;
-    
-    
-    //方法二
-    //旋转也可以用CATransform3DScale，当为负数的时候起到即旋转又缩放的效果
     CATransform3D transform = CATransform3DIdentity;
-    transform = CATransform3DScale(transform, -1, -1, 0);
+    transform = CATransform3DMakeRotation(70/180.0 * M_PI,1, 0, 0);
+    transform.m34 = 0.0005;
     self.test_layer.transform =  transform;
+    
+    
+//    //方法二
+//    //旋转也可以用CATransform3DScale，当为负数的时候起到即旋转又缩放的效果
+//    CATransform3D transform = CATransform3DIdentity;
+//    transform = CATransform3DScale(transform, -1, -1, 0);
+//    self.test_layer.transform =  transform;
 }
 
 - (void)set3DRotate

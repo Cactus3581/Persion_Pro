@@ -16,7 +16,7 @@
 #import "XRZDataTool.h"
 #import "MJExtension.h"
 #import "NSString+MJExtension.h"
-#import "SULoaderCategory.h"
+#import "KSPlayAudioCategory.h"
 
 #endif
 

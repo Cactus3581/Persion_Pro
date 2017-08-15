@@ -37,10 +37,40 @@
     if (!_player) {
         _player = [KSPlayer shareAVplayer];
         _player.delegate = self;
-
     }
     return _player;
 }
+
+- (void)addKVO {
+    [self.player addObserver:self forKeyPath:@"slideValue" options:NSKeyValueObservingOptionNew context:nil];
+    [self.player addObserver:self forKeyPath:@"duration" options:NSKeyValueObservingOptionNew context:nil];
+    [self.player addObserver:self forKeyPath:@"cacheProgress" options:NSKeyValueObservingOptionNew context:nil];
+    [self.player addObserver:self forKeyPath:@"playSelected" options:NSKeyValueObservingOptionNew context:nil];
+    [self.player addObserver:self forKeyPath:@"playSelected" options:NSKeyValueObservingOptionNew context:nil];
+    [self.player addObserver:self forKeyPath:@"playSelected" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+//    if ([keyPath isEqualToString:@"slideValue"]) {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                self.slider.value = self.player.progress;
+//                self.currentTime.text = [self convertStringWithTime:self.player.duration * self.player.progress];
+//            });
+//    }
+//    if ([keyPath isEqualToString:@"duration"]) {
+//        if (self.player.duration > 0) {
+//            self.duration.text = [self convertStringWithTime:self.player.duration];
+//            self.duration.hidden = NO;
+//            self.currentTime.hidden = NO;
+//        }else {
+//            self.duration.hidden = YES;
+//            self.currentTime.hidden = YES;
+//        }
+//    }
+//    if ([keyPath isEqualToString:@"cacheProgress"]) {
+//        //        NSLog(@"缓存进度：%f", self.player.cacheProgress);
+//    }
+//}
 
 - (void)setKeepDelegate:(BOOL)keep {
     if (keep) {
@@ -93,6 +123,7 @@
 - (void)playFail:(NSError *)error {
     
 }
+
 #pragma mark - setter 视频地址赋值
 - (void)setUrlString:(NSString *)urlString {
     if ([XRZValidateString(_urlString) isEqualToString:urlString]) {
@@ -100,6 +131,7 @@
     }
     _urlString = urlString;
     self.player.urlString = urlString;
+//    [self addKVO];
 }
 
 #pragma mark - 播放键 点击事件
@@ -120,6 +152,7 @@
     _currentTime.text = self.player.currentTimeStr;
 }
 
+
 #pragma mark - 布局UI
 - (void)layoutUI {
     _toolView = [[UIView alloc]init];
@@ -128,7 +161,7 @@
     [_playButton setImage:[UIImage imageNamed:@"play_player"]  forState:UIControlStateNormal];
     [_playButton setImage:[UIImage imageNamed:@"pause_player"] forState:UIControlStateSelected];
     [_playButton addTarget:self action:@selector(playButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-    _playButton.enabled = NO;
+//    _playButton.enabled = NO;
 
     _currentTime = [[UILabel alloc]init];
     _currentTime.text =@"00:00";
@@ -136,7 +169,7 @@
     _currentTime.textAlignment = NSTextAlignmentLeft;
 
     _slider = [[UISlider alloc]init];
-    _slider.enabled = NO;
+//    _slider.enabled = NO;
     [_slider setThumbImage:[UIImage imageNamed:@"avplyer"] forState:UIControlStateNormal];
     _slider.minimumTrackTintColor = [UIColor redColor];//小于滑块当前值滑块条的颜色，默认为白色
     _slider.maximumTrackTintColor = [UIColor lightTextColor];//大于滑块当前值滑块条的颜色
@@ -229,13 +262,14 @@
     _slider.minimumTrackTintColor = [UIColor whiteColor];
     _slider.maximumTrackTintColor = [UIColor whiteColor];
     _slider.minimumTrackTintColor = [UIColor redColor];//大于滑块当前值滑块条的颜色，默认为白色
-    _slider.maximumTrackTintColor = [UIColor lightTextColor];//大于滑块当前值滑块条的颜色
+    _slider.maximumTrackTintColor = [UIColor greenColor];//大于滑块当前值滑块条的颜色
     [_progressView setProgressTintColor:[UIColor blackColor]];
-    [_progressView setTrackTintColor:[UIColor greenColor]];
+    [_progressView setTrackTintColor:[UIColor lightTextColor]];
     self.toolView.layer.cornerRadius = 20;
     self.toolView.layer.borderColor = [UIColor lightTextColor].CGColor;
     self.toolView.layer.borderWidth = 1;
     _activityView.color = [UIColor redColor];
+
 }
 
 @end

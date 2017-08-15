@@ -13,7 +13,8 @@
 
 @interface KSPlayerViewController ()
 @property (strong, nonatomic) KSPlayerView *playView;
-
+@property (strong, nonatomic) UISlider *slider;
+@property (strong, nonatomic) UIProgressView *progressView;
 @end
 
 @implementation KSPlayerViewController
@@ -21,8 +22,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self configureSubviews];
-    [self configurePlay];
+//    [self configureSubviews];
+//    [self configurePlay];
+    
+    
+    _slider = [[UISlider alloc]init];
+    [_slider setThumbImage:[UIImage imageNamed:@"avplyer"] forState:UIControlStateNormal];
+    _slider.minimumTrackTintColor = [UIColor redColor];//小于滑块当前值滑块条的颜色，默认为白色
+    _slider.maximumTrackTintColor = [UIColor blueColor];//大于滑块当前值滑块条的颜色
+    
+    _progressView = [[UIProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleDefault];
+    //后面的颜色（譬如进度到30%，那么30%部分后面的颜色就是这个属性）
+    [_progressView setProgressTintColor:[UIColor blackColor]];
+    //前面的颜色
+    [_progressView setTrackTintColor:[UIColor greenColor]];
+    _progressView.progress=0.5;
+    
+
+
+    [self.view addSubview:self.slider];
+
+//    [self.view addSubview:self.progressView];
+
+    [_slider addSubview:self.progressView];
+//    [_slider sendSubviewToBack:_progressView];
+    
+    
+    [_slider mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(30);
+        make.bottom.equalTo(self.view).offset(-50);
+        make.height.mas_equalTo(50);
+        make.width.mas_equalTo(100);
+
+
+    }];
+    [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+
+    [self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.slider);
+        make.right.equalTo(self.slider);
+        make.centerY.equalTo(self.slider).offset(1);
+        make.height.mas_offset(2);
+    }];
+    
+
+}
+- (void)sliderValueChanged:(UISlider *)sender {
+//    _progressView.progress = sender.value;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

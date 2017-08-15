@@ -7,7 +7,6 @@
 //
 
 #import "KSFileHandle.h"
-#import "SULoaderCategory.h"
 @interface KSFileHandle ()
 
 @property (nonatomic, strong) NSFileHandle * writeFileHandle;

@@ -1,15 +1,14 @@
 //
-//  NSURL+SULoader.m
-//  SULoader
+//  NSURL+KSPlayAudio.m
+//  I'm a Coder
 //
-//  Created by 万众科技 on 16/6/28.
-//  Copyright © 2016年 万众科技. All rights reserved.
+//  Created by xiaruzhen on 2017/8/14.
+//  Copyright © 2017年 xiaruzhen. All rights reserved.
 //
 
-#import "NSURL+SULoader.h"
+#import "NSURL+KSPlayAudio.h"
 
-@implementation NSURL (SULoader)
-
+@implementation NSURL (KSPlayAudio)
 - (NSURL *)customSchemeURL {
     NSURLComponents * components = [[NSURLComponents alloc] initWithURL:self resolvingAgainstBaseURL:NO];
     components.scheme = @"streaming";
@@ -21,5 +20,4 @@
     components.scheme = @"http";
     return [components URL];
 }
-
 @end

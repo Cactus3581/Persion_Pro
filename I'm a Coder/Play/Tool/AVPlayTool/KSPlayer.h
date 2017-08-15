@@ -40,6 +40,13 @@ typedef NS_ENUM(NSInteger, KSPlayerState) {
 @property (nonatomic,assign) NSInteger currentTime;
 @property (nonatomic,assign) BOOL controlEnabled;
 @property (nonatomic, assign) KSPlayerState state;
+
+@property (nonatomic, assign) CGFloat slideValue;
+@property (nonatomic, assign) CGFloat duration;
+@property (nonatomic, assign) CGFloat cacheProgress;
+@property (nonatomic, assign) BOOL playSelected;
+
+
 /**
  *  当前歌曲缓存情况 YES：已缓存  NO：未缓存
  */

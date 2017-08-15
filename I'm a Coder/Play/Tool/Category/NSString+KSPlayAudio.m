@@ -1,15 +1,14 @@
 //
-//  NSString+SULoader.m
-//  SULoader
+//  NSString+KSPlayAudio.m
+//  I'm a Coder
 //
-//  Created by 万众科技 on 16/6/28.
-//  Copyright © 2016年 万众科技. All rights reserved.
+//  Created by xiaruzhen on 2017/8/14.
+//  Copyright © 2017年 xiaruzhen. All rights reserved.
 //
 
-#import "NSString+SULoader.h"
+#import "NSString+KSPlayAudio.h"
 
-@implementation NSString (SULoader)
-
+@implementation NSString (KSPlayAudio)
 + (NSString *)tempFilePath {
     return [[NSHomeDirectory( ) stringByAppendingPathComponent:@"tmp"] stringByAppendingPathComponent:@"MusicTemp.mp3"];
 }
@@ -22,5 +21,4 @@
 + (NSString *)fileNameWithURL:(NSURL *)url {
     return [[url.path componentsSeparatedByString:@"/"] lastObject];
 }
-
 @end

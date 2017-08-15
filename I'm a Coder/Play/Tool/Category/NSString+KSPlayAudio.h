@@ -1,15 +1,14 @@
 //
-//  NSString+SULoader.h
-//  SULoader
+//  NSString+KSPlayAudio.h
+//  I'm a Coder
 //
-//  Created by 万众科技 on 16/6/28.
-//  Copyright © 2016年 万众科技. All rights reserved.
+//  Created by xiaruzhen on 2017/8/14.
+//  Copyright © 2017年 xiaruzhen. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (SULoader)
-
+@interface NSString (KSPlayAudio)
 /**
  *  临时文件路径
  */
@@ -24,5 +23,4 @@
  *  获取网址中的文件名
  */
 + (NSString *)fileNameWithURL:(NSURL *)url;
-
 @end

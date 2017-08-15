@@ -19,7 +19,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor whiteColor];
     [self configureSubviews];
-//    [self configurePlay];
+    [self configurePlay];
 }
 
 - (void)configureSubviews {
@@ -43,7 +43,7 @@
         make.height.mas_equalTo(40);
 
     }];
-    playView.urlString = @"http://comment.cache.iciba.com/dialogue/40/18765902/64f32efc-6fd2-4cee-85ed-c7837da8a0b7.mp3";
+    playView.urlString = @"http://voice.iciba.com/upload/voa/mp317171717-03-01-03-22-55.mp3";
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

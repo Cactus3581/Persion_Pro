@@ -39,6 +39,8 @@
 		011B0FC51ED2851C00643227 /* KSSlideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B0FC21ED2851C00643227 /* KSSlideCell.m */; };
 		011B0FC61ED2851C00643227 /* KSSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011B0FC41ED2851C00643227 /* KSSlideView.m */; };
 		011F786E1F185E3F00184973 /* KSWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011F786D1F185E3F00184973 /* KSWaterWaveView.m */; };
+		012262251F41E96600A868FE /* NSURL+KSPlayAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 012262241F41E96600A868FE /* NSURL+KSPlayAudio.m */; };
+		012262281F41E99200A868FE /* NSString+KSPlayAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 012262271F41E99200A868FE /* NSString+KSPlayAudio.m */; };
 		013C970C1F389F2300BE557E /* AVplayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C97091F389F2300BE557E /* AVplayerView.m */; };
 		013C970D1F389F2300BE557E /* PLayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C970B1F389F2300BE557E /* PLayButton.m */; };
 		013C97101F389FAA00BE557E /* AVPLayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C970F1F389FAA00BE557E /* AVPLayViewController.m */; };
@@ -50,13 +52,9 @@
 		014891AE1E86818C0012E689 /* PopViewAnaimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 014891AD1E86818C0012E689 /* PopViewAnaimationVC.m */; };
 		014891B41E868B3B0012E689 /* Popview.m in Sources */ = {isa = PBXBuildFile; fileRef = 014891B31E868B3B0012E689 /* Popview.m */; };
 		014E27BE1F13E1CF00051FAE /* index1.toc in Resources */ = {isa = PBXBuildFile; fileRef = 014E27BD1F13E1CF00051FAE /* index1.toc */; };
-		014ECD781F400C6C00D0E559 /* TBloaderURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD751F400C6C00D0E559 /* TBloaderURLConnection.m */; };
-		014ECD791F400C6C00D0E559 /* TBVideoRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD771F400C6C00D0E559 /* TBVideoRequestTask.m */; };
 		014ECD7D1F40218700D0E559 /* KSResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD7C1F40218700D0E559 /* KSResourceLoader.m */; };
 		014ECD801F40219B00D0E559 /* KSRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD7F1F40219B00D0E559 /* KSRequestTask.m */; };
 		014ECD841F4022BB00D0E559 /* KSFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD831F4022BB00D0E559 /* KSFileHandle.m */; };
-		014ECD8B1F4023B200D0E559 /* NSString+SULoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD871F4023B200D0E559 /* NSString+SULoader.m */; };
-		014ECD8C1F4023B200D0E559 /* NSURL+SULoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD891F4023B200D0E559 /* NSURL+SULoader.m */; };
 		014ECD901F40242200D0E559 /* KSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD8F1F40242200D0E559 /* KSPlayer.m */; };
 		016C19501E4C177A002F910F /* AboutCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C194F1E4C177A002F910F /* AboutCopyViewController.m */; };
 		016C195A1E51B35E002F910F /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C19591E51B35E002F910F /* BlockViewController.m */; };
@@ -254,6 +252,11 @@
 		011B0FC41ED2851C00643227 /* KSSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSlideView.m; sourceTree = "<group>"; };
 		011F786C1F185E3F00184973 /* KSWaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSWaterWaveView.h; sourceTree = "<group>"; };
 		011F786D1F185E3F00184973 /* KSWaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSWaterWaveView.m; sourceTree = "<group>"; };
+		012262221F41E91F00A868FE /* KSPlayAudioCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSPlayAudioCategory.h; sourceTree = "<group>"; };
+		012262231F41E96600A868FE /* NSURL+KSPlayAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+KSPlayAudio.h"; sourceTree = "<group>"; };
+		012262241F41E96600A868FE /* NSURL+KSPlayAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KSPlayAudio.m"; sourceTree = "<group>"; };
+		012262261F41E99200A868FE /* NSString+KSPlayAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KSPlayAudio.h"; sourceTree = "<group>"; };
+		012262271F41E99200A868FE /* NSString+KSPlayAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KSPlayAudio.m"; sourceTree = "<group>"; };
 		013C97081F389F2300BE557E /* AVplayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVplayerView.h; sourceTree = "<group>"; };
 		013C97091F389F2300BE557E /* AVplayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVplayerView.m; sourceTree = "<group>"; };
 		013C970A1F389F2300BE557E /* PLayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLayButton.h; sourceTree = "<group>"; };
@@ -275,21 +278,12 @@
 		014891B21E868B3B0012E689 /* Popview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Popview.h; sourceTree = "<group>"; };
 		014891B31E868B3B0012E689 /* Popview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Popview.m; sourceTree = "<group>"; };
 		014E27BD1F13E1CF00051FAE /* index1.toc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index1.toc; sourceTree = "<group>"; };
-		014ECD741F400C6C00D0E559 /* TBloaderURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBloaderURLConnection.h; sourceTree = "<group>"; };
-		014ECD751F400C6C00D0E559 /* TBloaderURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBloaderURLConnection.m; sourceTree = "<group>"; };
-		014ECD761F400C6C00D0E559 /* TBVideoRequestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVideoRequestTask.h; sourceTree = "<group>"; };
-		014ECD771F400C6C00D0E559 /* TBVideoRequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVideoRequestTask.m; sourceTree = "<group>"; };
 		014ECD7B1F40218700D0E559 /* KSResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSResourceLoader.h; sourceTree = "<group>"; };
 		014ECD7C1F40218700D0E559 /* KSResourceLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSResourceLoader.m; sourceTree = "<group>"; };
 		014ECD7E1F40219B00D0E559 /* KSRequestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSRequestTask.h; sourceTree = "<group>"; };
 		014ECD7F1F40219B00D0E559 /* KSRequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSRequestTask.m; sourceTree = "<group>"; };
 		014ECD821F4022BB00D0E559 /* KSFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFileHandle.h; sourceTree = "<group>"; };
 		014ECD831F4022BB00D0E559 /* KSFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFileHandle.m; sourceTree = "<group>"; };
-		014ECD861F4023B200D0E559 /* NSString+SULoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SULoader.h"; sourceTree = "<group>"; };
-		014ECD871F4023B200D0E559 /* NSString+SULoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SULoader.m"; sourceTree = "<group>"; };
-		014ECD881F4023B200D0E559 /* NSURL+SULoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SULoader.h"; sourceTree = "<group>"; };
-		014ECD891F4023B200D0E559 /* NSURL+SULoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SULoader.m"; sourceTree = "<group>"; };
-		014ECD8A1F4023B200D0E559 /* SULoaderCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SULoaderCategory.h; sourceTree = "<group>"; };
 		014ECD8E1F40242200D0E559 /* KSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPlayer.h; sourceTree = "<group>"; };
 		014ECD8F1F40242200D0E559 /* KSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPlayer.m; sourceTree = "<group>"; };
 		016C194E1E4C177A002F910F /* AboutCopyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutCopyViewController.h; sourceTree = "<group>"; };
@@ -1125,11 +1119,11 @@
 		014ECD851F4023B200D0E559 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				014ECD861F4023B200D0E559 /* NSString+SULoader.h */,
-				014ECD871F4023B200D0E559 /* NSString+SULoader.m */,
-				014ECD881F4023B200D0E559 /* NSURL+SULoader.h */,
-				014ECD891F4023B200D0E559 /* NSURL+SULoader.m */,
-				014ECD8A1F4023B200D0E559 /* SULoaderCategory.h */,
+				012262221F41E91F00A868FE /* KSPlayAudioCategory.h */,
+				012262231F41E96600A868FE /* NSURL+KSPlayAudio.h */,
+				012262241F41E96600A868FE /* NSURL+KSPlayAudio.m */,
+				012262261F41E99200A868FE /* NSString+KSPlayAudio.h */,
+				012262271F41E99200A868FE /* NSString+KSPlayAudio.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1961,10 +1955,6 @@
 				014ECD851F4023B200D0E559 /* Category */,
 				014ECD811F4022B300D0E559 /* FileTool */,
 				014ECD7A1F40217900D0E559 /* DownloadTool */,
-				014ECD741F400C6C00D0E559 /* TBloaderURLConnection.h */,
-				014ECD751F400C6C00D0E559 /* TBloaderURLConnection.m */,
-				014ECD761F400C6C00D0E559 /* TBVideoRequestTask.h */,
-				014ECD771F400C6C00D0E559 /* TBVideoRequestTask.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -2203,7 +2193,6 @@
 				01B819DF1EC1DDEF0042464C /* UIFont+XRZAdd.m in Sources */,
 				01DEAEAE1F2AEB0F009B19E4 /* KSQRCodeScanBaseController.m in Sources */,
 				01CE35CD1E54AAEC00C082BB /* RunTimeViewController.m in Sources */,
-				014ECD8B1F4023B200D0E559 /* NSString+SULoader.m in Sources */,
 				013C97241F39BFEF00BE557E /* CircleProgressView.m in Sources */,
 				01CC37181F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m in Sources */,
 				0170DB371F14CC060041D4EE /* MJPropertyType.m in Sources */,
@@ -2213,10 +2202,10 @@
 				01877C761EE1492B00C86202 /* ClassModel.m in Sources */,
 				01877C7A1EE1492B00C86202 /* FMDatabaseAdditions.m in Sources */,
 				01877C441EDF123C00C86202 /* ZYProgressBar.m in Sources */,
-				014ECD791F400C6C00D0E559 /* TBVideoRequestTask.m in Sources */,
 				01C64D4F1E35EAFA00CC5E88 /* Sub_C_ViewController.m in Sources */,
 				01C64D611E36015E00CC5E88 /* CustomLayer_CG.m in Sources */,
 				01877C731EE1492B00C86202 /* DatabaseViewController.m in Sources */,
+				012262281F41E99200A868FE /* NSString+KSPlayAudio.m in Sources */,
 				01CE35C01E546FB100C082BB /* CustomCollectionCell.m in Sources */,
 				01CE35C31E546FB100C082BB /* Section_two_ReusableView.m in Sources */,
 				0183A90F1E86AFAC005D40DE /* TransitionToController.m in Sources */,
@@ -2226,7 +2215,6 @@
 				010BAA791E2787E0009E0ACE /* Sub_B_ViewController.m in Sources */,
 				016C19501E4C177A002F910F /* AboutCopyViewController.m in Sources */,
 				0183A9331E87AF50005D40DE /* BaseToViewController.m in Sources */,
-				014ECD781F400C6C00D0E559 /* TBloaderURLConnection.m in Sources */,
 				0183A9301E87AF45005D40DE /* BaseFromViewController.m in Sources */,
 				01B819E01EC1DDEF0042464C /* XRZCGUtilities.m in Sources */,
 				0183A9191E878671005D40DE /* VCAnimation.m in Sources */,
@@ -2315,6 +2303,7 @@
 				0183A9281E87AAF8005D40DE /* MoveTransitionViewController.m in Sources */,
 				01DEAEB31F2AEB0F009B19E4 /* KSQRCodeScanTool.m in Sources */,
 				013C97201F38B11D00BE557E /* AudioPlayerView.m in Sources */,
+				012262251F41E96600A868FE /* NSURL+KSPlayAudio.m in Sources */,
 				010BAA6F1E2782BC009E0ACE /* BaseTableViewCell.m in Sources */,
 				01110EF01F13729B00732172 /* KSGrammarBookCatalogueHeadCell.m in Sources */,
 				010BAA941E27A315009E0ACE /* BaseModel.m in Sources */,
@@ -2331,7 +2320,6 @@
 				0183A91C1E8787BE005D40DE /* GestureTransition.m in Sources */,
 				013C97131F38A02E00BE557E /* AVSecondController.m in Sources */,
 				01110EEB1F13729B00732172 /* KSGrammarBookCatalogueController.m in Sources */,
-				014ECD8C1F4023B200D0E559 /* NSURL+SULoader.m in Sources */,
 				01F353F21F3D9D9E00CD7C14 /* KSPlayerViewController.m in Sources */,
 				01CED3F91F35F1EB00C01377 /* circleView.m in Sources */,
 				01CE35EA1E5609EA00C082BB /* ArchiverModel.m in Sources */,

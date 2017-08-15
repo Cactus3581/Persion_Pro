@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "KSFileHandle.h"
 #import "KSResourceLoader.h"
-#import "SULoaderCategory.h"
+#import "KSPlayAudioCategory.h"
 
 @interface KSPlayer()<KSResourceLoaderDelegate>
 @property (nonatomic, strong) AVPlayer *player;//播放器

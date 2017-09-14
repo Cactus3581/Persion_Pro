@@ -31,8 +31,45 @@ static AVplayerView *playerView = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         playerView = [[AVplayerView alloc]init];
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        
+        NSError *activeError = nil;
+        if (![session setActive:YES error:&activeError]) {
+            NSLog(@"Failed to set active audio session!");
+        }
+        
+        //No.1
+        //开始写代码，调整音频会话设置，确保即便应用进入后台或静音开关已开启，音频仍将继续播放
+        
+        NSError *categoryError = nil;
+        [session setCategory:AVAudioSessionCategoryPlayback error:&categoryError];
+        
+        
+        //end_code
+
     });
     return playerView;
+}
+//No.3
+//开始写代码，响应远程控制，使得进入锁屏状态后可以控制音乐“播放”和“暂停”
+
+
+- (void) remoteControlReceivedWithEvent: (UIEvent *) receivedEvent {
+    if (receivedEvent.type == UIEventTypeRemoteControl) {
+        switch (receivedEvent.subtype) {
+            case UIEventSubtypeRemoteControlPlay:
+                [self.player play];
+                break;
+                
+            case UIEventSubtypeRemoteControlPause:
+                [self.player pause];
+                break;
+                
+            default:
+                NSLog(@"没有处理过这个事件------receivedEvent.subtype==%ld",(long)receivedEvent.subtype);
+                break;
+        }
+    }
 }
 
 - (instancetype)init {
@@ -48,6 +85,7 @@ static AVplayerView *playerView = nil;
 - (AVPlayer *)player {
     if (!_player) {
         _player = [[AVPlayer alloc] init];
+        
         __weak typeof(self) weakSelf = self;
         // 播放1s回调一次
         self.timeObserver = [_player addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:NULL usingBlock:^(CMTime time) {
@@ -81,6 +119,14 @@ static AVplayerView *playerView = nil;
         //添加播放完成通知
         [self addPlayerItemNotification];
     });
+    //No.2
+    //开始写代码，将媒体信息显示在锁定屏幕上，并使锁屏上控件可以控制音频播放
+    
+    
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    
+    
+    //end_code
 }
 
 #pragma mark - KVO 监听item状态方法

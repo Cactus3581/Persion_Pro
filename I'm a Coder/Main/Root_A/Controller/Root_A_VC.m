@@ -35,7 +35,7 @@
 #import "KSQRCodeViewController.h"
 #import "AVPLayViewController.h"
 #import "KSPlayerViewController.h"
-
+#import "YTKNetViewController.h"
 
 @interface Root_A_VC ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) NSArray *array;
@@ -146,7 +146,7 @@
 //    KSQRCodeScanController *sub_a = [[KSQRCodeScanController alloc]init];
 
 
-    //    Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
+//        Sub_A_ViewController *sub_a = [[Sub_A_ViewController alloc]init];
 //        Sub_B_ViewController *sub_a = [[Sub_B_ViewController alloc]init];
     KSPlayerViewController *sub_a = [[KSPlayerViewController alloc]init];
 
@@ -196,8 +196,8 @@
     
 //        KSQRCodeController *sub_a = [[KSQRCodeController alloc]init];
 //    KSQRCodeViewController *sub_a = [[KSQRCodeViewController alloc]init];
-
     
+//    YTKNetViewController *sub_a = [[YTKNetViewController alloc]init];
     sub_a.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:sub_a animated:YES];

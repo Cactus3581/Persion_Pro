@@ -40,7 +40,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
 //    [self initCircleProgress];
 //    [self configureCircleView];
-//    [self dealWithData];
+    [self dealWithData];
 //    [self set3DRotate];
 //        [self creatlayer];
 
@@ -50,7 +50,7 @@
 
 //    [KSProgressNumberBar show];
 //    [self progressBarDownload];
-    [self setBig];
+//    [self setBig];
 }
 
 - (void)setBig {
@@ -161,8 +161,8 @@
 
     
     // 渐变色
-        [self creatgradientLayer];//颜色渐变-滑动解锁
-    //    [self creatgradientLayer_two];//png渐变
+//        [self creatgradientLayer];//颜色渐变-滑动解锁
+        [self creatgradientLayer_two];//png渐变
     //    [self creatgradientLayer_three];//png覆盖图层
     
 //    [self audioplaying];
@@ -561,7 +561,7 @@
     moveRectangle.autoreverses = true;
     moveRectangle.repeatCount = HUGE;
     
-    [layer addAnimation:moveRectangle forKey:nil];
+//    [layer addAnimation:moveRectangle forKey:nil];
     
     //复制动画和状态
     //重复次数

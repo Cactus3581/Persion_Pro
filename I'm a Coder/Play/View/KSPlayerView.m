@@ -261,8 +261,8 @@
     [_slider setThumbImage:[UIImage imageNamed:@"avplyer"] forState:UIControlStateNormal];
     _slider.minimumTrackTintColor = [UIColor whiteColor];
     _slider.maximumTrackTintColor = [UIColor whiteColor];
-    _slider.minimumTrackTintColor = [UIColor redColor];//大于滑块当前值滑块条的颜色，默认为白色
-    _slider.maximumTrackTintColor = [UIColor greenColor];//大于滑块当前值滑块条的颜色
+    _slider.minimumTrackTintColor = [UIColor clearColor];//大于滑块当前值滑块条的颜色，默认为白色
+    _slider.maximumTrackTintColor = [UIColor clearColor];//大于滑块当前值滑块条的颜色
     [_progressView setProgressTintColor:[UIColor blackColor]];
     [_progressView setTrackTintColor:[UIColor lightTextColor]];
     self.toolView.layer.cornerRadius = 20;

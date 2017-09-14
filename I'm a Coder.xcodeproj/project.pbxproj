@@ -41,6 +41,8 @@
 		011F786E1F185E3F00184973 /* KSWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011F786D1F185E3F00184973 /* KSWaterWaveView.m */; };
 		012262251F41E96600A868FE /* NSURL+KSPlayAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 012262241F41E96600A868FE /* NSURL+KSPlayAudio.m */; };
 		012262281F41E99200A868FE /* NSString+KSPlayAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 012262271F41E99200A868FE /* NSString+KSPlayAudio.m */; };
+		0136E6421F63C8EA00B483E2 /* KSSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0136E6411F63C8EA00B483E2 /* KSSlider.m */; };
+		0136E6451F6555EF00B483E2 /* UIButton+KSEnlargeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0136E6441F6555EF00B483E2 /* UIButton+KSEnlargeEdge.m */; };
 		013C970C1F389F2300BE557E /* AVplayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C97091F389F2300BE557E /* AVplayerView.m */; };
 		013C970D1F389F2300BE557E /* PLayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C970B1F389F2300BE557E /* PLayButton.m */; };
 		013C97101F389FAA00BE557E /* AVPLayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013C970F1F389FAA00BE557E /* AVPLayViewController.m */; };
@@ -56,6 +58,7 @@
 		014ECD801F40219B00D0E559 /* KSRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD7F1F40219B00D0E559 /* KSRequestTask.m */; };
 		014ECD841F4022BB00D0E559 /* KSFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD831F4022BB00D0E559 /* KSFileHandle.m */; };
 		014ECD901F40242200D0E559 /* KSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 014ECD8F1F40242200D0E559 /* KSPlayer.m */; };
+		01692B511F57109200D25288 /* KSListenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 01692B501F57109200D25288 /* KSListenApi.m */; };
 		016C19501E4C177A002F910F /* AboutCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C194F1E4C177A002F910F /* AboutCopyViewController.m */; };
 		016C195A1E51B35E002F910F /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016C19591E51B35E002F910F /* BlockViewController.m */; };
 		0170DB331F14CC060041D4EE /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0170DB201F14CC060041D4EE /* MJExtensionConst.m */; };
@@ -130,6 +133,17 @@
 		01C64D761E3605C600CC5E88 /* BlockAnimatonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C64D751E3605C600CC5E88 /* BlockAnimatonVC.m */; };
 		01C7F7FA1E7BC9CC007AE40B /* MultithReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C7F7F91E7BC9CC007AE40B /* MultithReadingViewController.m */; };
 		01C7F8011E7BCB47007AE40B /* Static_ConstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C7F8001E7BCB47007AE40B /* Static_ConstViewController.m */; };
+		01CA525B1F56A78F0029731E /* YTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CA52491F56A78F0029731E /* YTKBaseRequest.m */; };
+		01CA525C1F56A78F0029731E /* YTKBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CA524B1F56A78F0029731E /* YTKBatchRequest.m */; };
+		01CA525D1F56A78F0029731E /* YTKBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CA524D1F56A78F0029731E /* YTKBatchRequestAgent.m */; };
+		01CA525E1F56A78F0029731E /* YTKChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CA524F1F56A78F0029731E /* YTKChainRequest.m */; };
+		01CA525F1F56A78F0029731E /* YTKChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CA52511F56A78F0029731E /* YTKChainRequestAgent.m */; };
+		01CA52601F56A78F0029731E /* YTKNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CA52541F56A78F0029731E /* YTKNetworkAgent.m */; };
+		01CA52611F56A78F0029731E /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CA52561F56A78F0029731E /* YTKNetworkConfig.m */; };
+		01CA52621F56A78F0029731E /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CA52581F56A78F0029731E /* YTKNetworkPrivate.m */; };
+		01CA52631F56A78F0029731E /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CA525A1F56A78F0029731E /* YTKRequest.m */; };
+		01CA52681F56A7F10029731E /* YTKNetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CA52661F56A7F10029731E /* YTKNetViewController.m */; };
+		01CA52691F56A7F10029731E /* YTKNetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CA52671F56A7F10029731E /* YTKNetViewController.xib */; };
 		01CC37181F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CC37161F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m */; };
 		01CC37191F17DF6A00A8EA55 /* KSGrammarUnfinishedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CC37171F17DF6A00A8EA55 /* KSGrammarUnfinishedController.xib */; };
 		01CE35891E52D23100C082BB /* NetRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CE35881E52D23100C082BB /* NetRequestViewController.m */; };
@@ -257,6 +271,10 @@
 		012262241F41E96600A868FE /* NSURL+KSPlayAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+KSPlayAudio.m"; sourceTree = "<group>"; };
 		012262261F41E99200A868FE /* NSString+KSPlayAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KSPlayAudio.h"; sourceTree = "<group>"; };
 		012262271F41E99200A868FE /* NSString+KSPlayAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KSPlayAudio.m"; sourceTree = "<group>"; };
+		0136E6401F63C8EA00B483E2 /* KSSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSSlider.h; sourceTree = "<group>"; };
+		0136E6411F63C8EA00B483E2 /* KSSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSlider.m; sourceTree = "<group>"; };
+		0136E6431F6555EF00B483E2 /* UIButton+KSEnlargeEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+KSEnlargeEdge.h"; sourceTree = "<group>"; };
+		0136E6441F6555EF00B483E2 /* UIButton+KSEnlargeEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KSEnlargeEdge.m"; sourceTree = "<group>"; };
 		013C97081F389F2300BE557E /* AVplayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVplayerView.h; sourceTree = "<group>"; };
 		013C97091F389F2300BE557E /* AVplayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVplayerView.m; sourceTree = "<group>"; };
 		013C970A1F389F2300BE557E /* PLayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLayButton.h; sourceTree = "<group>"; };
@@ -286,6 +304,8 @@
 		014ECD831F4022BB00D0E559 /* KSFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFileHandle.m; sourceTree = "<group>"; };
 		014ECD8E1F40242200D0E559 /* KSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPlayer.h; sourceTree = "<group>"; };
 		014ECD8F1F40242200D0E559 /* KSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPlayer.m; sourceTree = "<group>"; };
+		01692B4F1F57109200D25288 /* KSListenApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSListenApi.h; sourceTree = "<group>"; };
+		01692B501F57109200D25288 /* KSListenApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSListenApi.m; sourceTree = "<group>"; };
 		016C194E1E4C177A002F910F /* AboutCopyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutCopyViewController.h; sourceTree = "<group>"; };
 		016C194F1E4C177A002F910F /* AboutCopyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutCopyViewController.m; sourceTree = "<group>"; };
 		016C19581E51B35E002F910F /* BlockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockViewController.h; sourceTree = "<group>"; };
@@ -429,6 +449,28 @@
 		01C7F7F91E7BC9CC007AE40B /* MultithReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultithReadingViewController.m; sourceTree = "<group>"; };
 		01C7F7FF1E7BCB47007AE40B /* Static_ConstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Static_ConstViewController.h; sourceTree = "<group>"; };
 		01C7F8001E7BCB47007AE40B /* Static_ConstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Static_ConstViewController.m; sourceTree = "<group>"; };
+		01CA52481F56A78F0029731E /* YTKBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBaseRequest.h; sourceTree = "<group>"; };
+		01CA52491F56A78F0029731E /* YTKBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBaseRequest.m; sourceTree = "<group>"; };
+		01CA524A1F56A78F0029731E /* YTKBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequest.h; sourceTree = "<group>"; };
+		01CA524B1F56A78F0029731E /* YTKBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequest.m; sourceTree = "<group>"; };
+		01CA524C1F56A78F0029731E /* YTKBatchRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKBatchRequestAgent.h; sourceTree = "<group>"; };
+		01CA524D1F56A78F0029731E /* YTKBatchRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKBatchRequestAgent.m; sourceTree = "<group>"; };
+		01CA524E1F56A78F0029731E /* YTKChainRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKChainRequest.h; sourceTree = "<group>"; };
+		01CA524F1F56A78F0029731E /* YTKChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequest.m; sourceTree = "<group>"; };
+		01CA52501F56A78F0029731E /* YTKChainRequestAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKChainRequestAgent.h; sourceTree = "<group>"; };
+		01CA52511F56A78F0029731E /* YTKChainRequestAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKChainRequestAgent.m; sourceTree = "<group>"; };
+		01CA52521F56A78F0029731E /* YTKNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetwork.h; sourceTree = "<group>"; };
+		01CA52531F56A78F0029731E /* YTKNetworkAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkAgent.h; sourceTree = "<group>"; };
+		01CA52541F56A78F0029731E /* YTKNetworkAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkAgent.m; sourceTree = "<group>"; };
+		01CA52551F56A78F0029731E /* YTKNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkConfig.h; sourceTree = "<group>"; };
+		01CA52561F56A78F0029731E /* YTKNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkConfig.m; sourceTree = "<group>"; };
+		01CA52571F56A78F0029731E /* YTKNetworkPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetworkPrivate.h; sourceTree = "<group>"; };
+		01CA52581F56A78F0029731E /* YTKNetworkPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetworkPrivate.m; sourceTree = "<group>"; };
+		01CA52591F56A78F0029731E /* YTKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKRequest.h; sourceTree = "<group>"; };
+		01CA525A1F56A78F0029731E /* YTKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKRequest.m; sourceTree = "<group>"; };
+		01CA52651F56A7F10029731E /* YTKNetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKNetViewController.h; sourceTree = "<group>"; };
+		01CA52661F56A7F10029731E /* YTKNetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKNetViewController.m; sourceTree = "<group>"; };
+		01CA52671F56A7F10029731E /* YTKNetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YTKNetViewController.xib; sourceTree = "<group>"; };
 		01CC37151F17DF6A00A8EA55 /* KSGrammarUnfinishedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSGrammarUnfinishedController.h; sourceTree = "<group>"; };
 		01CC37161F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSGrammarUnfinishedController.m; sourceTree = "<group>"; };
 		01CC37171F17DF6A00A8EA55 /* KSGrammarUnfinishedController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KSGrammarUnfinishedController.xib; sourceTree = "<group>"; };
@@ -1029,6 +1071,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0136E63F1F63C8EA00B483E2 /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				0136E6431F6555EF00B483E2 /* UIButton+KSEnlargeEdge.h */,
+				0136E6441F6555EF00B483E2 /* UIButton+KSEnlargeEdge.m */,
+				0136E6401F63C8EA00B483E2 /* KSSlider.h */,
+				0136E6411F63C8EA00B483E2 /* KSSlider.m */,
+			);
+			path = Slide;
+			sourceTree = "<group>";
+		};
 		013C97071F389F2300BE557E /* AVplayerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1190,6 +1243,7 @@
 		0170DB071F14BC800041D4EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01CA52471F56A78F0029731E /* YTKNetwork */,
 				0170DB1D1F14CC060041D4EE /* MJExtension */,
 			);
 			path = Frameworks;
@@ -1639,9 +1693,48 @@
 			path = "Modifier_Static&Const";
 			sourceTree = "<group>";
 		};
+		01CA52471F56A78F0029731E /* YTKNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				01CA52481F56A78F0029731E /* YTKBaseRequest.h */,
+				01CA52491F56A78F0029731E /* YTKBaseRequest.m */,
+				01CA524A1F56A78F0029731E /* YTKBatchRequest.h */,
+				01CA524B1F56A78F0029731E /* YTKBatchRequest.m */,
+				01CA524C1F56A78F0029731E /* YTKBatchRequestAgent.h */,
+				01CA524D1F56A78F0029731E /* YTKBatchRequestAgent.m */,
+				01CA524E1F56A78F0029731E /* YTKChainRequest.h */,
+				01CA524F1F56A78F0029731E /* YTKChainRequest.m */,
+				01CA52501F56A78F0029731E /* YTKChainRequestAgent.h */,
+				01CA52511F56A78F0029731E /* YTKChainRequestAgent.m */,
+				01CA52521F56A78F0029731E /* YTKNetwork.h */,
+				01CA52531F56A78F0029731E /* YTKNetworkAgent.h */,
+				01CA52541F56A78F0029731E /* YTKNetworkAgent.m */,
+				01CA52551F56A78F0029731E /* YTKNetworkConfig.h */,
+				01CA52561F56A78F0029731E /* YTKNetworkConfig.m */,
+				01CA52571F56A78F0029731E /* YTKNetworkPrivate.h */,
+				01CA52581F56A78F0029731E /* YTKNetworkPrivate.m */,
+				01CA52591F56A78F0029731E /* YTKRequest.h */,
+				01CA525A1F56A78F0029731E /* YTKRequest.m */,
+			);
+			path = YTKNetwork;
+			sourceTree = "<group>";
+		};
+		01CA52641F56A7D20029731E /* YKT_NET */ = {
+			isa = PBXGroup;
+			children = (
+				01CA52651F56A7F10029731E /* YTKNetViewController.h */,
+				01CA52661F56A7F10029731E /* YTKNetViewController.m */,
+				01CA52671F56A7F10029731E /* YTKNetViewController.xib */,
+				01692B4F1F57109200D25288 /* KSListenApi.h */,
+				01692B501F57109200D25288 /* KSListenApi.m */,
+			);
+			path = YKT_NET;
+			sourceTree = "<group>";
+		};
 		01CE35801E52D20C00C082BB /* NetRequest */ = {
 			isa = PBXGroup;
 			children = (
+				01CA52641F56A7D20029731E /* YKT_NET */,
 				01CE35811E52D21700C082BB /* Controller */,
 				01CE35841E52D21700C082BB /* Model */,
 				01CE35851E52D21700C082BB /* View */,
@@ -1942,6 +2035,7 @@
 		01F353E91F3D9A4000CD7C14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0136E63F1F63C8EA00B483E2 /* Slide */,
 				01F353EB1F3D9A7300CD7C14 /* KSPlayerView.h */,
 				01F353EC1F3D9A7300CD7C14 /* KSPlayerView.m */,
 			);
@@ -2053,6 +2147,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 599FJK8FBV;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					010BAA021E276DB3009E0ACE = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -2100,6 +2199,7 @@
 				010BA9FA1E276DB3009E0ACE /* Assets.xcassets in Resources */,
 				0170DFB61F16118F0041D4EE /* KSCertificateView.xib in Resources */,
 				0170DFCE1F178DBE0041D4EE /* KSGrammarCertificateController.xib in Resources */,
+				01CA52691F56A7F10029731E /* YTKNetViewController.xib in Resources */,
 				01A4B5C71F18749B00B9168F /* cycleBorder.png in Resources */,
 				019557661F29DC9E007A5E98 /* ScanQR2@2x.png in Resources */,
 				019557611F29DC9E007A5E98 /* Down@2x.png in Resources */,
@@ -2192,12 +2292,15 @@
 				010BA9EF1E276DB3009E0ACE /* main.m in Sources */,
 				01B819DF1EC1DDEF0042464C /* UIFont+XRZAdd.m in Sources */,
 				01DEAEAE1F2AEB0F009B19E4 /* KSQRCodeScanBaseController.m in Sources */,
+				01CA525F1F56A78F0029731E /* YTKChainRequestAgent.m in Sources */,
 				01CE35CD1E54AAEC00C082BB /* RunTimeViewController.m in Sources */,
+				01CA525E1F56A78F0029731E /* YTKChainRequest.m in Sources */,
 				013C97241F39BFEF00BE557E /* CircleProgressView.m in Sources */,
 				01CC37181F17DF6A00A8EA55 /* KSGrammarUnfinishedController.m in Sources */,
 				0170DB371F14CC060041D4EE /* MJPropertyType.m in Sources */,
 				010BAA561E276DED009E0ACE /* BaseViewController.m in Sources */,
 				0183A92D1E87ABCE005D40DE /* MacicViewController_one.m in Sources */,
+				01CA525C1F56A78F0029731E /* YTKBatchRequest.m in Sources */,
 				01C7F8011E7BCB47007AE40B /* Static_ConstViewController.m in Sources */,
 				01877C761EE1492B00C86202 /* ClassModel.m in Sources */,
 				01877C7A1EE1492B00C86202 /* FMDatabaseAdditions.m in Sources */,
@@ -2216,7 +2319,9 @@
 				016C19501E4C177A002F910F /* AboutCopyViewController.m in Sources */,
 				0183A9331E87AF50005D40DE /* BaseToViewController.m in Sources */,
 				0183A9301E87AF45005D40DE /* BaseFromViewController.m in Sources */,
+				01CA52601F56A78F0029731E /* YTKNetworkAgent.m in Sources */,
 				01B819E01EC1DDEF0042464C /* XRZCGUtilities.m in Sources */,
+				01CA52611F56A78F0029731E /* YTKNetworkConfig.m in Sources */,
 				0183A9191E878671005D40DE /* VCAnimation.m in Sources */,
 				01110EF21F13729B00732172 /* KSGrammarBookCatalogueHeaderView.m in Sources */,
 				01CE35D11E54AB3F00C082BB /* UIImage+Swizzling.m in Sources */,
@@ -2224,6 +2329,7 @@
 				010BAA4B1E276DE6009E0ACE /* Root_D_VC.m in Sources */,
 				0183A9201E87A64F005D40DE /* BaseListViewController.m in Sources */,
 				01110EED1F13729B00732172 /* KSGrammarBookCatalogueModel.m in Sources */,
+				0136E6451F6555EF00B483E2 /* UIButton+KSEnlargeEdge.m in Sources */,
 				01A824661EC019E200C1BDDB /* KSAlertImageView.m in Sources */,
 				011B0FC51ED2851C00643227 /* KSSlideCell.m in Sources */,
 				01877C851EE1614B00C86202 /* CountryDBTools.m in Sources */,
@@ -2240,6 +2346,7 @@
 				01C64D551E35EDE000CC5E88 /* DrawRect_OC.m in Sources */,
 				01CE35AB1E546F3A00C082BB /* CollectionViewController.m in Sources */,
 				0170DFB41F1611190041D4EE /* KSCertificateView.m in Sources */,
+				01CA52681F56A7F10029731E /* YTKNetViewController.m in Sources */,
 				0170DB341F14CC060041D4EE /* MJFoundation.m in Sources */,
 				013C970D1F389F2300BE557E /* PLayButton.m in Sources */,
 				01F353F71F3D9DBB00CD7C14 /* KSSecondPlayController.m in Sources */,
@@ -2264,6 +2371,7 @@
 				014ECD841F4022BB00D0E559 /* KSFileHandle.m in Sources */,
 				013C97101F389FAA00BE557E /* AVPLayViewController.m in Sources */,
 				0170DB3F1F152BC00041D4EE /* KSGrammarBookCatalogueFooterView.m in Sources */,
+				01CA52621F56A78F0029731E /* YTKNetworkPrivate.m in Sources */,
 				014891AE1E86818C0012E689 /* PopViewAnaimationVC.m in Sources */,
 				01877C781EE1492B00C86202 /* SchoolModel.m in Sources */,
 				01CE35891E52D23100C082BB /* NetRequestViewController.m in Sources */,
@@ -2275,6 +2383,7 @@
 				0170DB391F14CC060041D4EE /* NSObject+MJCoding.m in Sources */,
 				0170DB361F14CC060041D4EE /* MJPropertyKey.m in Sources */,
 				014ECD7D1F40218700D0E559 /* KSResourceLoader.m in Sources */,
+				01CA525B1F56A78F0029731E /* YTKBaseRequest.m in Sources */,
 				01CE35D71E54B58B00C082BB /* NSObject+Propery.m in Sources */,
 				01877C741EE1492B00C86202 /* FMDatabaseManager.m in Sources */,
 				01DEAEB71F2AEB0F009B19E4 /* KSQRCodeScanViewStyle.m in Sources */,
@@ -2284,6 +2393,7 @@
 				01CE35C11E546FB100C082BB /* Section_one_ReusableView.m in Sources */,
 				0183A9231E87A91C005D40DE /* TransitionListViewController.m in Sources */,
 				01877C7D1EE1492B00C86202 /* FMResultSet.m in Sources */,
+				0136E6421F63C8EA00B483E2 /* KSSlider.m in Sources */,
 				01F353ED1F3D9A7300CD7C14 /* KSPlayerView.m in Sources */,
 				013C970C1F389F2300BE557E /* AVplayerView.m in Sources */,
 				010BAA6C1E278209009E0ACE /* BaseTableViewVC.m in Sources */,
@@ -2311,11 +2421,14 @@
 				010BAA551E276DED009E0ACE /* BaseNavigationVC.m in Sources */,
 				0170DFB91F174CD60041D4EE /* AppDelegate.m in Sources */,
 				0170DB3B1F14CC060041D4EE /* NSObject+MJProperty.m in Sources */,
+				01CA525D1F56A78F0029731E /* YTKBatchRequestAgent.m in Sources */,
 				01CE35ED1E56AA9000C082BB /* DataManager.m in Sources */,
+				01692B511F57109200D25288 /* KSListenApi.m in Sources */,
 				01CE35BE1E546FB100C082BB /* Cell_three.m in Sources */,
 				01110EEE1F13729B00732172 /* KSGrammarBookCatalogueCell.m in Sources */,
 				01877C801EE1531600C86202 /* FMDBTools.m in Sources */,
 				01DEAEB51F2AEB0F009B19E4 /* KSQRCodeScanLineAnimation.m in Sources */,
+				01CA52631F56A78F0029731E /* YTKRequest.m in Sources */,
 				01C64D761E3605C600CC5E88 /* BlockAnimatonVC.m in Sources */,
 				0183A91C1E8787BE005D40DE /* GestureTransition.m in Sources */,
 				013C97131F38A02E00BE557E /* AVSecondController.m in Sources */,
